@@ -1,0 +1,102 @@
+/**
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid $brand-color;
+		text-align: center;
+		p {
+			font-size: $small-font-size;
+			color: $grey-color;
+			padding-top: 10px;
+			a {
+				margin: 0 5px;
+			}
+		}
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+		text-align: center;
+    padding: $spacing-unit 0;
+		font-size: $small-font-size;
+		color: $grey-color;
+		a {
+			margin: 0 5px;
+		}
+}
+
+/**
+ * Site content
+ */
+.site-content {
+	padding: $spacing-unit 0;
+}
+
+.post-archive {
+	padding: $spacing-unit 0 0;
+	h2 {
+		font-size: $base-font-size;
+		font-weight: bold;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			span {
+				font-size: $small-font-size;
+				color: $grey-color;
+			}
+		}
+	}
+}
+
+/**
+ * Posts
+ */
+.post-header {
+    margin: $spacing-unit 0;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
