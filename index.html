@@ -9,6 +9,15 @@ layout: default
 	</div>
 
 	<div class="post-archive">
+		<h2>商业</h2>
+		<ul>
+			{% for post in site.categories.business %}
+			<li><span>{{ post.date | date:"%y-%-m-%-d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>	
+
+	<div class="post-archive">
 		<h2>设计</h2>
 		<ul>
 			{% for post in site.categories.design %}
