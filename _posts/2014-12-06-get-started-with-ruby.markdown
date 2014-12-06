@@ -35,7 +35,7 @@ nil.class # => NilClass
 
 {% highlight ruby %}
 3.times { print "Ruby! " } # 输出 "Ruby! Ruby! Ruby! "
-1.upto(9) {|x| print x } # 输出 "123456789"
+1.upto(9) { |x| print x } # 输出 "123456789"
 {% endhighlight %}
 
 数组
@@ -44,7 +44,7 @@ nil.class # => NilClass
 a = [3, 2, 1] # 创建数组 
 a[3] = a[2] - 1 # []来访问数组中的值
 a.each do |elt| # each 是一个迭代器，elt 是传递到块中的参数
-  print elt+1 # 输出 "4321"
+  print elt + 1 # 输出 "4321"
 end
 {% endhighlight %}
 
@@ -54,7 +54,7 @@ end
 h = { :one => 1, :two => 2 } # 创建哈希
 h[:one] # 通过键访问值
 h[:three] = 3 # 添加一个新的键值对到哈希中 
-h.each do |key,value| # 遍历哈希中的键值
+h.each do |key, value| # 遍历哈希中的键值
   print "#{value}:#{key}; " # 输出 "1:one; 2:two; 3:three; " 
 end
 {% endhighlight %}
@@ -74,7 +74,7 @@ end
 
 {% highlight ruby %}
 def square(x) # 定义一个名为 square 的方法，只有一个参数 x
-  x*x
+  x * x
 end
 {% endhighlight %}
 
@@ -89,6 +89,8 @@ x, y, z = [1, 2, 3] # 数组的元素自动赋给三个变量
 标点符号后缀和前缀
 
 `Array` 和 `Hash` 都有 `empty?` 方法，`?` 表明方法的返回值是布尔值，`Array` 有定义 `sort` 和 `sort!` 方法，`sort` 会返回排序后的数组，但是不会改变原来的数组，`sort!` 会将数组本身顺序改变，`!` 表明调用方法时要明确其后果。
+
+你应该会注意到很多 Ruby 变量名从标点符号开始，全局变量由 `$` 开始，实例变量由 `@` 开始，类变量由 `@@` 开始。
 
 正则和区间
 
@@ -111,7 +113,7 @@ class Sequence # 定义一个类
 
   def each
     x = @from # 从起始值开始
-    while x <= @to # 还没有结束值
+    while x <= @to # 还没有到结束值
       yield x # 传递 x 给块
       x += @by # x 增加 @by
     end
@@ -123,9 +125,9 @@ class Sequence # 定义一个类
     # 计算序列的长度，最后一行表达式的值作为方法的返回值
   end
 
-  def[](index) # 重写数组访问操作符
+  def [](index) # 重写数组访问操作符
     return nil if index < 0
-    v = @from + index*@by
+    v = @from + index * @by
     if v <= @to
       v
     else
@@ -145,6 +147,6 @@ end
 # 如何使用定义的 Sequence 类
 s = Sequence.new(1, 10, 2) # 从1到10，步长是2
 s.each { |x| print x } # 输出 "13579"
-print s[s.size-1] # 输出 9
+print s[s.size - 1] # 输出 9
 t = (s + 1) * 2 # 从4到22，步长是4
 {% endhighlight %}
