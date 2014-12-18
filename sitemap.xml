@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	<url>
+		<loc>http://blog.danthought.com/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/design/2014/11/15/signal-to-noise-ratio/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/business/2014/11/22/things-and-wunderlist/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/design/2014/11/29/design-better-help/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2014/12/06/get-started-with-ruby/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2014/12/13/ruby-datatypes-and-objects/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+</urlset>

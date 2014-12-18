@@ -1,0 +1,6 @@
+http://blog.danthought.com/
+http://blog.danthought.com/design/2014/11/15/signal-to-noise-ratio/
+http://blog.danthought.com/business/2014/11/22/things-and-wunderlist/
+http://blog.danthought.com/design/2014/11/29/design-better-help/
+http://blog.danthought.com/programming/2014/12/06/get-started-with-ruby/
+http://blog.danthought.com/programming/2014/12/13/ruby-datatypes-and-objects/
