@@ -5,3 +5,4 @@ http://blog.danthought.com/design/2014/11/29/design-better-help/
 http://blog.danthought.com/programming/2014/12/06/get-started-with-ruby/
 http://blog.danthought.com/programming/2014/12/13/ruby-datatypes-and-objects/
 http://blog.danthought.com/programming/2014/12/20/ruby-expressions-and-operators/
+http://blog.danthought.com/programming/2014/12/27/ruby-control-structures/

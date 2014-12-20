@@ -32,4 +32,8 @@
 		<loc>http://blog.danthought.com/programming/2014/12/20/ruby-expressions-and-operators/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2014/12/27/ruby-control-structures/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
