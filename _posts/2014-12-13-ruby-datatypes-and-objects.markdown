@@ -5,7 +5,7 @@ location: 成都
 category: programming
 ---
 
-![Ruby Numeric](/images/ruby-numeric.png)
+![Shopping](/images/shopping.jpg)
 
 #### 数字
 
