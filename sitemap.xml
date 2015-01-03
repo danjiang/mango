@@ -36,4 +36,8 @@
 		<loc>http://blog.danthought.com/programming/2014/12/27/ruby-control-structures/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/01/03/ruby-method-proc-lambda-closure/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>

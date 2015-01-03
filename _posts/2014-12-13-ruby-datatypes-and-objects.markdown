@@ -5,7 +5,7 @@ location: 成都
 category: programming
 ---
 
-![Shopping](/images/shopping.jpg)
+![Cans](/images/cans.jpg)
 
 #### 数字
 
