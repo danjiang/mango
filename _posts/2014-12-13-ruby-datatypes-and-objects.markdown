@@ -110,7 +110,7 @@ o.respond_to? :each # 检测对象是否有某个方法
 
 #### True False Nil
 
-`true` 是 TrueClass 的单例，`false` 是 FalseClass 的单例，`false` 或者 `nil` 就是 `false` ，其他值都是 `true`，0 0.0 "" 也是 `true`，`nil` 是 NilClass 的单例
+`true` 是 TrueClass 的单例，`false` 是 FalseClass 的单例，`false` 或者 `nil` 就是 `false` ，其他值都是 `true`，`0`, `0.0` 和 `""` 也是 `true`，`nil` 是 `NilClass` 的单例
 
 {% highlight ruby %}
 o == nil # 判断是否为空 
@@ -207,7 +207,7 @@ String === "s"   # true
 
 `<=>` 比较方法，运算符左边的与运算符右边的比较，大于返回-1，等与返回0，小于返回+1，实现了此方法的类可以 `include Comparable` 来获取 `<=` `==` 等这些比较方法
 
-`dup` 和 `clone` 都是浅拷贝。`dup` 和 `clone` 分配一个新的对象，拷贝旧对象的实例变量和 `tainted` 的变量到新对象，并且 `clone` 方法还会拷贝旧对象的 `singleton` 方法和 `frozen` 的变量
+`dup` 和 `clone` 都是浅拷贝。`dup` 和 `clone` 分配一个新的对象，拷贝旧对象的实例变量和 `tainted` 的变量到新对象，并且 `clone` 方法还会拷贝旧对象的单例方法和 `frozen` 的变量
 
 `frozen` 后的对象变成不可变对象，不能改变其值
 

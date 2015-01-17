@@ -9,14 +9,14 @@ category: programming
 
 #### 类
 
-`class` 关键字创建了一个常量来指代一个类，常量的名称和类的名称一样。在类定义中，在实例方法外，`self` 指代定义的类
+`class` 关键字创建了一个常量来代表这个类，常量的名称和类的名称一样。在类定义中，在实例方法外，`self` 指代定义的类
 
 {% highlight ruby %}
 class Point
 end
 {% endhighlight %}
 
-`Point` 常量是一个类对象代表我们的新类，所有的类对象都有一个 `new` 方法，用来创建实例
+`Point` 常量代表我们的新类，所有的类都有一个 `new` 方法，用来创建实例
 
 {% highlight ruby %}
 p = Point.new
@@ -63,7 +63,7 @@ q = Point.new(p.x * 2, p.y * 3)
 
 赋值表达式只会在通过对象调用时，才调用 `setter` 方法，所以在实例方法中写 `x = 2` 不会调用 `setter` 方法，只会创建新的本地变量
 
-`Module` 类定义了 `attr_reader` 和 `attr_accessor` 方法来简化创建访问器，`Class` 类继承了 `Module`，所以所有的类对象都有这两个方法
+`Module` 类定义了 `attr_reader` 和 `attr_accessor` 方法来简化创建访问器，`Class` 类继承了 `Module`，所以所有的类都有这两个方法
 
 {% highlight ruby %}
 class Point
@@ -193,7 +193,7 @@ def <=>(other)
 end
 {% endhighlight %}
 
-`Point` 常量是一个类对象代表我们的新类，定义 `Point` 的`类方法`，实际上是定义了 `Point` 类对象的单例方法
+定义 `Point` 的`类方法`
 
 {% highlight ruby %}
 class Point
@@ -207,13 +207,13 @@ class Point
 end
 {% endhighlight %}
 
-通过 `class << o` 来打开一个对象的 `eigenclass`，给类对象添加方法
+通过 `class << Point` 来打开一个类的 `eigenclass` 来添加类方法
 
 {% highlight ruby %}
 class << Point 
   def sum(*points)
     x = y = 0
-    points.each {|p| x += p.x; y += p.y }
+    points.each { |p| x += p.x; y += p.y }
     Point.new(x, y)
   end
 end
@@ -253,7 +253,7 @@ class Point
 end
 {% endhighlight %}
 
-类也是对象，可以像其他对象一样有实例变量，类对象的实例变量叫`类实例变量`，在类定义中且在实例方法定义外的实例变量就是类实例变量
+类也是对象，可以像其他对象一样有实例变量，类的实例变量叫`类实例变量`，在类定义中且在实例方法定义外的实例变量就是类实例变量
 
 {% highlight ruby %}
 class Point
@@ -342,7 +342,7 @@ end
 
 子类会继承父类的`类方法`，也可以重写父类的类方法，通常类方法的调用都通过类名来显示调用，最好不要依赖于继承，就通过定义该类方法的类来调用
 
-`实例变量`不是通过类定义的，所以和子类继承机制没有关系，当赋值给实例变量时，它们就被创建,，同样，`类实例变量`只是代表类的类对象的实例变量，也和子类继承机制没有关系
+`实例变量`不是通过类定义的，所以和子类继承机制没有关系，当赋值给实例变量时，它们就被创建,，同样，`类实例变量`只是代表类的实例变量，也和子类继承机制没有关系
 
 `类变量`被所有类和其子类共享，如果一个子类给已经在父类中存在的类变量赋值，会改变类变量，所有的类和其子类都会使用新的值
 
@@ -448,7 +448,7 @@ end
 
 #### 模块
 
-模块不能被实例化，不能被继承，独立的。因为类对象是 `Class` 类的实例，模块对象是 `Module` 类的实例，`Class` 类是 `Module` 类的子类，意味着所有类都是模块
+模块不能被实例化，不能被继承，独立的。因为类是 `Class` 类的实例，模块是 `Module` 类的实例，`Class` 类是 `Module` 类的子类，意味着所有类都是模块
 
 模块用来作为命名空间，模块中可以定义常量
 
@@ -537,7 +537,7 @@ print countdown.sort # 输出 "[1, 2, 3]"
 5. 检测 `Object` 类所混合的 `Kernel` 模块，也没有找到 `world` 方法，继而我们开始切换到查找 `method_missing` 方法
 6. 通过上述路径查找 `method_missing` 方法，最后在 `Kernel` 模块中找到该方法，调用其 `method_missing` 方法，会抛出异常 `NoMethodError: undefined method 'world' for "hello":String`
 
-类方法的查找和实例方法的查找很相似，记住类方法就是类对象的实例方法，查找类方法所以就是查找类对象的实例方法。Ruby 在查找一个对象的 `eigenclass` 的单例方法时，会查找 `eigenclass` 的所有父类的单例方法，所以查找 `Fixnum` 的类方法，会先查找 `Fixnum`，`Integer`，`Numeric` 和 `Object` 的单例方法，因为类对象是 `Class` 的实例，所以再查找 `Class`，`Module`，`Object` 和 `Kernel` 的实例方法
+类方法的查找和实例方法的查找很相似，Ruby 在查找一个对象的 `eigenclass` 的单例方法时，会查找 `eigenclass` 的所有父类的单例方法，所以查找 `Fixnum` 的类方法，会先查找 `Fixnum`，`Integer`，`Numeric` 和 `Object` 的单例方法，因为类是 `Class` 的实例，所以再查找 `Class`，`Module`，`Object` 和 `Kernel` 的实例方法
 
 #### 常量的查找
 

@@ -40,4 +40,12 @@
 		<loc>http://blog.danthought.com/programming/2015/01/03/ruby-method-proc-lambda-closure/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/01/10/ruby-classes-and-modules/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/business/2015/01/17/mobile-app-from-idea-to-product/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>

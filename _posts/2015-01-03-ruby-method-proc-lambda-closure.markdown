@@ -33,7 +33,7 @@ end
 distance, theta = polar(x, y)
 {% endhighlight %}
 
-定义 `Singleton` 方法，在单个对象上定义的方法
+定义单例方法，在单个对象上定义的方法
 
 {% highlight ruby %}
 o = "message"
