@@ -56,4 +56,8 @@
 		<loc>http://blog.danthought.com/programming/2015/01/31/git-pratical-guide/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/design/2015/02/07/blank-slate/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
