@@ -203,3 +203,19 @@ pre {
         }
     }
 }
+
+
+/**
+ * Table
+ */
+table, th, td {
+	border: 1px solid $grey-color-light;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 15px;
+	th, td {
+		padding: 5px;
+	}
+}

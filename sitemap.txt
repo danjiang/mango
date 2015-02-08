@@ -12,3 +12,4 @@ http://blog.danthought.com/business/2015/01/17/mobile-app-from-idea-to-product/
 http://blog.danthought.com/design/2015/01/24/design-detail-calorie-calendar/
 http://blog.danthought.com/programming/2015/01/31/git-pratical-guide/
 http://blog.danthought.com/design/2015/02/07/blank-slate/
+http://blog.danthought.com/programming/2015/02/14/vim-pratical-guide/
