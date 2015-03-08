@@ -68,4 +68,8 @@
 		<loc>http://blog.danthought.com/design/2015/02/28/implementation-model-and-mental-model/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/design/2015/03/08/ios-navigation/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
