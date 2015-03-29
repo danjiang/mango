@@ -80,4 +80,8 @@
 		<loc>http://blog.danthought.com/design/2015/03/22/ios-gestures/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/03/29/ruby-in-action-rubygems/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
