@@ -84,4 +84,8 @@
 		<loc>http://blog.danthought.com/programming/2015/03/29/ruby-in-action-rubygems/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/support/2015/04/05/email-is-very-useful/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
