@@ -88,4 +88,8 @@
 		<loc>http://blog.danthought.com/support/2015/04/05/email-is-very-useful/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/04/12/ios-infinite-scrolling/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
