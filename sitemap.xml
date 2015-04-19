@@ -92,4 +92,8 @@
 		<loc>http://blog.danthought.com/programming/2015/04/12/ios-infinite-scrolling/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/design/2015/04/19/idioms/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
