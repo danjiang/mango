@@ -22,3 +22,4 @@ http://blog.danthought.com/support/2015/04/05/email-is-very-useful/
 http://blog.danthought.com/programming/2015/04/12/ios-infinite-scrolling/
 http://blog.danthought.com/design/2015/04/19/idioms/
 http://blog.danthought.com/programming/2015/04/25/rails-in-action-javascript/
+http://blog.danthought.com/programming/2015/05/02/ruby-in-action-bundler/
