@@ -104,4 +104,9 @@
 		<loc>http://blog.danthought.com/programming/2015/05/02/ruby-in-action-bundler/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/05/09/ruby-in-action-rvm/
+</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
