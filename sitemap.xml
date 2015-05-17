@@ -105,8 +105,11 @@
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://blog.danthought.com/programming/2015/05/09/ruby-in-action-rvm/
-</loc>
+		<loc>http://blog.danthought.com/programming/2015/05/09/ruby-in-action-rvm/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/design/2015/05/17/affordance/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 </urlset>
