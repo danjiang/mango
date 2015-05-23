@@ -25,3 +25,4 @@ http://blog.danthought.com/programming/2015/04/25/rails-in-action-javascript/
 http://blog.danthought.com/programming/2015/05/02/ruby-in-action-bundler/
 http://blog.danthought.com/programming/2015/05/09/ruby-in-action-rvm/
 http://blog.danthought.com/design/2015/05/17/affordance/
+http://blog.danthought.com/business/2015/05/23/how-to-start-a-startup/
