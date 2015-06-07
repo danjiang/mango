@@ -120,4 +120,8 @@
 		<loc>http://blog.danthought.com/business/2015/05/31/press-kit/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/06/07/cocoapods/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
