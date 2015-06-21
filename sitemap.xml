@@ -128,4 +128,8 @@
 		<loc>http://blog.danthought.com/programming/2015/06/14/rails-in-action-concern/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/design/2015/06/21/build-interaction-and-animation-prototypes/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
