@@ -30,3 +30,4 @@ http://blog.danthought.com/business/2015/05/31/press-kit/
 http://blog.danthought.com/programming/2015/06/07/cocoapods/
 http://blog.danthought.com/programming/2015/06/14/rails-in-action-concern/
 http://blog.danthought.com/design/2015/06/21/build-interaction-and-animation-prototypes/
+http://blog.danthought.com/business/2015/06/28/health-diary/
