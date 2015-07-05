@@ -136,4 +136,8 @@
 		<loc>http://blog.danthought.com/business/2015/06/28/health-diary/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/07/05/rails-in-action-rspec/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
