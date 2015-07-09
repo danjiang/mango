@@ -26,7 +26,6 @@ end
 
 	$ rails generate rspec:install
 
-
 #### [Factory Girl][2]
 
 上一步配置 Gemfile 文件的时候，还声明了 factory_girl_rails，[Factory Girl][2] 作用是生成测试需要的数据，在测试很多问题的时候，都需要预先在数据库中填充一些数据，测试完一个单元，还应该清除数据库中的数据，保证下一个单元的测试不被这些遗留数据所影响，我们应该为每一个测试中要用到的 Model，在 spec/factories 编写一个 Factory：
