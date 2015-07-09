@@ -1,0 +1,54 @@
+---
+title: 学习 iOS 的经历
+author: 但江
+location: 成都
+category: programming
+---
+
+![WWDC 2011 - 2012](/images/wwdc-2011-2012.jpg)
+
+我从 2011 年开始 iOS 开发，走过很多弯路，其实在学习你不了解东西的时候，你甚至不知道那是弯路，直到你对这样东西有了足够的认识，你才知道什么是有效的，什么不是，所以不要管那么多，不要徘徊不前，立即开始吧。
+
+#### 书籍
+
+![Book Objective-C](/images/book-objective-c.jpg)
+
+学习 Objective-C 语法，很多人语法都没有搞清楚就开始写 iOS 应用，难怪写的跟狗屎一样，基础语法很重要，书中示例代码都要自己亲手敲入电脑。
+
+![Book Programming iOS](/images/book-programming-ios.jpg)
+
+本书可以带领你将 Cocoa Touch 中主要内容过一篇，基本上就是可以写一些简单的应用了。
+
+![Book iOS Programming Cookbook](/images/book-ios-programming-cookbook.jpg)
+
+本书做为参考就行了，就是一个问题，一个解决方案。
+
+![Book Core Data](/images/book-core-data.jpg)
+
+讲解 Core Data 最好的书籍。
+
+#### [Tutorials by Ray Wenderlich][1]
+
+这套教程的特点是通过编写应用代码来学习 iOS 的特性，所以一定跟着敲代码。
+
+#### [Apple Programming Guide][2]
+
+苹果官方针对不同类型的内容所写编程指南，很多人说里面的内容看不明白，说写的垃圾，那是你能力不够，上面介绍的书籍和教程几乎都是依靠苹果官方编程指南和 WWDC Videos 的实践，然后编写出来的，因为早些年没有这些书籍的时候，这是唯一可学习的资源。
+
+#### [WWDC 视频][3]
+
+水平达到一定程度，看 WWDC 视频是最好和最快速了解新技术的方式，然后苹果官方会相应地更新编程指南，很多技术先锋会先了解和实践这些新技术，写博客，写书籍，然后就有了最开始介绍的书籍和教程。
+
+#### Swift
+
+![Book The Swift Programming Language](/images/book-the-swift-programming-language.jpg)
+
+苹果官方出的 Swift 编程指南，最全面的语法参考。
+
+![Book Swift By Tutorials](/images/book-swift-by-tutorials.jpg)
+
+通过编写应用代码来学习 Swift 的特性。
+
+[1]: http://www.raywenderlich.com/store
+[2]: https://developer.apple.com/library/ios/navigation/
+[3]: https://developer.apple.com/videos
