@@ -27,7 +27,20 @@ category: programming
 
 讲解 Core Data 最好的书籍。
 
+![Book Quartz](/images/book-quartz.jpg)
+
+程序员的说法就是 Core Graphics，官方的说法就是 Quartz，可能大家会觉得比较冷门的技术，但是实际开发中运用还是比较多的，有两方面的好处，一是减少图片资源文件的使用，二是可以很便捷地实现动画效果。
+
 #### [Tutorials by Ray Wenderlich][1]
+
+* iOS 5 by Tutorials
+* iOS 6 by Tutorials
+* iOS 7 by Tutorials
+* iOS 8 by Tutorials
+* Swift by Tutorials
+* Core Data by Tutorials
+* iOS Animations by Tutorials
+* WatchKit by Tutorials
 
 这套教程的特点是通过编写应用代码来学习 iOS 的特性，所以一定跟着敲代码。
 
@@ -39,11 +52,19 @@ category: programming
 
 水平达到一定程度，看 WWDC 视频是最好和最快速了解新技术的方式，然后苹果官方会相应地更新编程指南，很多技术先锋会先了解和实践这些新技术，写博客，写书籍，然后就有了最开始介绍的书籍和教程。
 
+看视频参考指南：
+
+1. Keynote
+2. Platforms State of the Union
+3. Featured Videos
+4. What's New ... 都是对已有技术的更新
+5. 根据不同的主题类别选择视频观看
+
 #### Swift
 
 ![Book The Swift Programming Language](/images/book-the-swift-programming-language.jpg)
 
-苹果官方出的 Swift 编程指南，最全面的语法参考。
+苹果官方出的 Swift 编程指南，最全面的语法参考，iBook 上可以下载。
 
 ![Book Swift By Tutorials](/images/book-swift-by-tutorials.jpg)
 
