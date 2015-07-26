@@ -148,4 +148,8 @@
 		<loc>http://blog.danthought.com/programming/2015/07/18/learn-ios/</loc>
 		<changefreq>weekly</changefreq>
 	</url
+	<url>
+		<loc>http://blog.danthought.com/design/2015/07/26/ios-design-principle/</loc>
+		<changefreq>weekly</changefreq>
+	</url
 </urlset>
