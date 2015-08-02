@@ -35,3 +35,4 @@ http://blog.danthought.com/programming/2015/07/05/rails-in-action-rspec/
 http://blog.danthought.com/programming/2015/07/11/rails-in-action-cucumber/
 http://blog.danthought.com/programming/2015/07/18/learn-ios/
 http://blog.danthought.com/design/2015/07/26/ios-design-principle/
+http://blog.danthought.com/programming/2015/08/02/rails-in-action-capistrano/
