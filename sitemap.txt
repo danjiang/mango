@@ -39,3 +39,4 @@ http://blog.danthought.com/programming/2015/08/02/rails-in-action-capistrano/
 http://blog.danthought.com/business/2015/08/08/donot-go-hiding/
 http://blog.danthought.com/business/2015/08/16/daily-weight-tracker/
 http://blog.danthought.com/programming/2015/08/23/browser-cache/
+http://blog.danthought.com/business/2015/08/30/health-diary-v1-0-0/

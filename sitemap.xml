@@ -168,4 +168,8 @@
 		<loc>http://blog.danthought.com/programming/2015/08/23/browser-cache/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/business/2015/08/30/health-diary-v1-0-0/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
