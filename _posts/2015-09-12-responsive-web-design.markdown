@@ -1,5 +1,5 @@
 ---
-title: Responsive Web Design
+title: 自适应网页设计
 author: 但江
 location: 成都 
 category: design
