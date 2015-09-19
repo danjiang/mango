@@ -176,4 +176,8 @@
 		<loc>http://blog.danthought.com/design/2015/09/12/responsive-web-design/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/09/19/faceted-search-solr/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
