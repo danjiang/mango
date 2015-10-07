@@ -184,4 +184,8 @@
 		<loc>http://blog.danthought.com/design/2015/09/27/milk-bottle-design/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/design/2015/10/04/sass-for-web-designers/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>

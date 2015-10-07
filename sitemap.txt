@@ -43,3 +43,4 @@ http://blog.danthought.com/business/2015/08/30/health-diary-v1-0-0/
 http://blog.danthought.com/design/2015/09/12/responsive-web-design/
 http://blog.danthought.com/programming/2015/09/19/faceted-search-solr/
 http://blog.danthought.com/design/2015/09/27/milk-bottle-design/
+http://blog.danthought.com/design/2015/10/04/sass-for-web-designers/

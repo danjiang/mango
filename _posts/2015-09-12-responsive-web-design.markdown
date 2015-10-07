@@ -62,3 +62,7 @@ category: design
 * Turn mockup into html, change browser window size to test.
 * Test on devices and laptops to gather issues.
 * Change page mockup, treat it as a blueprint to design other pages.
+
+#### References
+
+[A Book Apart - Responsive Web Design](http://abookapart.com/products/responsive-web-design)
