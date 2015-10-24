@@ -196,4 +196,8 @@
 		<loc>http://blog.danthought.com/business/2015/10/18/do-not-just-be-a-dreamer/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/10/24/solr-introduction/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
