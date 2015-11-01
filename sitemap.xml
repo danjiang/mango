@@ -200,4 +200,8 @@
 		<loc>http://blog.danthought.com/programming/2015/10/24/solr-introduction/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/11/01/http-server-performance-optimize/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
