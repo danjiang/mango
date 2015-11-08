@@ -70,7 +70,7 @@ apache2ctl 命令可以用来启动，停止 apache，与使用启动脚本（/e
 
 	graceful|graceful-stop
 
-apache2ctl 的 graceful 参数会重启 apache 服务，但是不会影响已经存在的连接，graceful-stop 参数与 stop 类似，但是会让 apache 当前的连接完成任务后再停止掉，也就是说web 服务重启或关闭，进程会继续在旧的配置下处理完已有的连接。
+apache2ctl 的 graceful 参数会重启 apache 服务，但是不会影响已经存在的连接，graceful-stop 参数与 stop 类似，但是会让 apache 当前的连接完成任务后再停止掉，也就是说 web 服务重启或关闭，进程会继续在旧的配置下处理完已有的连接。
 
 所以使用 graceful 参数在重启 web 服务时，不会打断用户的使用，但是实际应用中，graceful 参数执行不是很完美，有可能会出问题，如果修改了很多配置信息，最好使用 restart 更可靠些。
 
