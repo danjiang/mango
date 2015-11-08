@@ -48,3 +48,4 @@ http://blog.danthought.com/business/2015/10/11/apple-keynote-review/
 http://blog.danthought.com/business/2015/10/18/do-not-just-be-a-dreamer/
 http://blog.danthought.com/programming/2015/10/24/solr-introduction/
 http://blog.danthought.com/programming/2015/11/01/http-server-performance-optimize/
+http://blog.danthought.com/programming/2015/11/08/installing-apache-on-ubuntu/
