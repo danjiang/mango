@@ -216,4 +216,8 @@
 		<loc>http://blog.danthought.com/programming/2015/11/22/configuring-the-apache-mpm-on-ubuntu/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/11/28/apache-key-configuration-on-ubuntu/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
