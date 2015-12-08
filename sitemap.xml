@@ -224,4 +224,8 @@
 		<loc>http://blog.danthought.com/programming/2015/12/05/apache-virtual-hosts-on-ubuntu-part1/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2015/12/12/apache-virtual-hosts-on-ubuntu-part2/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>

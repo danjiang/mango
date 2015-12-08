@@ -53,3 +53,4 @@ http://blog.danthought.com/programming/2015/11/14/apache-configuration-files-on-
 http://blog.danthought.com/programming/2015/11/22/configuring-the-apache-mpm-on-ubuntu/
 http://blog.danthought.com/programming/2015/11/28/apache-key-configuration-on-ubuntu/
 http://blog.danthought.com/programming/2015/12/05/apache-virtual-hosts-on-ubuntu-part1/
+http://blog.danthought.com/programming/2015/12/12/apache-virtual-hosts-on-ubuntu-part2/
