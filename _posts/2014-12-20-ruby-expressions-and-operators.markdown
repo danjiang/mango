@@ -3,6 +3,7 @@ title: Ruby 的表达式和运算
 author: 但江
 location: 成都
 category: programming
+tag: ruby
 ---
 
 ![Desk](/images/desk.jpg)

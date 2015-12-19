@@ -3,6 +3,7 @@ title: 学习 iOS 的经历
 author: 但江
 location: 成都
 category: programming
+tag: objective-c
 ---
 
 ![WWDC 2011 - 2012](/images/wwdc-2011-2012.jpg)

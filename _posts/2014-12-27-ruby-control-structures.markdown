@@ -3,6 +3,7 @@ title: Ruby 的流程控制
 author: 但江
 location: 成都
 category: programming
+tag: ruby
 ---
 
 ![Crossroad](/images/crossroad.jpg)

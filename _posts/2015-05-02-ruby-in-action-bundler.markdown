@@ -3,6 +3,7 @@ title: Ruby 实战 - Bundler
 author: 但江
 location: 成都
 category: programming
+tag: ruby
 ---
 
 [Bundler][1] 的作用是为了管理 Ruby 项目中所需要的 Gem 包，确保在开发环境，测试环境和产品环境中 Gem 包的正确安装。

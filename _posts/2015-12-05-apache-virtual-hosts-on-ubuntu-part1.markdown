@@ -1,8 +1,10 @@
 ---
-title: Ubuntu Apache 快速上手指南 - Apache 虚拟主机基础
+title: Apache 虚拟主机基础
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
+tag: ubuntu-apache
 ---
 
 通过之前的一系列的文章，你的 apache 服务应该设置完毕而且正常运行，如果你想让一个 Web 服务能够响应多个域名，你就需要为每个域名设置虚拟主机，本文中我们将设置一些示例域名的虚拟主机。

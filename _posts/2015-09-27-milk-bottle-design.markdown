@@ -1,5 +1,5 @@
 ---
-title:  奶瓶的设计
+title: 奶瓶的设计
 author: 但江
 location: 成都 
 category: design

@@ -1,8 +1,9 @@
 ---
-title: iOS 实战 - NSFetchedResultsController
+title: 深入 NSFetchedResultsController
 author: 但江
 location: 成都
 category: programming
+tag: objective-c
 ---
 
 NSFetchedResultsController 可以说是让人又爱又恨，如果同常规的 UITableView 或 UICollectionView 进行结合，你会觉得非常爽，简单而又高效，但是如果同你自己写的视图或者其他内置视图结合时，你就会觉得用起来非常别扭。本文将阐述 NSFetchedResultsController 常规用法，然后深入其内部实现机制，从而知道如何根据自己情况构建类似 NSFetchedResultsController 的功能。

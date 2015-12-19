@@ -1,8 +1,10 @@
 ---
-title: Ubuntu Apache 快速上手指南 - 安装 Apache
+title: 安装 Apache
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
+tag: ubuntu-apache
 ---
 
 Ubuntu 是一个非常流行的 Linux 操作系统，很多虚拟主机服务商都有支持这个操作系统，Apache HTTP Server 也是很流行 Web 服务软件，在 Ubuntu 上安装 Apache HTTP Server 很方便。

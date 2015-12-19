@@ -3,6 +3,7 @@ title: Ruby 的类和模块
 author: 但江
 location: 成都
 category: programming
+tag: ruby
 ---
 
 ![Bikes](/images/bikes.jpg)

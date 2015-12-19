@@ -3,6 +3,7 @@ title: 开始学习 Ruby
 author: 但江
 location: 成都 
 category: programming
+tag: ruby
 ---
 
 > Ruby 设计理念是为了让程序员使用时感到快乐

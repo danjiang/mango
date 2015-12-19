@@ -3,6 +3,7 @@ title: Rails 实战 - Capistrano
 author: 但江
 location: 成都
 category: programming
+tag: rails
 ---
 
 [Capistrano][1] 是 Ruby 编写的服务器自动化和部署工具，不是只能部署 Ruby 编写的项目，任何语言编写的项目都可以。

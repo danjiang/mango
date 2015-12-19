@@ -22,105 +22,59 @@ layout: default
 
 	<div class="post-featured">
 		<h5 class="post-featured-icon">精彩推荐</h5>
-		<div class="post-featured-brief-left">
-		{% assign foundImage = 0 %}
-		{% assign images = site.posts.first.content | split:"<img " %}
-		{% for image in images %}
-			{% if image contains 'src' %}
-				{% if foundImage == 0 %}
-					{% assign html = image | split:"/>" | first %}
-						<img {{ html }} />
-					{% assign foundImage = 1 %}
-				{% endif %}
-			{% endif %}
+		{% for post in site.tags.featured limit:4 %}
+			<div class="post-featured-brief">
+				{% assign foundImage = 0 %}
+				{% assign images = post.content | split:"<img " %}
+				{% for image in images %}
+					{% if image contains 'src' %}
+						{% if foundImage == 0 %}
+							{% assign html = image | split:"/>" | first %}
+								<img {{ html }} />
+							{% assign foundImage = 1 %}
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+				<h4><a href="{{ post.url }}">{{ post.title}}</a></h4>
+				{{ post.excerpt | markdownify}}
+			</div>
 		{% endfor %}
-		<h4><a href="{{ site.posts.first.url }}">{{ site.posts.first.title}}</a></h4>
-		{{ site.posts.first.excerpt | markdownify}}
-		</div>
-
-		<div class="post-featured-brief-right">
-		{% assign foundImage = 0 %}
-		{% assign images = site.posts.first.content | split:"<img " %}
-		{% for image in images %}
-			{% if image contains 'src' %}
-				{% if foundImage == 0 %}
-					{% assign html = image | split:"/>" | first %}
-						<img {{ html }} />
-					{% assign foundImage = 1 %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-		<h4><a href="{{ site.posts.first.url }}">{{ site.posts.first.title}}</a></h4>
-		{{ site.posts.first.excerpt | markdownify}}
-		</div>
-
-		<div class="post-featured-brief-left">
-		{% assign foundImage = 0 %}
-		{% assign images = site.posts.first.content | split:"<img " %}
-		{% for image in images %}
-			{% if image contains 'src' %}
-				{% if foundImage == 0 %}
-					{% assign html = image | split:"/>" | first %}
-						<img {{ html }} />
-					{% assign foundImage = 1 %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-		<h4><a href="{{ site.posts.first.url }}">{{ site.posts.first.title}}</a></h4>
-		{{ site.posts.first.excerpt | markdownify}}
-		</div>
-
-		<div class="post-featured-brief-right">
-		{% assign foundImage = 0 %}
-		{% assign images = site.posts.first.content | split:"<img " %}
-		{% for image in images %}
-			{% if image contains 'src' %}
-				{% if foundImage == 0 %}
-					{% assign html = image | split:"/>" | first %}
-						<img {{ html }} />
-					{% assign foundImage = 1 %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-		<h4><a href="{{ site.posts.first.url }}">{{ site.posts.first.title}}</a></h4>
-		{{ site.posts.first.excerpt | markdownify}}
-		</div>
 		<div class="clearfix"></div>
 	</div>
 
 	<div class="post-series">
 		<h5 class="post-series-icon">专题系列</h5>
-		<div class="post-series-tag-left">
-			<h5>Ruby</h5>
+		<div class="post-series-tag">
+			<h6>Ubuntu Apache</h6>
 			<ul>
-				{% for post in site.tags.ubuntu-apache %}
+				{% for post in site.tags.ubuntu-apache reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>
 		</div>	
-
-		<div class="post-series-tag-right">
-			<h5>Rails</h5>
+		
+		<div class="post-series-tag">
+			<h6>Ruby</h6>
 			<ul>
-				{% for post in site.categories.design %}
+				{% for post in site.tags.ruby reversed %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="post-series-tag">
+			<h6>Objective-C</h6>
+			<ul>
+				{% for post in site.tags.objective-c reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>
 		</div>	
-
-		<div class="post-series-tag-left">
-			<h5>Ubuntu Apache</h5>
+		
+		<div class="post-series-tag">
+			<h6>Rails</h6>
 			<ul>
-				{% for post in site.categories.programming %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
-		</div>	
-
-		<div class="post-series-tag-right">
-			<h5>Objective-C</h5>
-			<ul>
-				{% for post in site.categories.operation %}
+				{% for post in site.tags.rails reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>
@@ -130,17 +84,8 @@ layout: default
 
 	<div class="post-archive">
 		<h5 class="post-archive-icon">分类归档</h5>
-		<div class="post-archive-category-left">
-			<h5>商业</h5>
-			<ul>
-				{% for post in site.categories.business %}
-				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
-		</div>	
-
-		<div class="post-archive-category-right">
-			<h5>编程</h5>
+		<div class="post-archive-category">
+			<h6>编程</h6>
 			<ul>
 				{% for post in site.categories.programming %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -148,8 +93,17 @@ layout: default
 			</ul>
 		</div>	
 		
-		<div class="post-archive-category-left">
-			<h5>设计</h5>
+		<div class="post-archive-category">
+			<h6>商业</h6>
+			<ul>
+				{% for post in site.categories.business %}
+				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>	
+
+		<div class="post-archive-category">
+			<h6>设计</h6>
 			<ul>
 				{% for post in site.categories.design %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -157,8 +111,8 @@ layout: default
 			</ul>
 		</div>	
 
-		<div class="post-archive-category-left">
-			<h5>运营</h5>
+		<div class="post-archive-category">
+			<h6>运营</h6>
 			<ul>
 				{% for post in site.categories.operation %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>

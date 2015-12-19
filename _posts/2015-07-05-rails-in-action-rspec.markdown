@@ -3,6 +3,7 @@ title: Rails 实战 - RSpec
 author: 但江
 location: 成都
 category: programming
+tag: rails
 ---
 
 Ruby 社区一直都喜欢测试驱动开发，Rails 框架内置就有测试模块，本文将介绍如何利用 [RSpec][1] 来做单元测试，当然 [RSpec][1] 也可以用来做集成测试。

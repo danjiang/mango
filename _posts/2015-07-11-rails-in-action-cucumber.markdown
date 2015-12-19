@@ -3,6 +3,7 @@ title: Rails 实战 - Cucumber
 author: 但江
 location: 成都
 category: programming
+tag: rails
 ---
 
 从上周的文章 [Rails 实战 - RSpec][1] 了解到如何做单元测试，本文将介绍如何利用 [Cucumber][2] 来做行为驱动测试。

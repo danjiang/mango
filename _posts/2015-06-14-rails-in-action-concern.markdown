@@ -3,6 +3,7 @@ title: Rails 实战 - Concern
 author: 但江
 location: 成都
 category: programming
+tag: rails
 ---
 
 Rails 项目中通常都是将业务逻辑写在 Model 中，有时候一些业务逻辑不仅仅只是在一个特定的 Model 中，有时候一些相同的业务逻辑适用于多个 Model，我们就可以利用 [ActiveSupport::Concern][2] 来做封装。

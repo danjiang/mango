@@ -1,8 +1,10 @@
 ---
-title: Ubuntu Apache 快速上手指南 - Apache MPM
+title: Apache MPM
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
+tag: ubuntu-apache
 ---
 
 有一部分 apache 的安装是 MPM，是 Multi-Processing Method（多路处理模块）的简称，MPM 决定 apache 用什么机制来处理多路连接，在 [Ubuntu Apache 快速上手指南 - Apache 配置文件][1] 中，我们已经知道 apache 配置文件的放置位置，本文将会详细阐述 MPM 的详细配置，你会知道如何根据你的环境优化设置。

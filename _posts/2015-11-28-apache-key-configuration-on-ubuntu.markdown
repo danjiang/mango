@@ -1,8 +1,10 @@
 ---
-title: Ubuntu Apache 快速上手指南 - Apache 关键配置
+title: Apache 关键配置
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
+tag: ubuntu-apache
 ---
 
 我们已经知道[如何安装 Apache][1]，以及 [Apache 配置文件的放置位置][2]，还有 [MPM 的设置][3]，本文中我们浏览一些 Apache 常见的关键配置，让 Apache 更安全，更有效率。

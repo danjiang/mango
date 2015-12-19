@@ -3,6 +3,7 @@ title: Ruby 实战 - RubyGems
 author: 但江
 location: 成都
 category: programming
+tag: ruby
 ---
 
 RubyGems 是 Ruby 标准的打包，分享代码的方式，[RubyGems.org][1] 为 Ruby 社区提供了 Gem 托管服务，国内网络的原因，你可以使用淘宝提供的 [RubyGems 国内镜像][2]，本文会介绍使用 RubyGems 的命令来管理 Gem，还会做一个简单的 Gem 来发布

@@ -66,18 +66,6 @@
 	}
 }
 
-.post-featured-brief {
-	width: 45%;
-	margin-bottom: $spacing-unit;
-	h4 {
-		margin-top: $spacing-unit / 2;
-		margin-bottom: $spacing-unit / 2;
-		a {
-			text-decoration: none;
-		}
-	}
-}
-
 .post-featured {
 	padding-bottom: $spacing-unit;
 	margin-bottom: $spacing-unit * 2;
@@ -85,37 +73,23 @@
 	h5.post-featured-icon {
 		@include icon('/images/star.png')
 	}
-	div.post-featured-brief-left {
-		@extend .post-featured-brief;
+	div.post-featured-brief {
 		float: left;
-	}
-	div.post-featured-brief-right {
-		@extend .post-featured-brief;
-		float: right;
-	}
-}
-
-.post-series-tag {
-	width: 45%;
-	margin-bottom: $spacing-unit;
-	ul {
-		margin: 0;
-		padding-left: 1.35em;
-		li {
-			list-style: none;
-			&:before {
-				content: "";
-				border-color: transparent $grey-color;
-				border-style: solid;
-				border-width: 0.35em 0 0.35em 0.45em;
-				display: block;
-				height: 0;
-				width: 0;
-				left: -1em;
-				top: 1.2em;
-				position: relative;
+		width: 45%;
+		margin-right: 5%;
+		margin-bottom: $spacing-unit;
+		h4 {
+			margin-top: $spacing-unit / 2;
+			margin-bottom: $spacing-unit / 2;
+			a {
+				text-decoration: none;
 			}
 		}
+		@include media-query($on-phone) {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+		}	
 	}
 }
 
@@ -126,31 +100,35 @@
 	h5.post-series-icon {
 		@include icon('/images/folder-document.png')
 	}
-	div.post-series-tag-left {
-		@extend .post-series-tag;
+	div.post-series-tag {
 		float: left;
-	}
-	div.post-series-tag-right {
-		@extend .post-series-tag;
-		float: right;
-	}
-}
-
-.post-archive-category {
-	width: 45%;
-	margin-bottom: $spacing-unit;
-	ul {
-		margin: 0;
-		padding: 0;
-		li {
+		width: 45%;
+		margin-right: 5%;
+		margin-bottom: $spacing-unit;
+		ul {
 			margin: 0;
-			padding: 0;
-			list-style: none;
-			span {
-				font-size: $small-font-size;
-				color: $grey-color;
+			padding-left: 1.35em;
+			li {
+				list-style: none;
+				&:before {
+					content: "";
+					border-color: transparent $grey-color;
+					border-style: solid;
+					border-width: 0.35em 0 0.35em 0.45em;
+					display: block;
+					height: 0;
+					width: 0;
+					left: -1em;
+					top: 1.2em;
+					position: relative;
+				}
 			}
 		}
+		@include media-query($on-phone) {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+		}	
 	}
 }
 
@@ -159,13 +137,29 @@
 	h5.post-archive-icon {
 		@include icon('/images/calendar.png')
 	}
-	div.post-archive-category-left {
-		@extend .post-archive-category;
+	div.post-archive-category {
 		float: left;
-	}
-	div.post-archive-category-right {
-		@extend .post-archive-category;
-		float: right;
+		width: 45%;
+		margin-right: 5%;
+		margin-bottom: $spacing-unit;
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				span {
+					font-size: $small-font-size;
+					color: $grey-color;
+				}
+			}
+		}
+		@include media-query($on-phone) {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+		}	
 	}
 }
 

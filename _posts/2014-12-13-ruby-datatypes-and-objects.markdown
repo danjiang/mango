@@ -3,6 +3,7 @@ title: Ruby 的数据类型和对象
 author: 但江
 location: 成都 
 category: programming
+tag: ruby
 ---
 
 ![Cans](/images/cans.jpg)

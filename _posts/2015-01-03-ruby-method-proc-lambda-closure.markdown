@@ -3,6 +3,7 @@ title: Ruby 的方法，Proc，Lambda 和闭包
 author: 但江
 location: 成都
 category: programming
+tag: ruby
 ---
 
 ![Typewriter](/images/typewriter.jpg)

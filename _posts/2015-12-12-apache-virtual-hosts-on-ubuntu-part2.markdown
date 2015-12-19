@@ -1,11 +1,15 @@
 ---
-title: Ubuntu Apache 快速上手指南 - Apache 虚拟主机配置详解
+title: Apache 虚拟主机配置详解
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
+tag: ubuntu-apache
 ---
 
 我们知道虚拟主机的基本配置方法，本文将会深入了解一些虚拟主机的配置项，有些配置选项在前面的文章有出现过，有的没有出现过，需要注意一点，有些指令在 apache 主配置文件和虚拟主机的配置中都可以设置，如果两个文件有同样的配置，VirtualHost 配置块中的配置会起作用，你应该花时间来通读这些配置的阐述，你才能明白虚拟主机的功能强大。
+
+![Apache HTTP Server](/images/apache-http-server.jpg)
 
 #### ServerAdmin
 

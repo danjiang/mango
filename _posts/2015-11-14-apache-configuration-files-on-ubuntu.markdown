@@ -1,8 +1,10 @@
 ---
-title: Ubuntu Apache 快速上手指南 - Apache 配置文件
+title:  Apache 配置文件
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
+tag: ubuntu-apache
 ---
 
 在这篇文章中，我们将要看一下通过 apt-get 安装的 apache 在 ubuntu 上的配置文件放置位置和简短功能介绍。

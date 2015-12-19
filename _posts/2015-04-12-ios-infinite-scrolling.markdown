@@ -3,6 +3,7 @@ title: iOS 实战 - Infinite Scrolling
 author: 但江
 location: 成都
 category: programming
+tag: objective-c
 ---
 
 ![Weight Ruler](/images/weight-ruler.gif)
