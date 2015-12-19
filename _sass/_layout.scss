@@ -1,3 +1,10 @@
+@mixin icon($image) {
+	background: url($image) left center no-repeat;
+	background-size: 24px 24px;
+	padding-left: 32px;
+	margin-bottom: $spacing-unit;
+}
+
 /**
  * Site header
  */
@@ -33,14 +40,105 @@
  */
 .site-content {
 	padding: $spacing-unit 0;
+	p {
+		margin-bottom: 0;
+	}
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
-.post-archive {
-	padding: $spacing-unit 0 0;
-	h2 {
-		font-size: $base-font-size;
-		font-weight: bold;
+.post-latest {
+	padding-bottom: $spacing-unit * 2;
+	margin-bottom: $spacing-unit * 2;
+	border-bottom: 1px solid $grey-color-light;
+	h5.post-latest-icon {
+		@include icon('/images/flask.png')
 	}
+	h3 {
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.post-featured-brief {
+	width: 45%;
+	margin-bottom: $spacing-unit;
+	h4 {
+		margin-top: $spacing-unit / 2;
+		margin-bottom: $spacing-unit / 2;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.post-featured {
+	padding-bottom: $spacing-unit;
+	margin-bottom: $spacing-unit * 2;
+	border-bottom: 1px solid $grey-color-light;
+	h5.post-featured-icon {
+		@include icon('/images/star.png')
+	}
+	div.post-featured-brief-left {
+		@extend .post-featured-brief;
+		float: left;
+	}
+	div.post-featured-brief-right {
+		@extend .post-featured-brief;
+		float: right;
+	}
+}
+
+.post-series-tag {
+	width: 45%;
+	margin-bottom: $spacing-unit;
+	ul {
+		margin: 0;
+		padding-left: 1.35em;
+		li {
+			list-style: none;
+			&:before {
+				content: "";
+				border-color: transparent $grey-color;
+				border-style: solid;
+				border-width: 0.35em 0 0.35em 0.45em;
+				display: block;
+				height: 0;
+				width: 0;
+				left: -1em;
+				top: 1.2em;
+				position: relative;
+			}
+		}
+	}
+}
+
+.post-series {
+	padding-bottom: $spacing-unit;
+	margin-bottom: $spacing-unit * 2;
+	border-bottom: 1px solid $grey-color-light;
+	h5.post-series-icon {
+		@include icon('/images/folder-document.png')
+	}
+	div.post-series-tag-left {
+		@extend .post-series-tag;
+		float: left;
+	}
+	div.post-series-tag-right {
+		@extend .post-series-tag;
+		float: right;
+	}
+}
+
+.post-archive-category {
+	width: 45%;
+	margin-bottom: $spacing-unit;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -53,6 +151,21 @@
 				color: $grey-color;
 			}
 		}
+	}
+}
+
+.post-archive {
+	margin-bottom: $spacing-unit;
+	h5.post-archive-icon {
+		@include icon('/images/calendar.png')
+	}
+	div.post-archive-category-left {
+		@extend .post-archive-category;
+		float: left;
+	}
+	div.post-archive-category-right {
+		@extend .post-archive-category;
+		float: right;
 	}
 }
 
