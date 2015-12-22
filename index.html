@@ -36,7 +36,7 @@ layout: default
 					{% endif %}
 				{% endfor %}
 				<h4><a href="{{ post.url }}">{{ post.title}}</a></h4>
-				{{ post.excerpt | markdownify}}
+				{{ post.excerpt | strip_html }}
 			</div>
 		{% endfor %}
 		<div class="clearfix"></div>

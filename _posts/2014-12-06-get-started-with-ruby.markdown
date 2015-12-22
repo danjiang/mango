@@ -1,6 +1,7 @@
 ---
 title: 开始学习 Ruby 
 author: 但江
+avatar: danjiang
 location: 成都 
 category: programming
 tag: ruby
@@ -8,21 +9,25 @@ tag: ruby
 
 > Ruby 设计理念是为了让程序员使用时感到快乐
 
-#### 安装 Ruby
+## 安装 Ruby
 
 针对 Mac 或者 Linux 用户来说，安装 RVM（RVM 可以让你在系统上安装不同版本的 Ruby 和管理不同的 Gemsets）
 
-	$\curl -sSL https://get.rvm.io | bash -s stable
+{% highlight text %}
+$ \curl -sSL https://get.rvm.io | bash -s stable
+{% endhighlight %}
 
 通过 RVM 安装 Ruby
 
-	$rvm install 2.0.0
+{% highlight text %}
+$ rvm install 2.0.0
+{% endhighlight %}
 
-在终端中运行 `irb` 可以运行交互式的 Ruby Shell，敲一敲代码来感受真实 Ruby 代码
+在终端中运行 **irb** 可以运行交互式的 Ruby Shell，敲一敲代码来感受真实 Ruby 代码
 
-#### Ruby 的特性
+## Ruby 的特性
 
-一切都是对象
+### 一切都是对象
 
 {% highlight ruby %}
 1.class # => Fixnum 类的对象
@@ -32,14 +37,14 @@ false.class # => FalseClass
 nil.class # => NilClass
 {% endhighlight %}
 
-块和迭代器
+### 块和迭代器
 
 {% highlight ruby %}
 3.times { print "Ruby! " } # 输出 "Ruby! Ruby! Ruby! "
 1.upto(9) { |x| print x } # 输出 "123456789"
 {% endhighlight %}
 
-数组
+### 数组
 
 {% highlight ruby %}
 a = [3, 2, 1] # 创建数组 
@@ -49,7 +54,7 @@ a.each do |elt| # each 是一个迭代器，elt 是传递到块中的参数
 end
 {% endhighlight %}
 
-哈希
+### 哈希
 
 {% highlight ruby %}
 h = { :one => 1, :two => 2 } # 创建哈希
@@ -60,7 +65,7 @@ h.each do |key, value| # 遍历哈希中的键值
 end
 {% endhighlight %}
 
-表达式和运算符
+### 表达式和运算符
 
 {% highlight ruby %}
 1 + 2 # => 3: 加法
@@ -71,7 +76,7 @@ end
 "Ruby! " * 3 # => "Ruby! Ruby! Ruby! ": 重复
 {% endhighlight %}
 
-方法
+### 方法
 
 {% highlight ruby %}
 def square(x) # 定义一个名为 square 的方法，只有一个参数 x
@@ -79,7 +84,7 @@ def square(x) # 定义一个名为 square 的方法，只有一个参数 x
 end
 {% endhighlight %}
 
-赋值
+### 赋值
 
 {% highlight ruby %}
 x, y = 1, 2 # 同样的效果: x = 1; y = 2
@@ -87,13 +92,13 @@ a, b = b, a # 交换两个变量的值
 x, y, z = [1, 2, 3] # 数组的元素自动赋给三个变量
 {% endhighlight %}
 
-标点符号后缀和前缀
+### 标点符号后缀和前缀
 
-`Array` 和 `Hash` 都有 `empty?` 方法，`?` 表明方法的返回值是布尔值，`Array` 有定义 `sort` 和 `sort!` 方法，`sort` 会返回排序后的数组，但是不会改变原来的数组，`sort!` 会将数组本身顺序改变，`!` 表明调用方法时要明确其后果
+**Array** 和 **Hash** 都有 **empty?** 方法，**?** 表明方法的返回值是布尔值，**Array** 有定义 **sort** 和 **sort!** 方法，**sort** 会返回排序后的数组，但是不会改变原来的数组，**sort!** 会将数组本身顺序改变，**!** 表明调用方法时要明确其后果
 
-你应该会注意到很多 Ruby 变量名从标点符号开始，全局变量由 `$` 开始，实例变量由 `@` 开始，类变量由 `@@` 开始
+你应该会注意到很多 Ruby 变量名从标点符号开始，全局变量由 **$** 开始，实例变量由 **@** 开始，类变量由 **@@** 开始
 
-正则和区间
+### 正则和区间
 
 {% highlight ruby %}
 /[Rr]uby/ # 匹配 "Ruby" 或 "ruby"
@@ -102,7 +107,7 @@ x, y, z = [1, 2, 3] # 数组的元素自动赋给三个变量
 1...3 # 1到3，不包含3 
 {% endhighlight %}
 
-类和模块
+### 类和模块
 
 {% highlight ruby %}
 class Sequence # 定义一个类
