@@ -1,6 +1,7 @@
 ---
 title: 深入 NSFetchedResultsController
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
 tag: objective-c
@@ -8,7 +9,7 @@ tag: objective-c
 
 NSFetchedResultsController 可以说是让人又爱又恨，如果同常规的 UITableView 或 UICollectionView 进行结合，你会觉得非常爽，简单而又高效，但是如果同你自己写的视图或者其他内置视图结合时，你就会觉得用起来非常别扭。本文将阐述 NSFetchedResultsController 常规用法，然后深入其内部实现机制，从而知道如何根据自己情况构建类似 NSFetchedResultsController 的功能。
 
-#### 常规用法 
+## 常规用法 
 
 Controller 中有 NSFetchedResultsController 的属性。
 
@@ -111,7 +112,7 @@ UITableView 通过 NSFetchedResultsControllerDelegate 感知数据库的变化�
 }
 {% endhighlight %}
 
-#### 深入内部
+## 深入内部
 
 常见的情况是我们希望自己写的视图能够感知数据库的变化来自动更新内容，但是又不想像 NSFetchedResultsController 同 UITableView 内容结构绑定的这么死，那么我们就要了解一下 NSFetchedResultsController 是如何感知数据库的变化的，NSFetchedResultsController 通过监听 NSManagedObjectContext 发出的 NSManagedObjectContextObjectsDidChangeNotification， NSManagedObjectContextWillSaveNotification 和 NSManagedObjectContextDidSaveNotification 来感知数据库的变化，并且进一步缓存数据，控制 NSIndexPath 和数据之间的对应关系等等。
 

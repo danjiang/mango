@@ -1,18 +1,19 @@
 ---
 title: iOS 实战 - Infinite Scrolling
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
 tag: objective-c
 ---
 
-![Weight Ruler](/images/weight-ruler.gif)
+![Weight Ruler]({{ site.image_base_url }}/weight-ruler.gif)
 
-以上动画展示了应用[每日体重记录][1]中通过尺子来输入体重，要实现尺子的输入控件需要通过继承 UIScrollView 来做 Infinite Scrolling。
+以上动画展示了应用 [每日体重记录][1] 中通过尺子来输入体重，要实现尺子的输入控件需要通过继承 UIScrollView 来做 Infinite Scrolling。
 
-#### 尺子中的刻度
+## 尺子中的刻度
 
-![Weight Ruler Scale](/images/weight-ruler-scale.jpg)
+![Weight Ruler Scale]({{ site.image_base_url }}/weight-ruler-scale.jpg)
 
 首先我们需要通过继承 UIView 来实现上图中的刻度块，一个刻度块包含十个刻度和一个刻度值，不需要使用图片，通过 Quartz 框架来绘制，代码如下：
 
@@ -99,7 +100,7 @@ const CGFloat DTRulerScaleGap = 10;
 @end
 {% endhighlight %}
 
-#### UIScrollView Infinite Scrolling
+## UIScrollView Infinite Scrolling
 
 我们已经实现了尺子的刻度块，刻度块的长度为 100 点，如果以 iPhone 4s 的宽度，用户能够看到的刻度块也就是 3 个多一点，所以我们设定由 5 个刻度块首尾相接组成一把尺子，代码如下：
 
@@ -308,7 +309,7 @@ static const int DTRulerMaxScale = 999;
 }
 {% endhighlight %}
 
-#### 用户体验在于细节
+## 用户体验在于细节
 
 用户滑动尺子后，我们应该保证指向刻度的箭头指在刻度线上，而不是空隙上，同样的还需要将指向的刻度值显示出来，都是通过 UIScrollViewDelegate 来实现的，需要注意的是用户滑动频率比较快时，刻度值的变化就比较快，很有可能超过视图的渲染频率，所以需要 isEnoughTimeElapsed 方法来确认是不是过了足够的时间来降低改变刻度值的频率，视图渲染的原则如下：
 
