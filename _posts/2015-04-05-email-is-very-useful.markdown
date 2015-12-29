@@ -4,6 +4,7 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: operation
+tag: featured
 ---
 
 电子邮件的使用已经非常普遍，只要接触互联网的用户都不太可能没有电子邮件，注册了 QQ 也就对应有了 QQ 邮箱，初次使用 iPhone 需要注册 Apple ID，也就有了 iCloud 邮箱，很多企业也为工作人员提供了企业邮箱，然而在社交网络流行的如今，我们却容易忘记简单的电子邮件可以发挥很大的作用。

@@ -1,21 +1,22 @@
 ---
 title: 媒体资料
 author: 但江
+avatar: danjiang
 location: 成都 
 category: business
 ---
 
-媒体资料就是给媒体准备的资料包，不要以为媒体就是电视台，有名的博主、独立的测评网站等等都是媒体，国外的应用开发商都非常重视和这种类型的媒体建立联系，媒体可以帮助你更好地宣传产品，产生很大的正面效应。我一开始并没有把准备媒体资料当回事，直到[热量助手][1]被 App Store 在首页推荐，然后就有一些发掘新产品的网站和我联系，我才认识到准备媒体资料和媒体建立联系非常有必要。
+媒体资料就是给媒体准备的资料包，不要以为媒体就是电视台，有名的博主、独立的测评网站等等都是媒体，国外的应用开发商都非常重视和这种类型的媒体建立联系，媒体可以帮助你更好地宣传产品，产生很大的正面效应。我一开始并没有把准备媒体资料当回事，直到 [热量助手][1] 被 App Store 在首页推荐，然后就有一些发掘新产品的网站和我联系，我才认识到准备媒体资料和媒体建立联系非常有必要。
 
-#### Clear 的示例
+## Clear 的示例
 
 来自 Realmac Software 的 Dan Counsell 所写的文章 [Putting Together an App Press Kit][2] 很清楚阐述了要准备的资料。下面是 Clear 媒体资料的目录结构：
 
-![Clear Press Kit](/images/clear-press-kit.png)
+![Clear Press Kit]({{ site.image_base_url }}/clear-press-kit.png)
 
-#### [热量助手][1]的示例
+## 热量助手的示例
 
-我根据上面 Clear 的示例，比较仓促地准备了[热量助手的媒体资料][3]，算是一个开始吧，新版的时候再优化。
+我根据上面 Clear 的示例，比较仓促地准备了 [热量助手的媒体资料][3]，算是一个开始吧，新版的时候再优化。
 
 [1]: http://danthought.com/calorie
 [2]: http://dancounsell.com/articles/putting-together-an-app-press-kit

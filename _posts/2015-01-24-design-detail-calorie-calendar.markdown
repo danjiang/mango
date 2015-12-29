@@ -4,10 +4,9 @@ author: 但江
 avatar: danjiang
 location: 成都 
 category: design
-tag: featured
 ---
 
-现有版本的[热量记录][calorie]是通过表格分段来显示每一天的热量记录，当记录时间周期已经很长时，要导航到某一天的记录非常的不灵活，很多根据日期来记录信息的应用，为了方便找到特定日期的信息，使用日历是一种很常用的方式。
+现有版本的 [热量记录][calorie] 是通过表格分段来显示每一天的热量记录，当记录时间周期已经很长时，要导航到某一天的记录非常的不灵活，很多根据日期来记录信息的应用，为了方便找到特定日期的信息，使用日历是一种很常用的方式。
 
 ![Calorie No Calnedar]({{ site.image_base_url }}/calorie1.1-no-calendar.png)
 

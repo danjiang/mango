@@ -1,13 +1,14 @@
 ---
 title: Sass for Web Designers
 author: 但江
+avatar: danjiang
 location: 成都 
 category: design
 ---
 
-![Sass for Web Designers](/images/sass-for-web-designers.jpg)
+![Sass for Web Designers]({{ site.image_base_url }}/sass-for-web-designers.jpg)
 
-#### Nesting
+## Nesting
 
 With Sass, you can nest CSS rules inside each other instead of repeating selectors in separate declarations. The nesting also reflects the markup structure.
 
@@ -31,7 +32,7 @@ font: {
 }
 {% endhighlight %}
 
-Reference the current parent selector using the ampersand `&` as a special placeholder.
+Reference the current parent selector using the ampersand **&** as a special placeholder.
 
 {% highlight css %}
 li a {
@@ -47,9 +48,9 @@ li a {
 }
 {% endhighlight %}
 
-#### Variables
+## Variables
 
-Variables in Sass are defined like regular CSS rules using the `$`. Using the `darken` or `lighten` color function in Sass, we can generate different shades of color that will always be based on the brand palette.
+Variables in Sass are defined like regular CSS rules using the **$**. Using the **darken** or **lighten** color function in Sass, we can generate different shades of color that will always be based on the brand palette.
 
 {% highlight css %}
 $font-stack: Helvetica, sans-serif;
@@ -68,7 +69,7 @@ $mobile-first: "screen and (min-width: 300px)";
 @media #{$mobile-first} {}
 {% endhighlight %}
 
-#### Mixins
+## Mixins
 
 Use mixins to define a group of styles just once and refer to it anytime those styles are needed.
 
@@ -117,9 +118,9 @@ Retinizing hidpi background images.
 }
 {% endhighlight %}
 
-#### Import
+## Import
 
-Enter the `@import` rule, which Sass extends to allow the importing of multiple SCSS files, merging them into a single CSS file when compiled.
+Enter the **@import** rule, which Sass extends to allow the importing of multiple SCSS files, merging them into a single CSS file when compiled.
 
 {% highlight css %}
 // _reset.scss
@@ -143,9 +144,9 @@ body {
 }
 {% endhighlight %}
 
-#### Extend
+## Extend
 
-`@extend` function to chain together styles that are shared amongst multiple selectors.
+**@extend** function to chain together styles that are shared amongst multiple selectors.
 
 {% highlight css %}
 .message {
@@ -170,13 +171,13 @@ body {
 }
 {% endhighlight %}
 
-Using placeholder selectors with `@extend`. You might create a class that’s not used on its own, prefixing the class name with a `%` instead of a `.`.
+Using placeholder selectors with **@extend**. You might create a class that’s not used on its own, prefixing the class name with a **%** instead of a **.**.
 
 You can nest media queries inside the original declaration, and they will bubble up into their own separate declarations when the stylesheet is compiled.
 
-#### Operators
+## Operators
 
-Doing math in your CSS is very helpful. Sass has a handful of standard math operators like `+`, `-`, `*`, `/`, and `%`.
+Doing math in your CSS is very helpful. Sass has a handful of standard math operators like **+**, **-**, **\***, **/**, and **%**.
 
 {% highlight css %}
 .container { width: 100%; }
@@ -191,8 +192,3 @@ aside[role="complimentary"] {
   width: 300px / 960px * 100%;
 }
 {% endhighlight %}
-
-#### References
-
-* [A Book Apart - Sass for Web Designers](http://abookapart.com/products/sass-for-web-designers)
-* [Sass Basics](http://sass-lang.com/guide)

@@ -1,6 +1,7 @@
 ---
 title: Rails 实战 - Capistrano
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
 tag: rails
@@ -8,7 +9,7 @@ tag: rails
 
 [Capistrano][1] 是 Ruby 编写的服务器自动化和部署工具，不是只能部署 Ruby 编写的项目，任何语言编写的项目都可以。
 
-#### 安装
+## 安装
 
 Rails 项目中使用 [Capistrano][1]，在 Gemfile 加入如下配置：
 
@@ -18,21 +19,27 @@ gem 'capistrano', '~> 3.4.0'
 
 安装 Gems：
 
-	$ bundle install
+{% highlight text %}
+$ bundle install
+{% endhighlight %}
 
 初始化需要的目录和文件：
 
-	$ bundle exec cap install
+{% highlight text %}
+$ bundle exec cap install
+{% endhighlight %}
 
 会生成如下目录和文件：
 
-![Capistrano Rails](/images/capistrano-rails.png)
+![Capistrano Rails]({{ site.image_base_url }}/capistrano-rails.png)
 
 创建不同 stage 的配置文件
 
-	$ bundle exec cap install STAGES=local,sandbox,qa,production
+{% highlight text %}
+$ bundle exec cap install STAGES=local,sandbox,qa,production
+{% endhighlight %}
 
-#### 结构
+## 结构
 
 在服务器上部署好的项目会遵循一定的结构，假设部署到服务器的目录为：
 
@@ -42,7 +49,7 @@ set :deploy_to, '/var/www/my_app_name'
 
 部署的项目会遵循的结构：
 
-![Capistrano Deploy To](/images/capistrano-deploy-to.png)
+![Capistrano Deploy To]({{ site.image_base_url }}/capistrano-deploy-to.png)
 
 * current 链接到最近的一次版本发布
 * releases 所有的版本发布
@@ -50,7 +57,7 @@ set :deploy_to, '/var/www/my_app_name'
 * revisions.log 日志记录每一次发布和回滚
 * shared 每个发布版本之间需要保留的配置和数据
 
-#### 配置
+## 配置
 
 Capfile 文件中加载 [Capistrano][1] 需要的模块，有些模块根据需要配置：
 
@@ -189,15 +196,17 @@ after :finishing, :notify do
 end
 {% endhighlight %}
 
-#### 使用
+## 使用
 
-	# 查看所有任务
-	$ bundle exec cap -T
+{% highlight text %}
+# 查看所有任务
+$ bundle exec cap -T
 
-	# 部署到 staging 环境 
-	$ bundle exec cap staging deploy
+# 部署到 staging 环境 
+$ bundle exec cap staging deploy
 
-	# 部署到 production 环境 
-	$ bundle exec cap production deploy
+# 部署到 production 环境 
+$ bundle exec cap production deploy
+{% endhighlight %}
 
 [1]: http://capistranorb.com

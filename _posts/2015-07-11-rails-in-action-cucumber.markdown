@@ -1,6 +1,7 @@
 ---
 title: Rails 实战 - Cucumber
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
 tag: rails
@@ -8,7 +9,7 @@ tag: rails
 
 从上周的文章 [Rails 实战 - RSpec][1] 了解到如何做单元测试，本文将介绍如何利用 [Cucumber][2] 来做行为驱动测试。
 
-#### Rails 和 Cucumber
+## Rails 和 Cucumber
 
 Rails 项目中使用 [Cucumber][2]，在 Gemfile 加入如下配置：
 
@@ -26,17 +27,21 @@ end
 
 安装 Gems：
 
-	$ bundle install
+{% highlight text %}
+$ bundle install
+{% endhighlight %}
 
 初始化 features 目录，features 目录下会生成文件 support/env.rb，此文件明确一些配置项：
 
-	$ rails generate cucumber:install
+{% highlight text %}
+$ rails generate cucumber:install
+{% endhighlight %}
 
-#### [Factory Girl][3]
+## Factory Girl
 
 在文章 [Rails 实战 - RSpec][1] 中编写的 Factories，在这里还是可以使用。
 
-#### 编写 Features
+## 编写 Features
 
 > 创建锻炼，选择分类，填写名称，单位，还可以附加图片
 
@@ -67,9 +72,11 @@ Feature: Create exercise
 
 终端中运行测试，我们还没有编写步骤定义，肯定会报错：
 
-	$ bin/cucumber features/create_exercise.feature
+{% highlight text %}
+$ bin/cucumber features/create_exercise.feature
+{% endhighlight %}
 
-#### 编写 Step Definitions
+## 编写 Step Definitions
 
 通过 features/step_definitions 编写步骤定义，不同 Feature 中描述的类似场景可以使用相同的步骤定义：
 
@@ -161,13 +168,15 @@ end
 
 在 Rails 项目中实现相应的业务逻辑，终端中再次运行测试，就会看到测试通过：
 
-	$ bin/cucumber features/create_exercise.feature
+{% highlight text %}
+$ bin/cucumber features/create_exercise.feature
+{% endhighlight %}
 
-#### [Capybara][4]
+## Capybara
 
 在上面编写测试步骤的过程中，可以看到 visit, fill_in, click_button, click_link 和 attach_file 这些方法都是由 [Capybara][4] 提供的，用来执行浏览器中的操作，如访问链接，填写表单，提交表单等。
 
-#### 含有 JavaScript 操作的测试
+## 含有 JavaScript 操作的测试
 
 在 Gemfile 中包含有 selenium-webdriver，在运行包含有 JavaScript 操作的测试时，就会启动浏览器进行相应的测试，你需要做的就是在 Feature 中添加一个标记，如下：
 

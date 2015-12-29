@@ -1,38 +1,39 @@
 ---
 title: 学习 iOS 的经历
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
 tag: objective-c
 ---
 
-![WWDC 2011 - 2012](/images/wwdc-2011-2012.jpg)
-
 我从 2011 年开始 iOS 开发，走过很多弯路，其实在学习你不了解东西的时候，你甚至不知道那是弯路，直到你对这样东西有了足够的认识，你才知道什么是有效的，什么不是，所以不要管那么多，不要徘徊不前，立即开始吧。
 
-#### 书籍
+![WWDC 2011 - 2012]({{ site.image_base_url }}/wwdc-2011-2012.jpg)
 
-![Book Objective-C](/images/book-objective-c.jpg)
+## 书籍
+
+![Book Objective-C]({{ site.image_base_url }}/book-objective-c.jpg)
 
 学习 Objective-C 语法，很多人语法都没有搞清楚就开始写 iOS 应用，难怪写的跟狗屎一样，基础语法很重要，书中示例代码都要自己亲手敲入电脑。
 
-![Book Programming iOS](/images/book-programming-ios.jpg)
+![Book Programming iOS]({{ site.image_base_url }}/book-programming-ios.jpg)
 
 本书可以带领你将 Cocoa Touch 中主要内容过一篇，基本上就是可以写一些简单的应用了。
 
-![Book iOS Programming Cookbook](/images/book-ios-programming-cookbook.jpg)
+![Book iOS Programming Cookbook]({{ site.image_base_url }}/book-ios-programming-cookbook.jpg)
 
 本书做为参考就行了，就是一个问题，一个解决方案。
 
-![Book Core Data](/images/book-core-data.jpg)
+![Book Core Data]({{ site.image_base_url }}/book-core-data.jpg)
 
 讲解 Core Data 最好的书籍。
 
-![Book Quartz](/images/book-quartz.jpg)
+![Book Quartz]({{ site.image_base_url }}/book-quartz.jpg)
 
 程序员的说法就是 Core Graphics，官方的说法就是 Quartz，可能大家会觉得比较冷门的技术，但是实际开发中运用还是比较多的，有两方面的好处，一是减少图片资源文件的使用，二是可以很便捷地实现动画效果。
 
-#### [Tutorials by Ray Wenderlich][1]
+## Tutorials by Ray Wenderlich
 
 * iOS 5 by Tutorials
 * iOS 6 by Tutorials
@@ -43,15 +44,15 @@ tag: objective-c
 * iOS Animations by Tutorials
 * WatchKit by Tutorials
 
-这套教程的特点是通过编写应用代码来学习 iOS 的特性，所以一定跟着敲代码。
+[这套教程][1] 的特点是通过编写应用代码来学习 iOS 的特性，所以一定跟着敲代码。
 
-#### [Apple Programming Guide][2]
+## Apple Programming Guide
 
-苹果官方针对不同类型的内容所写编程指南，很多人说里面的内容看不明白，说写的垃圾，那是你能力不够，上面介绍的书籍和教程几乎都是依靠苹果官方编程指南和 WWDC Videos 的实践，然后编写出来的，因为早些年没有这些书籍的时候，这是唯一可学习的资源。
+苹果官方针对不同类型的内容所写 [编程指南][2]，很多人说里面的内容看不明白，说写的垃圾，那是你能力不够，上面介绍的书籍和教程几乎都是依靠苹果官方编程指南和 WWDC Videos 的实践，然后编写出来的，因为早些年没有这些书籍的时候，这是唯一可学习的资源。
 
-#### [WWDC 视频][3]
+## WWDC 视频
 
-水平达到一定程度，看 WWDC 视频是最好和最快速了解新技术的方式，然后苹果官方会相应地更新编程指南，很多技术先锋会先了解和实践这些新技术，写博客，写书籍，然后就有了最开始介绍的书籍和教程。
+水平达到一定程度，看 [WWDC][3] 视频是最好和最快速了解新技术的方式，然后苹果官方会相应地更新编程指南，很多技术先锋会先了解和实践这些新技术，写博客，写书籍，然后就有了最开始介绍的书籍和教程。
 
 看视频参考指南：
 
@@ -61,13 +62,13 @@ tag: objective-c
 4. What's New ... 都是对已有技术的更新
 5. 根据不同的主题类别选择视频观看
 
-#### Swift
+## Swift
 
-![Book The Swift Programming Language](/images/book-the-swift-programming-language.jpg)
+![Book The Swift Programming Language]({{ site.image_base_url }}/book-the-swift-programming-language.jpg)
 
 苹果官方出的 Swift 编程指南，最全面的语法参考，iBook 上可以下载。
 
-![Book Swift By Tutorials](/images/book-swift-by-tutorials.jpg)
+![Book Swift By Tutorials]({{ site.image_base_url }}/book-swift-by-tutorials.jpg)
 
 通过编写应用代码来学习 Swift 的特性。
 

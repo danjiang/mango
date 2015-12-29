@@ -1,14 +1,19 @@
 ---
 title: Rails 实战 - JavaScript
 author: 但江
+avatar: danjiang
 location: 成都
 category: programming
 tag: rails
 ---
 
-从 Rails 3.1 开始已经将 jQuery 作为默认的 Javascript 库，本文将会介绍如何结合 jQuery 和 Rails 3.1 来编写 AJAX 应用，结合 jQuery 和 Rails 3.1 关键在于 [jquery_ujs.js][1] 文件，ujs 是 Unobtrusive JavaScript 的缩写，意味着将行为 Javascript 和表现 HTML 分离开，不要写如 `<button onClick="alert('Hello')">Hello</button>` 这样的代码。
+从 Rails 3.1 开始已经将 jQuery 作为默认的 Javascript 库，本文将会介绍如何结合 jQuery 和 Rails 3.1 来编写 AJAX 应用，结合 jQuery 和 Rails 3.1 关键在于 [jquery_ujs.js][1] 文件，ujs 是 Unobtrusive JavaScript 的缩写，意味着将行为 Javascript 和表现 HTML 分离开，不要写如下面这样的代码。
 
-#### [jquery_ujs.js][1] 实现 AJAX 的原理
+{% highlight html %}
+<button onClick="alert('Hello')">Hello</button>
+{% endhighlight %}
+
+## jquery_ujs.js 实现 AJAX 的原理
 
 既然不能在 HTML 中直接为 HTML 标签绑定事件，那么将采用如下方式
 
@@ -33,10 +38,12 @@ $('a[data-remote], input[data-remote]')
 
 处理 AJAX 的响应，通过对表单和链接的回调方法来实现，如下是回调事件
 
-	ajax:beforeSend //发送请求前
-	ajax:success //请求成功
-	ajax:complete //请求完成
-	ajax:error //请求失败
+{% highlight text %}
+ajax:beforeSend //发送请求前
+ajax:success //请求成功
+ajax:complete //请求完成
+ajax:error //请求失败
+{% endhighlight %}
 
 对表单和链接的绑定相应的事件和方法
 
@@ -56,9 +63,9 @@ $('#create_comment_form')
 });
 {% endhighlight %}
 
-#### 处理不同响应类型
+## 处理不同响应类型
 
-**纯文本**
+### 纯文本
 
 Rails Controller 中
 
@@ -76,7 +83,7 @@ bind('ajax:success', function(evt, data, status, xhr){
 });
 {% endhighlight %}
 
-**HTML**
+### HTML
 
 Rails Controller 中
 
@@ -94,7 +101,7 @@ bind('ajax:success', function(evt, data, status, xhr){
 });
 {% endhighlight %}
 
-**JSON**
+### JSON
 
 Rails Controller 中
 
@@ -112,7 +119,7 @@ bind('ajax:success', function(evt, data, status, xhr){
 });
 {% endhighlight %}
 
-**Javascript**
+### Javascript
 
 Rails Controller 中
 
@@ -126,21 +133,6 @@ Javascript 文件中
 
 不用做什么，浏览器会执行返回的 Javascript 的代码
 
-#### 用jQuery 直接发送 AJAX 请求
+## 用 jQuery 直接发送 AJAX 请求
 
 使用 jQuery AJAX 发送正确类型（text, json, javascript...）的请求，Rails 返回正确类型的值即可
-
-#### 参考资料
-
-* [Rails 3 Remote Links and Forms: A Definitive Guide][2]
-* [Rails 3 Remote Links and Forms Part 2: Data-type (with jQuery)][3]
-* [jQuery API AJAX][4]
-* [Layouts and Rendering in Rails][5]
-* [Working with JavaScript in Rails][6]
-
-[1]: https://github.com/rails/jquery-ujs
-[2]: http://www.alfajango.com/blog/rails-3-remote-links-and-forms/
-[3]: http://www.alfajango.com/blog/rails-3-remote-links-and-forms-data-type-with-jquery/
-[4]: http://api.jquery.com/jQuery.ajax/
-[5]: http://guides.rubyonrails.org/layouts_and_rendering.html
-[6]: http://guides.rubyonrails.org/working_with_javascript_in_rails.html

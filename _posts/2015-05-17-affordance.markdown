@@ -1,6 +1,7 @@
 ---
 title: 预设用途 
 author: 但江
+avatar: danjiang
 location: 成都 
 category: design
 ---
@@ -9,18 +10,18 @@ category: design
 >
 > —— W ∙ H ∙ 梅奥尔的《设计原则》，1979 年 
 
-#### 基本概念
+## 基本概念
 
-![Chair](/images/chair.jpg)
+![Chair]({{ site.image_base_url }}/chair.jpg)
 
 预设用途的重点在于了解一件物品实际上能用来做何用途，或被认为能有什么用途。椅子能够起到支撑作用，因此可以让人坐，也可以被拿走。玻璃是透明的，能被砸碎。木材通常坚硬，不透明，可用于支撑或雕刻。平坦的表面上可以写些东西，因此木料也可用于书写。英国铁路局面临的问题是：如果在候车棚上安上玻璃，破坏公物者就会把它砸碎；如果用三合板，就会有人在上面乱写乱刻，不同的材质，会引发不同的问题，铁路局的人一时也难以找到一个万全之策。
 
-#### 视觉上的预设用途
+## 视觉上的预设用途
 
 当做了什么的时候，在视觉上清楚地表明发生了什么。iOS 8 系统中键盘的上档键就没有明确地从视觉上表明是否有效。
 
-![Current iOS Keyboard Shift](/images/current-ios-keyboard-shift.gif)
+![Current iOS Keyboard Shift]({{ site.image_base_url }}/current-ios-keyboard-shift.gif)
 
 参考 Andriod 系统，给出的替代方案，上档键只有轻微的视觉变化，再加上键盘字母变化就更加清楚地表明发生了什么。
 
-![Alternative iOS Keyboard Shift](/images/alternative-ios-keyboard-shift.gif)
+![Alternative iOS Keyboard Shift]({{ site.image_base_url }}/alternative-ios-keyboard-shift.gif)
