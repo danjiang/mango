@@ -18,31 +18,21 @@ category: business
 
 ## 版本 1.0
 
-![Daily Weight Tracker V1 Home]({{ site.image_base_url }}/daily-weight-tracker-v1-home.png)
+![Daily Weight Tracker V1 Home and Weight]({{ site.image_base_url }}/daily-weight-tracker-v1-home-and-weight.jpg)
 
-![Daily Weight Tracker V1 Weight]({{ site.image_base_url }}/daily-weight-tracker-v1-weight.png)
+![Daily Weight Tracker V1 Height and Photos]({{ site.image_base_url }}/daily-weight-tracker-v1-height-and-photos.jpg)
 
-![Daily Weight Tracker V1 Height]({{ site.image_base_url }}/daily-weight-tracker-v1-height.png)
-
-![Daily Weight Tracker V1 Photos]({{ site.image_base_url }}/daily-weight-tracker-v1-photos.png)
-
-![Daily Weight Tracker V1 Weibo]({{ site.image_base_url }}/daily-weight-tracker-v1-weibo.png)
-
-![Daily Weight Tracker V1 Email]({{ site.image_base_url }}/daily-weight-tracker-v1-email.png)
+![Daily Weight Tracker V1 Weibo and Email]({{ site.image_base_url }}/daily-weight-tracker-v1-weibo-and-email.jpg)
 
 2012年5月28日 发布 版本 1.0
 
 回过头来看，真是觉得当时的自己业余的不行，整个 App 的导航设计非常糟糕，模态视图和逐级深入的导航视图运用都不正确，其实就是这么简单的问题，在我现在遇到的一些设计师也还在犯这样的错误，主界面的设计也因为那时候拟物化的流行，搞出来这么个界面，那时候做 App 的思维方式也只是停留在技术层面，不懂得交互设计，也没有视觉设计的品味，如何去推广和销售就更没有想过。
 
-#### 版本 1.5
+## 版本 1.5
 
-![Daily Weight Tracker V1.5 Home]({{ site.image_base_url }}/daily-weight-tracker-v1.5-home.png)
+![Daily Weight Tracker V1.5 Home and Weight]({{ site.image_base_url }}/daily-weight-tracker-v1.5-home-and-weight.jpg)
 
-![Daily Weight Tracker V1.5 Weight]({{ site.image_base_url }}/daily-weight-tracker-v1.5-weight.png)
-
-![Daily Weight Tracker V1.5 Share]({{ site.image_base_url }}/daily-weight-tracker-v1.5-share.png)
-
-![Daily Weight Tracker V1.5 Photos]({{ site.image_base_url }}/daily-weight-tracker-v1.5-photos.png)
+![Daily Weight Tracker V1.5 Share and Photos]({{ site.image_base_url }}/daily-weight-tracker-v1.5-share-and-photos.jpg)
 
 ![Daily Weight Tracker V1.5 Settings]({{ site.image_base_url }}/daily-weight-tracker-v1.5-settings.png)
 
@@ -61,23 +51,15 @@ category: business
 
 此版本在交互设计和用户体验上有所提升，免去了一些重复的操作，英语的国际化对推广和销售会有大的帮助，在第一个版本就应该做。
 
-#### 版本 1.6
+## 版本 1.6
 
-![Daily Weight Tracker V1.6 Icon]({{ site.image_base_url }}/daily-weight-tracker-v1.6-icon.png)
+![Daily Weight Tracker V1.6 Icon and Grid]({{ site.image_base_url }}/daily-weight-tracker-v1.6-icon-and-grid.jpg)
 
-![Daily Weight Tracker V1.6 Grid]({{ site.image_base_url }}/daily-weight-tracker-v1.6-grid.png)
+![Daily Weight Tracker V1.6 List and Detail]({{ site.image_base_url }}/daily-weight-tracker-v1.6-list-and-detail.jpg)
 
-![Daily Weight Tracker V1.6 List]({{ site.image_base_url }}/daily-weight-tracker-v1.6-list.png)
+![Daily Weight Tracker V1.6 New and Weight]({{ site.image_base_url }}/daily-weight-tracker-v1.6-new-and-weight.jpg)
 
-![Daily Weight Tracker V1.6 Detail]({{ site.image_base_url }}/daily-weight-tracker-v1.6-detail.png)
-
-![Daily Weight Tracker V1.6 New]({{ site.image_base_url }}/daily-weight-tracker-v1.6-new.png)
-
-![Daily Weight Tracker V1.6 Weight]({{ site.image_base_url }}/daily-weight-tracker-v1.6-weight.png)
-
-![Daily Weight Tracker V1.6 Height]({{ site.image_base_url }}/daily-weight-tracker-v1.6-height.png)
-
-![Daily Weight Tracker V1.6 Background]({{ site.image_base_url }}/daily-weight-tracker-v1.6-background.png)
+![Daily Weight Tracker V1.6 Height and Background]({{ site.image_base_url }}/daily-weight-tracker-v1.6-height-and-background.jpg)
 
 2012年8月4日 发布 版本 1.6.0
 
@@ -110,19 +92,13 @@ category: business
 
 ![Daily Weight Tracker V1.6 Website 2]({{ site.image_base_url }}/daily-weight-tracker-v1.6-website2.png)
 
-#### 版本 1.7
+## 版本 1.7
 
-![Daily Weight Tracker V1.7 Icon]({{ site.image_base_url }}/daily-weight-tracker-v1.7-icon.png)
+![Daily Weight Tracker V1.7 Icon and Home]({{ site.image_base_url }}/daily-weight-tracker-v1.7-icon-and-home.jpg)
 
-![Daily Weight Tracker V1.7 Home]({{ site.image_base_url }}/daily-weight-tracker-v1.7-home.png)
+![Daily Weight Tracker V1.7 Ruler and Share]({{ site.image_base_url }}/daily-weight-tracker-v1.7-ruler-and-share.jpg)
 
-![Daily Weight Tracker V1.7 Ruler]({{ site.image_base_url }}/daily-weight-tracker-v1.7-ruler.png)
-
-![Daily Weight Tracker V1.7 Share]({{ site.image_base_url }}/daily-weight-tracker-v1.7-share.png)
-
-![Daily Weight Tracker V1.7 Swipe]({{ site.image_base_url }}/daily-weight-tracker-v1.7-swipe.png)
-
-![Daily Weight Tracker V1.7 Camera]({{ site.image_base_url }}/daily-weight-tracker-v1.7-camera.png)
+![Daily Weight Tracker V1.7 Swipe and Camera]({{ site.image_base_url }}/daily-weight-tracker-v1.7-swipe-and-camera.jpg)
 
 2013年9月24日 发布 版本 1.7.0
 
@@ -138,25 +114,17 @@ category: business
 
 ![Daily Weight Tracker V1.7 Website]({{ site.image_base_url }}/daily-weight-tracker-v1.7-website.png)
 
-#### 版本 1.8
+## 版本 1.8
 
-![Daily Weight Tracker V1.8 Light]({{ site.image_base_url }}/daily-weight-tracker-v1.8-light.png)
+![Daily Weight Tracker V1.8 Light and Dark]({{ site.image_base_url }}/daily-weight-tracker-v1.8-light-and-dark.jpg)
 
-![Daily Weight Tracker V1.8 Dark]({{ site.image_base_url }}/daily-weight-tracker-v1.8-dark.png)
+![Daily Weight Tracker V1.8 Weight and Calendar]({{ site.image_base_url }}/daily-weight-tracker-v1.8-weight-and-calendar.jpg)
 
-![Daily Weight Tracker V1.8 Weight]({{ site.image_base_url }}/daily-weight-tracker-v1.8-weight.png)
+![Daily Weight Tracker V1.8 iCloud and Camera]({{ site.image_base_url }}/daily-weight-tracker-v1.8-iCloud-and-camera.jpg)
 
-![Daily Weight Tracker V1.8 Calendar]({{ site.image_base_url }}/daily-weight-tracker-v1.8-calendar.png)
+![Daily Weight Tracker V1.8 Today and Social]({{ site.image_base_url }}/daily-weight-tracker-v1.8-today-and-social.jpg)
 
-![Daily Weight Tracker V1.8 iCloud]({{ site.image_base_url }}/daily-weight-tracker-v1.8-iCloud.png)
-
-![Daily Weight Tracker V1.8 Camera]({{ site.image_base_url }}/daily-weight-tracker-v1.8-camera.png)
-
-![Daily Weight Tracker V1.8 Today]({{ site.image_base_url }}/daily-weight-tracker-v1.8-today.png)
-
-![Daily Weight Tracker V1.8 Social]({{ site.image_base_url }}/daily-weight-tracker-v1.8-social.png)
-
-![Daily Weight Tracker V1.8 Remove]({{ site.image_base_url }}/daily-weight-tracker-v1.8-remove.png)
+![Daily Weight Tracker V1.8 Remove]({{ site.image_base_url }}/daily-weight-tracker-v1.8-remove.jpg)
 
 2014年5月22日 发布 版本 1.8.0
 
@@ -183,11 +151,11 @@ iOS 7 的扁平化不只是去除了纹理和阴影，而是在动画上更加�
 
 ![Daily Weight Tracker V1.8 Website]({{ site.image_base_url }}/daily-weight-tracker-v1.8-website.png)
 
-#### 开放源代码
+## 开放源代码
 
 现在使用 Swift 来开发 iOS 应用也是大势所趋，但是 iOS 系统使用习惯是相同的，我想开源 **每日体重记录** 的 Objective-C 源代码还是会有一些借鉴意义，请访问 [每日体重记录 Github 仓库][1]。
 
-#### 全面升级
+## 全面升级
 
 正是因为有了这些经历，如今的我，在设计和开发一款 App 的时候，我不会只是把它看作一个手机应用，而是看作一款产品，或者是为解决用户问题的整体方案中其中一个节点，我也会在设计，研发，营运和营销各个方面全面地提升自己。做任何事情都不应该忘记了自己的出发点。
 
