@@ -224,4 +224,12 @@
 		<loc>http://blog.danthought.com/programming/2015/12/12/apache-virtual-hosts-on-ubuntu-part2/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/business/2016/01/11/china-swift-conference/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/business/2016/01/17/blogging-for-one-year/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
