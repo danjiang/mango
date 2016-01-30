@@ -1,5 +1,5 @@
 ---
-title:  Apache 配置文件
+title: Apache 配置文件
 author: 但江
 avatar: danjiang
 location: 成都

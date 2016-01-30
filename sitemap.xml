@@ -232,4 +232,12 @@
 		<loc>http://blog.danthought.com/business/2016/01/17/blogging-for-one-year/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/business/2016/01/25/calorie-1-for-mac-is-here/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/01/30/get-started-with-swift/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
