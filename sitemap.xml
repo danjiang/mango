@@ -240,4 +240,8 @@
 		<loc>http://blog.danthought.com/programming/2016/01/30/get-started-with-swift/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/02/05/swift-variables-and-constants/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>

@@ -29,7 +29,7 @@ category: business
 * Auto Layout 系列
 * iOS Animation 系列
 * Core Data 系列
-* Sprite Kit 系列
+* Core Graphics 系列
 * OS X 系列
 * Sketch 系列
 * Framer Stuido 系列

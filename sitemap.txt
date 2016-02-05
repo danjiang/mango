@@ -57,3 +57,4 @@ http://blog.danthought.com/business/2016/01/11/china-swift-conference/
 http://blog.danthought.com/business/2016/01/17/blogging-for-one-year/
 http://blog.danthought.com/business/2016/01/25/calorie-1-for-mac-is-here/
 http://blog.danthought.com/programming/2016/01/30/get-started-with-swift/
+http://blog.danthought.com/programming/2016/02/05/swift-variables-and-constants/
