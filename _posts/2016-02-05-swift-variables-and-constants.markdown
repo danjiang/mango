@@ -78,7 +78,7 @@ double = Double(integer)
 
 {% highlight swift %}
 func currentLocation() -> (Double, Double) {
-	return (104.06667, 30.66667)
+  return (104.06667, 30.66667)
 }
 
 let location = currentLocation()
