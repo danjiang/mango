@@ -92,7 +92,7 @@ for score in individualScores {
 print(teamScore)
 {% endhighlight %}
 
-可选值要么有值、要么没有值
+可选类型要么有值、要么没有值
 
 {% highlight swift %}
 var optionalString: String? = "Hello" // ? 表明可选
@@ -105,7 +105,7 @@ if let name = optionalName { // optionalName 有值才会运行 {} 中的内容
 }
 {% endhighlight %}
 
-**??** 可以为可选值提供默认值
+**??** 可以为可选类型提供默认值
 
 {% highlight swift %}
 let nickName: String? = nil

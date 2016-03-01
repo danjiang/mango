@@ -98,7 +98,7 @@ if distance > 60 {
 
 ## 空合并运算符
 
-在操作可选值时候，一种简便的提供默认值的写法。
+在操作可选类型时候，一种简便的提供默认值的写法。
 
 {% highlight swift %}
 let defaultWeight = 60
