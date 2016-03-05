@@ -244,4 +244,8 @@
 		<loc>http://blog.danthought.com/programming/2016/02/05/swift-variables-and-constants/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/03/05/swift-optionals/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>

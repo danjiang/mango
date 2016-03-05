@@ -1,7 +1,7 @@
 # Site settings
-title: 博客 - 商业、设计、编程和运营 - Dan Thought Studio
+title: 博客 - 商业、设计、编程和运营 - 但索特工作室
 description: > # this means to ignore newlines until "baseurl:"
-  来自于 Dan Thought Studio 的思考，关注商业、设计、编程和运营
+  来自于但索特工作室的思考，关注商业、设计、编程和运营
 permalink: pretty
 image_base_url: "http://7xpdj8.com1.z0.glb.clouddn.com" # the base hostname & protocol for your site
 home: "http://danthought.com"
