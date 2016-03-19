@@ -252,4 +252,8 @@
 		<loc>http://blog.danthought.com/programming/2016/03/11/swift-control-flow/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/03/19/swift-arrays/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
