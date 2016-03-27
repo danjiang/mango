@@ -256,4 +256,8 @@
 		<loc>http://blog.danthought.com/programming/2016/03/19/swift-arrays/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/03/27/swift-dictionaries/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
