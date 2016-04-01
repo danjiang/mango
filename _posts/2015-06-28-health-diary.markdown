@@ -9,7 +9,7 @@ tag: featured
 
 之前就已经写过文章 [移动应用从想法到产品][1]，我在工作室设计和开发的移动应用都是按照文中的步骤来的，根据实践经验所总结的，不过最近在设计和开发新的应用 [健康日记][2]，所以记录下设计和开发此应用背后的故事，再对照那篇文章的内容，读者应该会有更深的体会，注意有很多图片。
 
-![Health Diary V1.0]({{ site.image_base_url }}/health-diary-v1.0.png)
+![Health Diary V1.0](/images/health-diary-v1.0.png)
 
 ## 想法
 
@@ -31,7 +31,7 @@ tag: featured
 
 用户的邮件反馈，再结合 Google 统计中访问 [每日体重记录][3] 主页所搜索的关键词，就会产生一些零星的想法，我平时都随身携带一个纸质的小笔记本，突然冒出一些想法我就会记录下来，渐渐地就会有一个清晰的思路，以下就是笔记本中的内容：
 
-![Health Diary Idea]({{ site.image_base_url }}/health-diary-idea1.jpg)
+![Health Diary Idea](/images/health-diary-idea1.jpg)
 
 想法都是很美好的，下面就要认真研究和分析一下那些是目前能够做成产品的，对于血糖，睡眠和咖啡因摄入，需要专业性和更定制化的功能，所以做成独立的应用是比较好的，空气质量和天气对于身体健康有影响，但不是记录和分析的来源，所以剩下的可以融合成产品的就是：体重，饮水，心情和目标达成。
 
@@ -53,33 +53,33 @@ tag: featured
 
 接下来就通过纸和笔来绘制简单的草图界面，我是通过应用 Marvel 将这些草图串起来，体验下基本的流程和交互，[健康日记的草图界面][4]。
 
-![Health Diary Paper Timeline and Calendar]({{ site.image_base_url }}/health-diary-paper-timeline-and-calendar.jpg)
+![Health Diary Paper Timeline and Calendar](/images/health-diary-paper-timeline-and-calendar.jpg)
 
-![Health Diary Paper Chart and Settings]({{ site.image_base_url }}/health-diary-paper-chart-and-settings.jpg)
+![Health Diary Paper Chart and Settings](/images/health-diary-paper-chart-and-settings.jpg)
 
-![Health Diary Paper Diary and Compose]({{ site.image_base_url }}/health-diary-paper-diary-and-compose.jpg)
+![Health Diary Paper Diary and Compose](/images/health-diary-paper-diary-and-compose.jpg)
 
-![Health Diary Paper Edit and Camera]({{ site.image_base_url }}/health-diary-paper-edit-and-camera.jpg)
+![Health Diary Paper Edit and Camera](/images/health-diary-paper-edit-and-camera.jpg)
 
-![Health Diary Paper Weight and Water]({{ site.image_base_url }}/health-diary-paper-weight-and-water.jpg)
+![Health Diary Paper Weight and Water](/images/health-diary-paper-weight-and-water.jpg)
 
-![Health Diary Paper Mood and Target]({{ site.image_base_url }}/health-diary-paper-mood-and-target.jpg)
+![Health Diary Paper Mood and Target](/images/health-diary-paper-mood-and-target.jpg)
 
 ## 高保真
 
 上面的草图是不是很让人很抓狂，接着就要开始用专业工具 Sketch 来设计应用图标和高保真界面。
 
-![Health Diary Paper Icon]({{ site.image_base_url }}/health-diary-icon.jpg)
+![Health Diary Paper Icon](/images/health-diary-icon.jpg)
 
-![Health Diary Timeline]({{ site.image_base_url }}/health-diary-timeline.jpg)
+![Health Diary Timeline](/images/health-diary-timeline.jpg)
 
-![Health Diary Calendar and Diary]({{ site.image_base_url }}/health-diary-calendar-and-diary.jpg)
+![Health Diary Calendar and Diary](/images/health-diary-calendar-and-diary.jpg)
 
-![Health Diary Diary With Photo and Weight]({{ site.image_base_url }}/health-diary-diary-with-photo-and-weight.jpg)
+![Health Diary Diary With Photo and Weight](/images/health-diary-diary-with-photo-and-weight.jpg)
 
-![Health Diary Diary With Water and Mood]({{ site.image_base_url }}/health-diary-diary-with-water-and-mood.jpg)
+![Health Diary Diary With Water and Mood](/images/health-diary-diary-with-water-and-mood.jpg)
 
-![Health Diary Diary With Target]({{ site.image_base_url }}/health-diary-diary-with-target.jpg)
+![Health Diary Diary With Target](/images/health-diary-diary-with-target.jpg)
 
 ## 动效设计
 
@@ -92,7 +92,7 @@ tag: featured
 
 如下的宣传页中所说，我正在用 Swift 编写代码，[关注我们][2]，了解应用的最新动向吧。
 
-![Health Diary Website]({{ site.image_base_url }}/health-diary-website.jpg)
+![Health Diary Website](/images/health-diary-website.jpg)
 
 [1]: /business/2015/01/17/mobile-app-from-idea-to-product/
 [2]: http://danthought.com/health

@@ -9,7 +9,7 @@ tag: ubuntu-apache
 
 通过之前的一系列的文章，你的 apache 服务应该设置完毕而且正常运行，如果你想让一个 Web 服务能够响应多个域名，你就需要为每个域名设置虚拟主机，本文中我们将设置一些示例域名的虚拟主机。
 
-![Apache HTTP Server]({{ site.image_base_url }}/apache-http-server.jpg)
+![Apache HTTP Server](/images/apache-http-server.jpg)
 
 ## 创建你的目录结构
 
@@ -189,7 +189,7 @@ sudo /etc/init.d/apache2 reload
 
 修改好了后，我们在电脑上通过浏览器来访问下域名：
 
-![Apache Domain1 Com]({{ site.image_base_url }}/apache-domain1-com.jpg)
+![Apache Domain1 Com](/images/apache-domain1-com.jpg)
 
 你看到了你自己编写的 index.html 文件的内容，虚拟主机的配置看来没什么问题。
 
@@ -197,7 +197,7 @@ sudo /etc/init.d/apache2 reload
 
 记得我们在虚拟主机的配置中有设置 ServerAlias，你也可以通过这个别名来访问你的站点：
 
-![Apache WWW Domain1 Com]({{ site.image_base_url }}/apache-www-domain1-com.jpg)
+![Apache WWW Domain1 Com](/images/apache-www-domain1-com.jpg)
 
 ## 设置 domain2.com
 

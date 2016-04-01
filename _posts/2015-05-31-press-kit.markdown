@@ -12,7 +12,7 @@ category: business
 
 来自 Realmac Software 的 Dan Counsell 所写的文章 [Putting Together an App Press Kit][2] 很清楚阐述了要准备的资料。下面是 Clear 媒体资料的目录结构：
 
-![Clear Press Kit]({{ site.image_base_url }}/clear-press-kit.png)
+![Clear Press Kit](/images/clear-press-kit.png)
 
 ## 热量助手的示例
 

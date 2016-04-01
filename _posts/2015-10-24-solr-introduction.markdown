@@ -6,7 +6,7 @@ location: 成都
 category: programming
 ---
 
-![Solr in Action]({{ site.image_base_url }}/solr-in-action.png)
+![Solr in Action](/images/solr-in-action.png)
 
 ## Solr 是什么？
 
@@ -43,9 +43,9 @@ Solr 可以把相关性最高的搜索结果排在前面，Solr 中 Similarity �
 
 下图中展示了原始文字如何通过分词器和词汇过滤器变成了最终的关键词：
 
-![Solr Text Analyze Graph]({{ site.image_base_url }}/solr-text-analyze-graph.png)
+![Solr Text Analyze Graph](/images/solr-text-analyze-graph.png)
 
-![Solr Text Analyze Table]({{ site.image_base_url }}/solr-text-analyze-table.png)
+![Solr Text Analyze Table](/images/solr-text-analyze-table.png)
 
 Tokenizer: parse the text into a stream of tokens
 

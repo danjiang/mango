@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 三种集合类型之一的数组，让我们开始吧。
 
-![Swift Arrays]({{ site.image_base_url }}/swift-arrays.jpg)
+![Swift Arrays](/images/swift-arrays.jpg)
 
 ## 可变和不可变
 

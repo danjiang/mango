@@ -9,7 +9,7 @@ tag: ubuntu-apache
 
 Ubuntu 是一个非常流行的 Linux 操作系统，很多虚拟主机服务商都有支持这个操作系统，Apache HTTP Server 也是很流行 Web 服务软件，在 Ubuntu 上安装 Apache HTTP Server 很方便。
 
-![Apache HTTP Server]({{ site.image_base_url }}/apache-http-server.jpg)
+![Apache HTTP Server](/images/apache-http-server.jpg)
 
 ## 检测 iptables
 

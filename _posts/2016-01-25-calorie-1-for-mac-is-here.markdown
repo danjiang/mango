@@ -13,23 +13,23 @@ tag: featured
 
 每日热量统计和记录，还有每日所需基本热量。
 
-![Calorie Mac V1 Log]({{ site.image_base_url }}/calorie-mac-v1-log.jpg)
+![Calorie Mac V1 Log](/images/calorie-mac-v1-log.jpg)
 
 浏览食物分类、锻炼分类和品牌食物。
 
-![Calorie Mac V1 Browse]({{ site.image_base_url }}/calorie-mac-v1-browse.jpg)
+![Calorie Mac V1 Browse](/images/calorie-mac-v1-browse.jpg)
 
 通过名称来搜索食物或锻炼，搜索记录会保留。
 
-![Calorie Mac V1 search]({{ site.image_base_url }}/calorie-mac-v1-search.jpg)
+![Calorie Mac V1 search](/images/calorie-mac-v1-search.jpg)
 
 记录食物热量和运动消耗。
 
-![Calorie Mac V1 Create]({{ site.image_base_url }}/calorie-mac-v1-create.jpg)
+![Calorie Mac V1 Create](/images/calorie-mac-v1-create.jpg)
 
 在所有设备中同步你的热量记录。
 
-![Calorie Mac V1 iCloud]({{ site.image_base_url }}/calorie-mac-v1-icloud.jpg)
+![Calorie Mac V1 iCloud](/images/calorie-mac-v1-icloud.jpg)
 
 ## 背后的小故事
 
@@ -37,21 +37,21 @@ tag: featured
 
 Mac 应用的图标并不是完全的扁平化感觉，在 Yosemite 过后，OS X 整体的风格更向 iOS 风格靠近，看下 OS X 系统中自带应用的图标。
 
-![OS X HIG Desiging App Icons]({{ site.image_base_url }}/OS-X-HIG-Designing-App-Icons.jpg)
+![OS X HIG Desiging App Icons](/images/OS-X-HIG-Designing-App-Icons.jpg)
 
 健康日记的图标。
 
-![Calorie Mac iOS Icon]({{ site.image_base_url }}/calorie-mac-ios-icon.png)
+![Calorie Mac iOS Icon](/images/calorie-mac-ios-icon.png)
 
 ### UI 设计
 
 这是我第一次制作 Mac 应用，你可以看下面三张图，我在用纸和笔绘制草图时候，可以看出基本上还是套用的 iOS 界面设计，但是在实际开发过程中发现这样是行不通的，然后根据 OS X Human Interface Guidelines 中的指导，再在 Xcode 中不断地调整，最后才有应用界面的整体结构，算不上非常满意，但还是蛮不错啦。
 
-![Calorie Mac Draft Browse]({{ site.image_base_url }}/calorie-mac-draft-browse.jpg)
+![Calorie Mac Draft Browse](/images/calorie-mac-draft-browse.jpg)
 
-![Calorie Mac Draft Search]({{ site.image_base_url }}/calorie-mac-draft-search.jpg)
+![Calorie Mac Draft Search](/images/calorie-mac-draft-search.jpg)
 
-![Calorie Mac Draft Logs]({{ site.image_base_url }}/calorie-mac-draft-logs.jpg)
+![Calorie Mac Draft Logs](/images/calorie-mac-draft-logs.jpg)
 
 ### Cocoa 编程
 
@@ -81,7 +81,7 @@ class CalendarViewController: NSViewController {
 
 下面的日期选择控件中日期应该反映到上面 Controller 的 date 中，date 的值也应该反映到日期选择控件中，比如在日期选择控件刚开始显示的时候，这一切都是由 Bindings 来完成，看下图右侧的配置。
 
-![XIB CalendarViewController]({{ site.image_base_url }}/XIB-CalendarViewController.jpg)
+![XIB CalendarViewController](/images/XIB-CalendarViewController.jpg)
 
 ## 赶紧下载体验吧
 

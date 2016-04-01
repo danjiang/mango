@@ -31,7 +31,7 @@ $ bundle exec cap install
 
 会生成如下目录和文件：
 
-![Capistrano Rails]({{ site.image_base_url }}/capistrano-rails.png)
+![Capistrano Rails](/images/capistrano-rails.png)
 
 创建不同 stage 的配置文件
 
@@ -49,7 +49,7 @@ set :deploy_to, '/var/www/my_app_name'
 
 部署的项目会遵循的结构：
 
-![Capistrano Deploy To]({{ site.image_base_url }}/capistrano-deploy-to.png)
+![Capistrano Deploy To](/images/capistrano-deploy-to.png)
 
 * current 链接到最近的一次版本发布
 * releases 所有的版本发布

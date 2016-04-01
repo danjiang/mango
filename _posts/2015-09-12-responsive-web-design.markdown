@@ -6,7 +6,7 @@ location: 成都
 category: design
 ---
 
-![Responsive Web Design]({{ site.image_base_url }}/responsive-web-design.jpg)
+![Responsive Web Design](/images/responsive-web-design.jpg)
 
 ## A Flexible Grid-Based Layout
 

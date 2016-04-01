@@ -11,7 +11,7 @@ tag: featured
 >
 > —— 摘自《重来》让每个人都上前线
 
-![Ideas on Paper]({{ site.image_base_url }}/ideas-on-paper.jpg)
+![Ideas on Paper](/images/ideas-on-paper.jpg)
 
 ## 空想家
 

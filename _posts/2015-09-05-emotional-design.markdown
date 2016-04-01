@@ -40,27 +40,27 @@ category: design
 
 [Wufoo][4] 是帮助人们创建在线表单的工具，创建表单是一项枯燥而又乏味的工作，[Wufoo][4] 从视觉设计和交互设计上让这项工作变得简单而又有趣，拖拖拽拽，轻轻松松就搞定了，有时间可以看一下 [Wufoo][4] 创始人的视频 [How to Build Products Users Love ][3]。
 
-![Wufoo]({{ site.image_base_url }}/wufoo.jpg)
+![Wufoo](/images/wufoo.jpg)
 
 [MailChimp][5] 是在线发送邮件的服务，它们的吉祥物，背着邮包的大猩猩邮递员，大猩猩是灵长类动物，聪明值得信赖，一定可以很好地完成送达邮件的任务，这也是网站的个性所在，大猩猩邮递员是这个网站的代言人，用户在和这个网站打交道时，会感受到不是面对一张张的网页，而是聪明的大猩猩邮递员在为用户服务。
 
-![MailChimp]({{ site.image_base_url }}/mailchimp.jpg)
+![MailChimp](/images/mailchimp.jpg)
 
 [Flickr][6] 是在线照片存储服务，平时有很多用户使用，有一天，它们的网站挂了，如果是你，你会怎么办？[Flickr][6] 通过如下页面，告诉用户打印这个页面，发挥自己的创意来给这个两个圈上色，网站恢复后，上传你的创意照片，就可以免费赢得一年高级账户，[Flickr][6] 将酸柠檬变成了可口的柠檬汁。
 
-![Flickr is Down]({{ site.image_base_url }}/flickr-is-down.jpg)
+![Flickr is Down](/images/flickr-is-down.jpg)
 
-![Flickr is On]({{ site.image_base_url }}/flickr-is-on.jpg)
+![Flickr is On](/images/flickr-is-on.jpg)
 
 ## 阅读书籍
 
 [设计心理学 3 : 情感设计][1] 中的内容更侧重理论和范围更广的设计概念。
 
-![Design for Everything 3]({{ site.image_base_url }}/design-for-everthing-3.jpg)
+![Design for Everything 3](/images/design-for-everthing-3.jpg)
 
 [Design for Emotion][2] 中的内容实践性更强，也有很多示例。
 
-![Design for Emotion]({{ site.image_base_url }}/designing-for-emotion.jpg)
+![Design for Emotion](/images/designing-for-emotion.jpg)
 
 [1]: http://book.douban.com/subject/10550576/
 [2]: http://abookapart.com/products/designing-for-emotion

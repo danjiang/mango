@@ -8,7 +8,7 @@ category: business
 
 中国首届 Swift 开发者大会，昨天在北京北航新主楼会议中心召开，坦率地讲，我从来没有参见过这种会议，也是抱着去感受一下的心态，还因为我也用 Swift 编写过两款应用，一款 iPhone 应用 [健康日记][1]，一款即将上线的 Mac 应用 [热量助手][2]，也是抱着交流的心态，才大老远地飞到北京，还好没有冻成狗。
 
-![China Swift Conference 2015]({{ site.image_base_url }}/china-swift-conference-2015.jpg)
+![China Swift Conference 2015](/images/china-swift-conference-2015.jpg)
 
 地方不太好找，晚来了一会儿，错过了会议的开场白，搜寻了半天才找了个座位，然后第一个 Session 就开始了，大部分 Session 感受不深，函数式编程对我没有什么吸引力，用了较久的 Ruby，map 这些方法在 Ruby 里司空见惯，我不排斥什么编程方式、什么设计模式、什么编程原则，只是不要把这些东西说的太邪乎了，引用一下 **Metaprogramming Ruby** 书中的内容来解释一下，我们可以在意这些，但是不要太在意，较长耐心看。
 

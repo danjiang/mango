@@ -10,7 +10,7 @@ category: business
 >
 > ——[How to Start a Startup by Sam Altman][1]
 
-![Y Combinator]({{ site.image_base_url }}/ycombinator.png)
+![Y Combinator](/images/ycombinator.png)
 
 This is what I learned about startup:
 

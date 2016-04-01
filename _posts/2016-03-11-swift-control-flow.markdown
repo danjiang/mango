@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 流程控制，当然有常见的 **for** 循环和 **if** 条件，还有 **continue** 和 **break** 等流程控制语句，最后还会讲到 **guard** 和 **\#available**，让我们开始吧。
 
-![Swift Control Flow]({{ site.image_base_url }}/swift-control-flow.jpg)
+![Swift Control Flow](/images/swift-control-flow.jpg)
 
 ## 循环
 

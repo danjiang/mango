@@ -8,7 +8,7 @@ category: design
 
 现有版本的 [热量记录][calorie] 是通过表格分段来显示每一天的热量记录，当记录时间周期已经很长时，要导航到某一天的记录非常的不灵活，很多根据日期来记录信息的应用，为了方便找到特定日期的信息，使用日历是一种很常用的方式。
 
-![Calorie No Calnedar]({{ site.image_base_url }}/calorie1.1-no-calendar.png)
+![Calorie No Calnedar](/images/calorie1.1-no-calendar.png)
 
 该如何设计这样一个日历呢，首先要明确要解决的问题：
 
@@ -18,7 +18,7 @@ category: design
 
 ## 第一次尝试
 
-![Calorie Calendar Beta1]({{ site.image_base_url }}/calorie1.1-calendar-beta1.png)
+![Calorie Calendar Beta1](/images/calorie1.1-calendar-beta1.png)
 
 问题：
 
@@ -32,7 +32,7 @@ category: design
 
 ## 第二次尝试
 
-![Calorie Calendar Beta2]({{ site.image_base_url }}/calorie1.1-calendar-beta2.png)
+![Calorie Calendar Beta2](/images/calorie1.1-calendar-beta2.png)
 
 问题：
 
@@ -48,7 +48,7 @@ category: design
 
 ## 最终方案
 
-![Calorie Calendar Final]({{ site.image_base_url }}/calorie1.1-calendar-final.png)
+![Calorie Calendar Final](/images/calorie1.1-calendar-final.png)
 
 问题：
 

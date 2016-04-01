@@ -14,7 +14,7 @@ category: programming
 
 通过 [CNET][2] 做示例可以容易理解什么是分面搜索，[CNET][2] 是第一个使用 [Solr][1] 的网站，早在 [Solr][1] 被贡献给 Apache。
 
-![Solr CNET]({{ site.image_base_url }}/solr-cnet.jpg)
+![Solr CNET](/images/solr-cnet.jpg)
 
 这个示例是分面浏览，因为从 digital cameras 类目开始而不是用户搜索，Manufactuter 是一个搜索结果的分面，此分面的值包括 Canon USA，Sony 和 Nikon，在这之前的一个页面还包括 Price 和 Digital camera type 分面，因为我们已经从这些分面中选择了的 Price 为 $400 - $500 和 Digital camera type 为 SLR 的约束，所以不在显示，对应这些约束，结果集数量和相机列表只显示了价格在 $400 - $500 的数码 SLR 相机，任何显示的分面约束都可以被点击，进一步过滤搜索结果，已经应用的约束可以从面包屑中取消。
 

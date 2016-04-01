@@ -6,7 +6,7 @@ location: 成都
 category: business
 ---
 
-![Roller Coaster]({{ site.image_base_url }}/roller-coaster.jpg)
+![Roller Coaster](/images/roller-coaster.jpg)
 
 最近工作上遇到了极大的困难，我所在的创业公司，资金出现了问题，几个月发不出工资，很多同事纷纷离开，还在的很多同事也是人心惶惶，投资方的注资仍需时日，但也不能完全保证没有问题。
 

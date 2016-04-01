@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 字符串和字符，当然一定会讲到字符编码的问题，让我们开始吧。
 
-![Swift Strings and Characters]({{ site.image_base_url }}/swift-strings-and-characters.jpg)
+![Swift Strings and Characters](/images/swift-strings-and-characters.jpg)
 
 ## 创建字符串
 
@@ -109,7 +109,7 @@ greeting.insert("晚", atIndex: greeting.startIndex) // 晚上好！
 
 听起来好复杂的样子，绝大多数情况不用深究，只要知道 **==** 来比较字符串的值，长的一样就会是相等的。
 
-![Swift Strings Equal]({{ site.image_base_url }}/swift-strings-equal.jpg)
+![Swift Strings Equal](/images/swift-strings-equal.jpg)
 
 ## Unicode
 

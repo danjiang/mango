@@ -11,21 +11,21 @@ tag: swift
 
 请注意，示例代码都来自 **The Swift Programming Language - A Swift Tour**，如果你有更多疑问可以参考这本苹果官方教程，我都是自己敲的代码，不是复制粘贴的，所以你最好也一起跟着这篇文章敲代码来开始学 Swift，所谓 Muscle Memory。
 
-![Swift Opensource]({{ site.image_base_url }}/swift-opensource.jpg)
+![Swift Opensource](/images/swift-opensource.jpg)
 
 ## Playground
 
 目前来看，大家学习 Swift 主要是为了开发苹果平台的应用，你应该有一台 Mac，Mac 上应该装了 Xcode，打开 Xcode，在欢迎界面点击 **Get started with a plaground**。
 
-![Get Started with a Playground]({{ site.image_base_url }}/get-started-with-a-playground.jpg)
+![Get Started with a Playground](/images/get-started-with-a-playground.jpg)
 
 在下面的界面中，输入你新建的 Playground 的 **名称** 和 **平台**。
 
-![New Playground]({{ site.image_base_url }}/new-playground.jpg)
+![New Playground](/images/new-playground.jpg)
 
 从上一步点击 **Next** 过后，你就会看到 Playground 的主界面了，在这里敲代码学习 Swift，可以不用操心很多你不熟悉的平台 SDK，学习语法，打好基础。
 
-![Tour Playground]({{ site.image_base_url }}/tour-playground.jpg)
+![Tour Playground](/images/tour-playground.jpg)
 
 ## 基础值
 

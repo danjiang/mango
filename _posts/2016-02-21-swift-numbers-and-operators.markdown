@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 数字和运算符，还会说到布尔值，让我们开始吧。
 
-![Swift Numbers and Operators]({{ site.image_base_url }}/swift-numbers-and-operators.jpg)
+![Swift Numbers and Operators](/images/swift-numbers-and-operators.jpg)
 
 ## 赋值运算符
 

@@ -8,7 +8,7 @@ category: business
 
 其实已经写了一年又快两个月了，此篇文章主要是想做一个总结和一个规划。
 
-![Blogging for One Year]({{ site.image_base_url }}/blogging-for-one-year.jpg)
+![Blogging for One Year](/images/blogging-for-one-year.jpg)
 
 # 写写写
 

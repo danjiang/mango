@@ -7,13 +7,13 @@ category: programming
 tag: objective-c
 ---
 
-![Weight Ruler]({{ site.image_base_url }}/weight-ruler.gif)
+![Weight Ruler](/images/weight-ruler.gif)
 
 以上动画展示了应用 [每日体重记录][1] 中通过尺子来输入体重，要实现尺子的输入控件需要通过继承 UIScrollView 来做 Infinite Scrolling。
 
 ## 尺子中的刻度
 
-![Weight Ruler Scale]({{ site.image_base_url }}/weight-ruler-scale.jpg)
+![Weight Ruler Scale](/images/weight-ruler-scale.jpg)
 
 首先我们需要通过继承 UIView 来实现上图中的刻度块，一个刻度块包含十个刻度和一个刻度值，不需要使用图片，通过 Quartz 框架来绘制，代码如下：
 

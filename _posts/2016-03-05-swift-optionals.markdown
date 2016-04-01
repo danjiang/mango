@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 可选类型，如果稍微有点其他语言的编程经验，都会大概使用过对空值的表示方法，nil、null 和 none 傻傻分不清楚，让我们开始吧。
 
-![Swift Optionals]({{ site.image_base_url }}/swift-optionals.jpg)
+![Swift Optionals](/images/swift-optionals.jpg)
 
 ## 什么是可选类型
 

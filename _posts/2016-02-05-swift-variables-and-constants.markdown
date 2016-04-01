@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 变量和常量，和其他任何编程语言一样，编程所使用的变量和常量都是要指定类型的，所以也会谈到类型相关的问题，最后会说一下元组 Tuples，让我们开始吧。
 
-![Swift Variables and Constnats]({{ site.image_base_url }}/swift-variables-and-constants1.jpg)
+![Swift Variables and Constnats](/images/swift-variables-and-constants1.jpg)
 
 ## 变量
 
@@ -28,7 +28,7 @@ greeting = "晚上好，张三"
 let apple = "苹果"
 {% endhighlight %}
 
-![Swift Constnats Error]({{ site.image_base_url }}/swift-constants-error.jpg)
+![Swift Constnats Error](/images/swift-constants-error.jpg)
 
 > 编写 Swift 代码时，最好方式是一开始都声明为常量，在写过程中，如果发现确实需要改变其值，再将声明修改为变量。
 
@@ -64,7 +64,7 @@ let pi = 3.14159 // pi 被推断为 Double 类型
 
 Swift 是强类型语言，所以值不能自动地转换为其他类型，需要自己来做类型转换 Type Conversion，否侧会有编译错误。
 
-![Swift Type Conversion Error]({{ site.image_base_url }}/swift-type-conversion-error.jpg)
+![Swift Type Conversion Error](/images/swift-type-conversion-error.jpg)
 
 {% highlight swift %}
 let integer = 11 // integer 被推断为 Int 类型

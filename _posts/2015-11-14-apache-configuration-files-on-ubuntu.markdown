@@ -9,7 +9,7 @@ tag: ubuntu-apache
 
 在这篇文章中，我们将要看一下通过 apt-get 安装的 apache 在 ubuntu 上的配置文件放置位置和简短功能介绍。
 
-![Apache HTTP Server]({{ site.image_base_url }}/apache-http-server.jpg)
+![Apache HTTP Server](/images/apache-http-server.jpg)
 
 ## apache 配置文件目录
 
@@ -29,7 +29,7 @@ $ ls /etc/apache2
 
 你会看到下面的信息：
 
-![Apache Configuration Files]({{ site.image_base_url }}/apache-configuration-files.jpg)
+![Apache Configuration Files](/images/apache-configuration-files.jpg)
 
 我们会从浏览核心配置文件 apache2.conf 开始。
 

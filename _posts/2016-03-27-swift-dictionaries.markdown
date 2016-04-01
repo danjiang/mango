@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 三种集合类型之一的字典，让我们开始吧。
 
-![Swift Dictionaries]({{ site.image_base_url }}/swift-dictionaries.jpg)
+![Swift Dictionaries](/images/swift-dictionaries.jpg)
 
 ## 简单说明
 

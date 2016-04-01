@@ -6,7 +6,7 @@ location: 成都
 category: design
 ---
 
-![Sass for Web Designers]({{ site.image_base_url }}/sass-for-web-designers.jpg)
+![Sass for Web Designers](/images/sass-for-web-designers.jpg)
 
 ## Nesting
 

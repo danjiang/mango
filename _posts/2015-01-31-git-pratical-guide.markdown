@@ -33,7 +33,7 @@ $ git clone git://github.com/schacon/grit.git mygrit
 
 文件状态流转
 
-![Git File Status]({{ site.image_base_url }}/git-file-status.png)
+![Git File Status](/images/git-file-status.png)
 
 检查当前文件状态
 
@@ -202,11 +202,11 @@ $ git push origin -f
 
 如果觉得使用命令行麻烦可以下载 [SourceTree][sourcetreee]。
 
-![Sourcetree Mac Log]({{ site.image_base_url }}/sourcetree-mac-log.png)
+![Sourcetree Mac Log](/images/sourcetree-mac-log.png)
 
 更完整的 [Git 在线教程][gitbook]。
 
-![Pro Git]({{ site.image_base_url }}/pro-git.jpg)
+![Pro Git](/images/pro-git.jpg)
 
 如果不小心把一些类似密匙之类敏感文件提交到了版本库，参考 [Remove sensitive data][remove-sensitive-data] 来进行处理。
 

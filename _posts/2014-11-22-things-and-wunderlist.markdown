@@ -10,11 +10,11 @@ category: business
 
 ## 独立应用与平台应用
 
-![Things]({{ site.image_base_url }}/things.png)
+![Things](/images/things.png)
 
 [Things][things] 是由德国的 [Cultured Code][culturedcode] 公司开发的，是典型的**独立应用**，也就是很小团队、甚至是一个人设计和开发的应用，这种类型的应用通常都是付费下载的模式并且价格也不便宜，还有一点值得注意就是**独立应用**专注一个平台，[Things][things] 专注于苹果公司的平台 Mac OS 和 iOS，毕竟小团队和个人没有那么大的人力和资源开发适用于各个平台的应用，但是并不是说这样的商业模式没有前途，不高的总体收入平摊到每个人身上还是非常可观的。
 
-![Wunderlist]({{ site.image_base_url }}/wunderlist.png)
+![Wunderlist](/images/wunderlist.png)
 
 说的 [Things][things]，就不得不说到同样是由来自德国的公司 [6Wunderkinder][6wunderkinder] 开发的 [Wunderlist][wunderlist]，也是一款效率型的 GTD 应用，不同之处在于 [Wunderlist][wunderlist] 适用于多种平台并且免费使用，如果要使用团队协作的高级功能就需要付费，是典型的**平台应用**，当然一开始也是从 iOS 应用和 Android 应用起步的，逐步涉及到更多的平台，从而获取更多的用户，在拥有大量免费用户的基数上，针对这些用户的特征提供增值付费业务来获取利润，要开发涉及多平台的产品和维持大量的免费用户通常没有充足的资本支持是不太可能的，[6Wunderkinder][6wunderkinder] 由一群精英投资者和合伙人支持。
 

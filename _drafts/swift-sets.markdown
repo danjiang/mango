@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 三种集合类型之一的集合，让我们开始吧。
 
-![Swift Sets]({{ site.image_base_url }}/swift-sets.jpg)
+![Swift Sets](/images/swift-sets.jpg)
 
 ## 简单说明
 
@@ -81,7 +81,7 @@ for genre in genres.sort() {
 
 ## 集合操作
 
-![Swift Sets Venn]({{ site.image_base_url }}/swift-sets-venn.jpg)
+![Swift Sets Venn](/images/swift-sets-venn.jpg)
 
 {% highlight swift %}
 let oddDigits: Set = [1, 3, 5, 7, 9]
@@ -101,7 +101,7 @@ oddDigits.exclusiveOr(singleDigitPrimeNumbers).sort()
 // [1, 2, 9]
 {% endhighlight %}
 
-![Swift Sets Euler]({{ site.image_base_url }}/swift-sets-euler.jpg)
+![Swift Sets Euler](/images/swift-sets-euler.jpg)
 
 {% highlight swift %}
 let houseAnimals: Set = ["Dog", "Cat"]

@@ -9,27 +9,27 @@ tag: objective-c
 
 我从 2011 年开始 iOS 开发，走过很多弯路，其实在学习你不了解东西的时候，你甚至不知道那是弯路，直到你对这样东西有了足够的认识，你才知道什么是有效的，什么不是，所以不要管那么多，不要徘徊不前，立即开始吧。
 
-![WWDC 2011 - 2012]({{ site.image_base_url }}/wwdc-2011-2012.jpg)
+![WWDC 2011 - 2012](/images/wwdc-2011-2012.jpg)
 
 ## 书籍
 
-![Book Objective-C]({{ site.image_base_url }}/book-objective-c.jpg)
+![Book Objective-C](/images/book-objective-c.jpg)
 
 学习 Objective-C 语法，很多人语法都没有搞清楚就开始写 iOS 应用，难怪写的跟狗屎一样，基础语法很重要，书中示例代码都要自己亲手敲入电脑。
 
-![Book Programming iOS]({{ site.image_base_url }}/book-programming-ios.jpg)
+![Book Programming iOS](/images/book-programming-ios.jpg)
 
 本书可以带领你将 Cocoa Touch 中主要内容过一篇，基本上就是可以写一些简单的应用了。
 
-![Book iOS Programming Cookbook]({{ site.image_base_url }}/book-ios-programming-cookbook.jpg)
+![Book iOS Programming Cookbook](/images/book-ios-programming-cookbook.jpg)
 
 本书做为参考就行了，就是一个问题，一个解决方案。
 
-![Book Core Data]({{ site.image_base_url }}/book-core-data.jpg)
+![Book Core Data](/images/book-core-data.jpg)
 
 讲解 Core Data 最好的书籍。
 
-![Book Quartz]({{ site.image_base_url }}/book-quartz.jpg)
+![Book Quartz](/images/book-quartz.jpg)
 
 程序员的说法就是 Core Graphics，官方的说法就是 Quartz，可能大家会觉得比较冷门的技术，但是实际开发中运用还是比较多的，有两方面的好处，一是减少图片资源文件的使用，二是可以很便捷地实现动画效果。
 
@@ -64,11 +64,11 @@ tag: objective-c
 
 ## Swift
 
-![Book The Swift Programming Language]({{ site.image_base_url }}/book-the-swift-programming-language.jpg)
+![Book The Swift Programming Language](/images/book-the-swift-programming-language.jpg)
 
 苹果官方出的 Swift 编程指南，最全面的语法参考，iBook 上可以下载。
 
-![Book Swift By Tutorials]({{ site.image_base_url }}/book-swift-by-tutorials.jpg)
+![Book Swift By Tutorials](/images/book-swift-by-tutorials.jpg)
 
 通过编写应用代码来学习 Swift 的特性。
 

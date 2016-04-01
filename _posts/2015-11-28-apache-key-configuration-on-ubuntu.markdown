@@ -9,7 +9,7 @@ tag: ubuntu-apache
 
 我们已经知道 [如何安装 Apache][1]，以及 [Apache 配置文件的放置位置][2]，还有 [MPM 的设置][3]，本文中我们浏览一些 Apache 常见的关键配置，让 Apache 更安全，更有效率。
 
-![Apache HTTP Server]({{ site.image_base_url }}/apache-http-server.jpg)
+![Apache HTTP Server](/images/apache-http-server.jpg)
 
 ## Timeout
 
@@ -126,7 +126,7 @@ ServerSignature On
 
 apache 服务会自己生成如404和目录浏览的页面，这些页面会包含一个 footer，上面会有一些关于服务器的信息和管理员的联系方式，像下面这样：
 
-![Apache 404]({{ site.image_base_url }}/apache-404.png)
+![Apache 404](/images/apache-404.png)
 
 有一些浏览器会替换这个默认的错误页面为自己定义的页面，通常会有一个 **View page source** 的选项，你就可以到原来的样子。
 
