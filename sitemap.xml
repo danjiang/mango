@@ -260,4 +260,12 @@
 		<loc>http://blog.danthought.com/programming/2016/03/27/swift-dictionaries/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/04/03/swift-sets/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/04/08/swift-functions/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>
