@@ -45,6 +45,15 @@ layout: default
 	<div class="post-series">
 		<h5 class="post-series-icon">专题系列</h5>
 		<div class="post-series-tag">
+			<h6>Core Data</h6>
+			<ul>
+				{% for post in site.tags.core-data reversed %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>	
+
+		<div class="post-series-tag">
 			<h6>Swift</h6>
 			<ul>
 				{% for post in site.tags.swift reversed %}
