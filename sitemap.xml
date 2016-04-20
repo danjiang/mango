@@ -268,4 +268,8 @@
 		<loc>http://blog.danthought.com/programming/2016/04/08/swift-functions/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/04/20/core-data-basic/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>

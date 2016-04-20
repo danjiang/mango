@@ -45,6 +45,24 @@ layout: default
 	<div class="post-series">
 		<h5 class="post-series-icon">专题系列</h5>
 		<div class="post-series-tag">
+			<h6>Rails</h6>
+			<ul>
+				{% for post in site.tags.rails reversed %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>	
+
+		<div class="post-series-tag">
+			<h6>Ruby</h6>
+			<ul>
+				{% for post in site.tags.ruby reversed %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		
+		<div class="post-series-tag">
 			<h6>Core Data</h6>
 			<ul>
 				{% for post in site.tags.core-data reversed %}
@@ -60,25 +78,7 @@ layout: default
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>
-		</div>	
-		
-		<div class="post-series-tag">
-			<h6>Ruby</h6>
-			<ul>
-				{% for post in site.tags.ruby reversed %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
 		</div>
-
-		<div class="post-series-tag">
-			<h6>Rails</h6>
-			<ul>
-				{% for post in site.tags.rails reversed %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
-		</div>	
 
 		<div class="post-series-tag">
 			<h6>Ubuntu Apache</h6>
@@ -97,7 +97,6 @@ layout: default
 				{% endfor %}
 			</ul>
 		</div>	
-		
 		<div class="clearfix"></div>
 	</div>
 
