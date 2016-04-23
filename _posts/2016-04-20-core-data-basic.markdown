@@ -7,7 +7,7 @@ category: programming
 tag: core-data
 ---
 
-从这篇文章，你将学习到有关 Core Data 的基础知识，如何创建 Core Data Stack，如何增删改查，[示例代码地址](https://github.com/danjiang/BlogCoreData)，让我们开始吧。
+从这篇文章，你将学习到有关 Core Data 的基础知识，如何创建 Core Data Stack，如何增删改查，[示例代码地址](https://github.com/danjiang/blog-core-data)，让我们开始吧。
 
 ![Core Data Data Model Graph](/images/core-data-data-model-graph.jpg)
 
