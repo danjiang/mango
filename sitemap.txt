@@ -65,3 +65,4 @@ http://blog.danthought.com/programming/2016/03/27/swift-dictionaries/
 http://blog.danthought.com/programming/2016/04/03/swift-sets/
 http://blog.danthought.com/programming/2016/04/08/swift-functions/
 http://blog.danthought.com/programming/2016/04/20/core-data-basic/
+http://blog.danthought.com/programming/2016/05/04/core-data-fetch/
