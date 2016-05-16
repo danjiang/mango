@@ -272,8 +272,12 @@
 		<loc>http://blog.danthought.com/programming/2016/04/20/core-data-basic/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
-		<url>
+	<url>
 		<loc>http://blog.danthought.com/programming/2016/05/04/core-data-fetch/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/05/16/core-data-nsfetchedresultscontroller/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 </urlset>
