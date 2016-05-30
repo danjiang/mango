@@ -17,8 +17,8 @@ tag: swift
 
 {% highlight swift %}
 func greeting(name: String) -> String {
-  let welcome = "Hello, " + name;
-  return welcome;
+  let welcome = "Hello, " + name
+  return welcome
 }
 
 print(greeting("Jack"))

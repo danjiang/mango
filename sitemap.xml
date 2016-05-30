@@ -280,4 +280,8 @@
 		<loc>http://blog.danthought.com/programming/2016/05/16/core-data-nsfetchedresultscontroller/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
+		<url>
+		<loc>http://blog.danthought.com/programming/2016/05/30/swift-closures/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
 </urlset>

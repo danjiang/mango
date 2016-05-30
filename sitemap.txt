@@ -67,3 +67,4 @@ http://blog.danthought.com/programming/2016/04/08/swift-functions/
 http://blog.danthought.com/programming/2016/04/20/core-data-basic/
 http://blog.danthought.com/programming/2016/05/04/core-data-fetch/
 http://blog.danthought.com/programming/2016/05/16/core-data-nsfetchedresultscontroller/
+http://blog.danthought.com/programming/2016/05/30/swift-closures/
