@@ -57,8 +57,65 @@ default:
 
 ## 关联值
 
-可变
+在定义枚举时，每一种情况都可以附加关联值，比如像下面这样定义一个条码的枚举，一个条码代表一个唯一的物品，条码既可以是条形码，也可以是二维码。
+
+{% highlight swift %}
+enum Barcode {
+  case UPCA(Int, Int, Int, Int)
+  case QRCode(String)
+}
+
+var barcode = Barcode.UPCA(8, 112233, 45678, 3)
+barcode = .QRCode("ABCDEFGHIJKLMNOP")
+
+switch barcode {
+case .UPCA(let numberSystem, let manufacturer, let product, let check):
+  print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .QRCode(let productCode):
+  print("QR code: \(productCode).")
+}
+{% endhighlight %}
 
 ## 原始值
 
-不可变
+在定义枚举时，每一种情况都可以有默认值，也叫原始值，从名字也看得出来，原始值和关联值不同在于不能改变，并且都是同一类型。
+
+### 显示地定义原始值
+
+{% highlight swift %}
+enum ASCIIControlCharacter: Character {
+  case Tab = "\t"
+  case LineFeed = "\n"
+  case CarriageReturn = "\r"
+}
+{% endhighlight %}
+
+### 隐式地定义原始值
+
+{% highlight swift %}
+enum Planet: Int {
+  case Mercury = 1, Venus, Earth, Mars
+}
+
+print(Planet.Venus.rawValue) // 2
+
+enum Direction: String {
+  case Left, Right, Forward, Back
+}
+
+print(Direction.Right.rawValue) // Right
+{% endhighlight %}
+
+### 从原始值初始化
+
+{% highlight swift %}
+if let home = Direction(rawValue: "Back") {
+  print(home) // Back
+}
+
+if let lost = Direction(rawValue: "Lost") {
+  print(lost)
+} else {
+  print("Be lost") // Be lost
+}
+{% endhighlight %}
