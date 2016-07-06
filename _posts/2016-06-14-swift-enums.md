@@ -27,6 +27,22 @@ var direction = Direction.Down
 direction = .Left // 已经知道 direction 的类型，推荐使用这种方式来赋值
 {% endhighlight %}
 
+## 枚举是值类型
+
+值类型，在赋值或者当作参数传递给函数时，其值都会被拷贝。
+
+{% highlight swift %}
+enum CompassPoint {
+  case North, South, East, West
+}
+var currentDirection = CompassPoint.West
+let rememberedDirection = currentDirection
+currentDirection = .East
+if rememberedDirection == .West {
+  print("The remembered direction is still .West")
+}
+{% endhighlight %}
+
 ## Switch
 
 使用 **switch** 语句可以很方便地判断枚举的各种情况，如果 **switch** 语句中的 **case** 能覆盖枚举的每一种情况，也就不需要 **default**，否则就需要 **default** 来处理没有覆盖到的情况。
