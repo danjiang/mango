@@ -2,7 +2,7 @@
 title: Swift 可选类型
 author: 但江
 avatar: danjiang
-location: 成都 
+location: 成都
 category: programming
 tag: swift
 ---
@@ -73,6 +73,20 @@ if let n = name, a = age {
 }
 {% endhighlight %}
 
+## 隐式展开可选类型
+
+有时候，一个变量在初始化时，可能为 nil，当被赋值后保证不会为 nil，这种情况下就应该使用隐式展开可选类型来简化调用时的代码。好绕口。
+
+{% highlight swift %}
+class LeftViewController: NSViewController {
+
+  @IBOutlet weak var searchField: NSSearchField!
+
+}
+{% endhighlight %}
+
+上面的示例中，**searchField** 在 **LeftViewController** 调用 **init** 方法初始化时还是 nil，但是 **LeftViewController** 从 **XIB** 中加载了相关视图过后，就不再为 nil，在后面逻辑代码处理中可以放心使用类似 **searchField.doSomething()** 这样的代码。
+
 ## 空合并运算符
 
 在操作可选类型时候，一种简便的提供默认值的写法。
@@ -87,4 +101,26 @@ var weight = inputWeight ?? defaultWeight
 inputWeight = 55
 weight = inputWeight ?? defaultWeight
 // inputWeight 有值，weight 结果是 55
+{% endhighlight %}
+
+## 可选链
+
+可选链是一种在可选类型上访问属性、调用方法和访问下标的过程，如果可选类型有值，那么调用成功，如果可选类型没有值，整个过程将返回 nil，多个调用过程可以链接起来，整个链中如果任意一个可选类型没有值，则整个链返回 nil。
+
+{% highlight swift %}
+class Person {
+  var residence: Residence?
+}
+
+class Residence {
+  var numberOfRooms = 1
+}
+
+let john = Person()
+
+if let roomCount = john.residence?.numberOfRooms {
+  print("John`s residence has \(roomCount) room(s).")
+} else {
+  print("Unable to retrieve the number of rooms.")
+}
 {% endhighlight %}
