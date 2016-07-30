@@ -7,6 +7,10 @@ category: programming
 tag: swift
 ---
 
+从这篇文章，你将学习到如何使用 Swift 的属性，属性可以定义在类、结构体和枚举中。
+
+![Swift Properties](/images/swift-properties.jpg)
+
 ## 存储属性
 
 ### 基本概念
@@ -98,4 +102,52 @@ struct Rect {
 
 ## 属性观察者
 
+属性观察者可以用于观察属性值的变化，但是有一点，设置的新属性值与旧属性值是否有变化都会被调用。
+
+* **willSet** 在属性值被存储前调用，新属性值会作为参数 **newValue** 传入，如果不设置其他参数名；
+* **didSet** 在属性值被存储后调用，旧属性值会作为参数 **oldValue** 传入，如果不设置其他参数名。
+
+{% highlight swift %}
+class StepCounter {
+  var totalSteps: Int = 0 {
+    willSet(newTotalSteps) {
+      print("About to set totalSteps to \(newTotalSteps)")
+    }
+    didSet {
+      if totalSteps > oldValue {
+        print("Added \(totalSteps - oldValue) steps")
+      }
+    }
+  }
+}
+{% endhighlight %}
+
 ## 类型属性
+
+上面介绍的实例属性，属于某一个实例，每创建一个新的实例，它都有其自己的实例属性。类型属性属于这个类型，当需要定义对于所有实例属性都一样的常量或变量时，类型属性就很有用。由 **static** 来定义类型属性；**class** 还可以用在类的类型计算属性上，这样子类就可以覆盖其实现。
+
+{% highlight swift %}
+struct SomeStructure {
+  static var storedTypeProperty = "Some value."
+  static var computedTypeProperty: Int {
+    return 1
+  }
+}
+
+enum SomeEnumeration {
+  static var storedTypeProperty = "Some value."
+  static var computedTypeProperty: Int {
+    return 6
+  }
+}
+
+class SomeClass {
+  static var storedTypeProperty = "Some value."
+  static var computedTypeProperty: Int {
+    return 27
+  }
+  class var overrideableComputedTypeProperty: Int {
+    return 107
+  }
+}
+{% endhighlight %}

@@ -13,7 +13,7 @@ tag: swift
 
 ## 类的能力
 
-* 属性
+* [属性](/programming/2016/07/30/swift-properties/)
 * 方法
 * 下标
 * 初始化
