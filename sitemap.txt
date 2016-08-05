@@ -68,3 +68,7 @@ http://blog.danthought.com/programming/2016/04/20/core-data-basic/
 http://blog.danthought.com/programming/2016/05/04/core-data-fetch/
 http://blog.danthought.com/programming/2016/05/16/core-data-nsfetchedresultscontroller/
 http://blog.danthought.com/programming/2016/05/30/swift-closures/
+http://blog.danthought.com/programming/2016/06/14/swift-enums/
+http://blog.danthought.com/programming/2016/06/27/swift-structs/
+http://blog.danthought.com/programming/2016/07/13/swift-classes/
+http://blog.danthought.com/programming/2016/07/30/swift-properties/

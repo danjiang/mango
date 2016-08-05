@@ -280,8 +280,24 @@
 		<loc>http://blog.danthought.com/programming/2016/05/16/core-data-nsfetchedresultscontroller/</loc>
 		<changefreq>weekly</changefreq>
 	</url>
-		<url>
+	<url>
 		<loc>http://blog.danthought.com/programming/2016/05/30/swift-closures/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/06/14/swift-enums/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/06/27/swift-structs/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/07/13/swift-classes/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/07/30/swift-properties/</loc>
 		<changefreq>weekly</changefreq>
 	</url>	
 </urlset>
