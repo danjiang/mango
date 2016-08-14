@@ -74,3 +74,33 @@ struct Point {
 {% endhighlight %}
 
 ## 类型方法
+
+前面介绍的实例方法，在某一个实例上调用。当然，还可以定义在类型上调用的方法，也就是类型方法。在 **func** 前面加 **static** 来定义类型方法；在 **func** 前面加 **class** 也可以定义类型方法，不过子类就可以覆盖其实现。
+
+{% highlight swift %}
+struct LevelTracker {
+  static var highesetUnlockedLevel = 1
+  var currentLevel = 1
+
+  static func unlock(level: Int) {
+    if level > highesetUnlockedLevel {
+      highesetUnlockedLevel = level
+    }
+  }
+
+  static func isUnlocked(level: Int) -> Bool {
+    return level <= highesetUnlockedLevel
+  }
+
+  mutating func advance(to level: Int) -> Bool {
+    if LevelTracker.isUnlocked(level) {
+      currentLevel = level
+      return true
+    } else {
+      return false
+    }
+  }
+}
+{% endhighlight %}
+
+注意，类型方法中引用类型属性，不需要通过类型名称。

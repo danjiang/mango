@@ -14,7 +14,7 @@ tag: swift
 ## 结构体的能力
 
 * [属性](/programming/2016/07/30/swift-properties/)
-* 方法
+* [方法](/programming/2016/08/14/swift-methods/)
 * 下标
 * 初始化
 * 扩展
