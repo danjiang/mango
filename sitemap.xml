@@ -300,4 +300,16 @@
 		<loc>http://blog.danthought.com/programming/2016/07/30/swift-properties/</loc>
 		<changefreq>weekly</changefreq>
 	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/08/14/swift-methods/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/08/21/swift-subscripts/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/08/29/swift-initialization/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
 </urlset>

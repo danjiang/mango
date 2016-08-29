@@ -72,3 +72,6 @@ http://blog.danthought.com/programming/2016/06/14/swift-enums/
 http://blog.danthought.com/programming/2016/06/27/swift-structs/
 http://blog.danthought.com/programming/2016/07/13/swift-classes/
 http://blog.danthought.com/programming/2016/07/30/swift-properties/
+http://blog.danthought.com/programming/2016/08/14/swift-methods/
+http://blog.danthought.com/programming/2016/08/21/swift-subscripts/
+http://blog.danthought.com/programming/2016/08/29/swift-initialization/

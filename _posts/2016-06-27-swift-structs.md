@@ -15,8 +15,8 @@ tag: swift
 
 * [属性](/programming/2016/07/30/swift-properties/)
 * [方法](/programming/2016/08/14/swift-methods/)
-* 下标
-* 初始化
+* [下标](/programming/2016/08/21/swift-subscripts/)
+* [初始化](/programming/2016/08/29/swift-initialization/)
 * 扩展
 * 协议
 
