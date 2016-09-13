@@ -88,7 +88,7 @@ class RecipeIngredient: Food {
 }
 {% endhighlight %}
 
-###  反初始化
+###  反初始化器
 
 {% highlight swift %}
 deinit {
