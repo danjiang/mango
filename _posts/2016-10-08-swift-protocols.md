@@ -65,13 +65,13 @@ class Starship: FullyNamed {
 
 {% highlight swift %}
 protocol Greating {
-    func hello() -> String
+  func hello() -> String
 }
 
 class Welcome: Greating {
-    func hello() -> String {
-        return "Hello"
-    }
+  func hello() -> String {
+    return "Hello"
+  }
 }
 {% endhighlight %}
 
@@ -81,19 +81,19 @@ class Welcome: Greating {
 
 {% highlight swift %}
 protocol Togglable {
-    mutating func toggle()
+  mutating func toggle()
 }
 
 enum OnOffSwitch: Togglable {
-    case off, on
-    mutating func toggle() {
-        switch self {
-        case .off:
-            self = .on
-        case .on:
-            self = .off
-        }
+  case off, on
+  mutating func toggle() {
+    switch self {
+    case .off:
+      self = .on
+    case .on:
+      self = .off
     }
+  }
 }
 {% endhighlight %}
 
@@ -103,19 +103,19 @@ enum OnOffSwitch: Togglable {
 
 {% highlight swift %}
 protocol SomeProtocol {
-    init()
+  init()
 }
 
 class SomeSuperClass {
-    init() {
-        
-    }
+  init() {
+    
+  }
 }
 
 class SomeSubClass: SomeSuperClass, SomeProtocol {
-    required override init() {
-        
-    }
+  required override init() {
+    
+  }
 }
 {% endhighlight %}
 
@@ -125,19 +125,19 @@ class SomeSubClass: SomeSuperClass, SomeProtocol {
 
 {% highlight swift %}
 protocol Generator {
-    init()
-    func randomNumber() -> Int
+  init()
+  func randomNumber() -> Int
 }
 
 let generator: Generator
 let generators: [Generator]
 
 struct Caculator {
-    let generator: Generator
-    
-    func random() {
-        generator.randomNumber()
-    }
+  let generator: Generator
+  
+  func random() {
+    generator.randomNumber()
+  }
 }
 {% endhighlight %}
 
@@ -149,17 +149,17 @@ struct Caculator {
 
 {% highlight swift %}
 struct Dice {
-    var sides: Int
+  var sides: Int
 }
 
 protocol TextRepresentable {
-    var textualDescription: String { get }
+  var textualDescription: String { get }
 }
 
 extension Dice: TextRepresentable {
-    var textualDescription: String {
-        return "A \(sides)-sided dice"
-    }
+  var textualDescription: String {
+    return "A \(sides)-sided dice"
+  }
 }
 {% endhighlight %}
 
@@ -187,17 +187,17 @@ protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
 
 {% highlight swift %}
 protocol SomeProtocol {
-
+  
 }
 
 protocol AnotherProtocol {
-
+  
 }
 
 struct SomeStruct {
-    func compose(p: SomeProtocol & AnotherProtocol) {
-        
-    }
+  func compose(p: SomeProtocol & AnotherProtocol) {
+    
+  }
 }
 {% endhighlight %}
 
