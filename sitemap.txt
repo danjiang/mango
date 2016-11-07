@@ -75,3 +75,8 @@ http://blog.danthought.com/programming/2016/07/30/swift-properties/
 http://blog.danthought.com/programming/2016/08/14/swift-methods/
 http://blog.danthought.com/programming/2016/08/21/swift-subscripts/
 http://blog.danthought.com/programming/2016/08/29/swift-initialization/
+http://blog.danthought.com/programming/2016/09/12/swift-extensions/
+http://blog.danthought.com/programming/2016/10/08/swift-protocols/
+http://blog.danthought.com/programming/2016/10/15/swift-inheritance/
+http://blog.danthought.com/programming/2016/10/17/swift-type-casting/
+http://blog.danthought.com/programming/2016/11/07/swift-memory-management/

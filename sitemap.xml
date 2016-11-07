@@ -312,4 +312,24 @@
 		<loc>http://blog.danthought.com/programming/2016/08/29/swift-initialization/</loc>
 		<changefreq>weekly</changefreq>
 	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/09/12/swift-extensions/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/10/08/swift-protocols/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/10/15/swift-inheritance/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/10/17/swift-type-casting/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
+	<url>
+		<loc>http://blog.danthought.com/programming/2016/11/07/swift-memory-management/</loc>
+		<changefreq>weekly</changefreq>
+	</url>	
 </urlset>
