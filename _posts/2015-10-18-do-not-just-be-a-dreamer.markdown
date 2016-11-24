@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都 
 category: business
-tag: featured
 ---
 
 > 直到如今，克雷格列表的创始人克雷格· 纽马克还在亲自回复客户的电子邮件呢，并且都是在几分钟内就回复的，他还会随时删除网站讨论区里有种族偏见的帖子，以及纽约城市中介网发布的虚假公寓租赁信息。

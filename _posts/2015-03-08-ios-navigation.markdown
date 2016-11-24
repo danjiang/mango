@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都 
 category: design
-tag: featured
 ---
 
 导航的作用是将应用中不同界面有效地组织起来，对于用户而言，查看内容和完成任务才是最重要的，导航不应该过多地引起用户的注意，而是辅助用户完成自己的目标，本文将全面介绍 iOS 系统中内置的导航方式。
