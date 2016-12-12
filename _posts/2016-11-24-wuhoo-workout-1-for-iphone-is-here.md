@@ -9,7 +9,7 @@ tag: featured
 
 [Wuhoo 训练][1] 是一款 iPhone 手机应用，目前主要的功能是创建训练计时器，并使用这些计时器来帮助你做训练。[Wuhoo][2] 是针对健康数字生活的品牌。
 
-![Wuhoo Workout iPhone V1 Hand](/images/wuhoo-workout-for-iphone-1-hand.png)
+![Wuhoo Workout iPhone V1 Hand](/images/wuhoo-workout-for-iphone-1-hand.jpg)
 
 ## 为什么做这样一个应用
 
