@@ -36,7 +36,6 @@ http://blog.danthought.com/programming/2015/07/11/rails-in-action-cucumber/
 http://blog.danthought.com/programming/2015/07/18/learn-ios/
 http://blog.danthought.com/design/2015/07/26/ios-design-principle/
 http://blog.danthought.com/programming/2015/08/02/rails-in-action-capistrano/
-http://blog.danthought.com/business/2015/08/08/donot-go-hiding/
 http://blog.danthought.com/business/2015/08/16/daily-weight-tracker/
 http://blog.danthought.com/programming/2015/08/23/browser-cache/
 http://blog.danthought.com/design/2015/09/12/responsive-web-design/

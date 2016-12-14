@@ -22,7 +22,7 @@ tag: swift
 * [继承](/programming/2016/10/15/swift-inheritance/)
 * [类型转换](/programming/2016/10/17/swift-type-casting/)
 * [反初始化](/programming/2016/08/29/swift-initialization/)
-* ARC
+* [ARC](/programming/2016/11/07/swift-memory-management/)
 
 ## 定义
 
