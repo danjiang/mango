@@ -135,7 +135,7 @@ extension Int {
   }
 }
 
-func printIntegerKinds(numbers: [Int]) {
+func printIntegerKinds(_ numbers: [Int]) {
   for number in numbers {
     switch number.kind {
     case .negative:

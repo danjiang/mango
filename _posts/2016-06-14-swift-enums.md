@@ -17,14 +17,14 @@ tag: swift
 
 {% highlight swift %}
 enum Direction {
-  case Up
-  case Down
-  case Left
-  case Right
+  case up
+  case down
+  case left
+  case right
 }
 
-var direction = Direction.Down
-direction = .Left // 已经知道 direction 的类型，推荐使用这种方式来赋值
+var direction = Direction.down
+direction = .left // 已经知道 direction 的类型，推荐使用这种方式来赋值
 {% endhighlight %}
 
 ## 枚举是值类型
@@ -33,12 +33,12 @@ direction = .Left // 已经知道 direction 的类型，推荐使用这种方式
 
 {% highlight swift %}
 enum CompassPoint {
-  case North, South, East, West
+  case north, south, east, west
 }
-var currentDirection = CompassPoint.West
+var currentDirection = CompassPoint.west
 let rememberedDirection = currentDirection
-currentDirection = .East
-if rememberedDirection == .West {
+currentDirection = .east
+if rememberedDirection == .west {
   print("The remembered direction is still .West")
 }
 {% endhighlight %}
@@ -48,22 +48,22 @@ if rememberedDirection == .West {
 使用 **switch** 语句可以很方便地判断枚举的各种情况，如果 **switch** 语句中的 **case** 能覆盖枚举的每一种情况，也就不需要 **default**，否则就需要 **default** 来处理没有覆盖到的情况。
 
 {% highlight swift %}
-var direction = Direction.Left
+var direction = Direction.left
 
 switch direction {
-case .Up:
+case .up:
   print("Keep going")
-case .Down:
+case .down:
   print("Go back")
-case .Left:
+case .left:
   print("Go left")
-case .Right:
+case .right:
   print("Go right")
 }
 // prints "Go right"
 
 switch direction {
-case .Down:
+case .down:
   print("Go back")
 default:
   print("You are lost")
@@ -77,17 +77,17 @@ default:
 
 {% highlight swift %}
 enum Barcode {
-  case UPCA(Int, Int, Int, Int)
-  case QRCode(String)
+  case upca(Int, Int, Int, Int)
+  case qrCode(String)
 }
 
-var barcode = Barcode.UPCA(8, 112233, 45678, 3)
-barcode = .QRCode("ABCDEFGHIJKLMNOP")
+var barcode = Barcode.upca(8, 112233, 45678, 3)
+barcode = .qrCode("ABCDEFGHIJKLMNOP")
 
 switch barcode {
-case .UPCA(let numberSystem, let manufacturer, let product, let check):
+case .upca(let numberSystem, let manufacturer, let product, let check):
   print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
-case .QRCode(let productCode):
+case .qrCode(let productCode):
   print("QR code: \(productCode).")
 }
 {% endhighlight %}
@@ -100,9 +100,9 @@ case .QRCode(let productCode):
 
 {% highlight swift %}
 enum ASCIIControlCharacter: Character {
-  case Tab = "\t"
-  case LineFeed = "\n"
-  case CarriageReturn = "\r"
+  case tab = "\t"
+  case lineFeed = "\n"
+  case carriageReturn = "\r"
 }
 {% endhighlight %}
 
@@ -110,16 +110,16 @@ enum ASCIIControlCharacter: Character {
 
 {% highlight swift %}
 enum Planet: Int {
-  case Mercury = 1, Venus, Earth, Mars
+  case mercury = 1, venus, earth, mars
 }
 
-print(Planet.Venus.rawValue) // 2
+print(Planet.venus.rawValue) // 2
 
 enum Direction: String {
-  case Left, Right, Forward, Back
+  case left, right, forward, back
 }
 
-print(Direction.Right.rawValue) // Right
+print(Direction.right.rawValue) // Right
 {% endhighlight %}
 
 ### 从原始值初始化

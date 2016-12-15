@@ -42,16 +42,16 @@ mick.age += 1 // error
 
 {% highlight swift %}
 class DataImporter {
-
-var fileName = "data.txt" // time consuming for IO
-
+  
+  var fileName = "data.txt" // time consuming for IO
+  
 }
 
 class DataManager {
-
-lazy var importer = DataImporter()
-var data = [String]()
-
+  
+  lazy var importer = DataImporter()
+  var data = [String]()
+  
 }
 {% endhighlight %}
 

@@ -23,7 +23,7 @@ class Counter {
   func increment() {
     count += 1
   }
-  func incrementBy(amount: Int) {
+  func increment(by amount: Int) {
     count += amount
   }
   func reset() {
@@ -33,7 +33,7 @@ class Counter {
 
 let counter = Counter()
 counter.increment()
-counter.incrementBy(by: 2)
+counter.increment(by: 2)
 counter.reset()
 {% endhighlight %}
 
@@ -81,17 +81,17 @@ struct Point {
 struct LevelTracker {
   static var highesetUnlockedLevel = 1
   var currentLevel = 1
-
-  static func unlock(level: Int) {
+  
+  static func unlock(_ level: Int) {
     if level > highesetUnlockedLevel {
       highesetUnlockedLevel = level
     }
   }
-
-  static func isUnlocked(level: Int) -> Bool {
+  
+  static func isUnlocked(_ level: Int) -> Bool {
     return level <= highesetUnlockedLevel
   }
-
+  
   mutating func advance(to level: Int) -> Bool {
     if LevelTracker.isUnlocked(level) {
       currentLevel = level
