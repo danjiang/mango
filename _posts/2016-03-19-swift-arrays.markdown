@@ -27,7 +27,7 @@ let strings = [String]()
 通过默认值来创建
 
 {% highlight swift %}
-var threeDoubles = [Double](count: 3, repeatedValue: 0.0)
+var threeDoubles = [Double](repeating: 0.0, count: 3)
 {% endhighlight %}
 
 通过数组语义来创建
@@ -53,9 +53,9 @@ if shoppingList.count < 5 {
 }
 
 // 访问最后一个元素
-print(shoppingList.first)
+print(shoppingList.first ?? "")
 // 访问第一个元素
-print(shoppingList.last)
+print(shoppingList.last ?? "")
 // 通过下标来访问第二元素
 print(shoppingList[1])
 // 通过区间来访问第二个到第三个元素
@@ -65,9 +65,9 @@ print(shoppingList[1...2])
 var numbers = [3, 1, 8]
 
 // 访问值最小的元素
-print(numbers.minElement())
+print(numbers.min() ?? 0)
 // 访问值最大的元素
-print(numbers.maxElement())
+print(numbers.max() ?? 0)
 {% endhighlight %}
 
 ## 操作数组元素
@@ -80,12 +80,12 @@ shoppingList.append("Bread")
 shoppingList += ["Banana"]
 
 // 插入元素
-shoppingList.insert("Avocado", atIndex: 0)
+shoppingList.insert("Avocado", at: 0)
 
 // 删除元素
 shoppingList.removeLast()
 shoppingList.removeFirst()
-shoppingList.removeAtIndex(1)
+shoppingList.remove(at: 1)
 
 // 修改元素
 shoppingList[1] = "Pecan"
@@ -103,7 +103,7 @@ for item in shoppingList {
 }
 
 // 需要下标的遍历
-for (index, item) in shoppingList.enumerate() {
+for (index, item) in shoppingList.enumerated() {
   print("\(index). \(item)")
 }
 {% endhighlight %}
@@ -116,7 +116,7 @@ for (index, item) in shoppingList.enumerate() {
 var scores = [2, 3, 5]
 
 // 函数式计算总和
-var total = scores.reduce(0, combine: +)
+var total = scores.reduce(0, +)
 
 // 等价于下面的计算
 var sum = 0

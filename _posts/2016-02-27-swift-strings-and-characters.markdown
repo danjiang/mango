@@ -36,7 +36,7 @@ name += " 安德森" // 会报错的
 请记住字符串是值类型，所以赋值或者方法的参数传递时，会重新拷贝一份，再传递，不用担心会改变原值。
 
 {% highlight swift %}
-func greeting(name: String) {
+func greeting(_ name: String) {
   var username = name
   username = "汤姆"
   print(username)
@@ -90,17 +90,17 @@ let result = "\(two) 加上 \(three) 的结果是 \(two + three)"
 var greeting = "早上好"
 
 greeting[greeting.startIndex] // 早
-greeting[greeting.endIndex.predecessor()] // 好
-greeting[greeting.startIndex.successor()] // 上
+greeting[greeting.index(before: greeting.endIndex)] // 好
+greeting[greeting.index(after: greeting.startIndex)] // 上
 
-let index = greeting.startIndex.advancedBy(2)
+let index = greeting.index(greeting.startIndex, offsetBy: 2)
 greeting[index] // 好
 
-greeting.insert("！", atIndex: greeting.endIndex) // 早上好！
+greeting.insert("！", at: greeting.endIndex) // 早上好！
 
-let range = greeting.startIndex..<greeting.startIndex.advancedBy(1)
-greeting.removeRange(range)
-greeting.insert("晚", atIndex: greeting.startIndex) // 晚上好！
+let range = greeting.startIndex..<greeting.index(greeting.startIndex, offsetBy: 1)
+greeting.removeSubrange(range)
+greeting.insert("晚", at: greeting.startIndex) // 晚上好！
 {% endhighlight %}
 
 ## 比较字符串

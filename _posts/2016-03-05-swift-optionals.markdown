@@ -66,7 +66,7 @@ if let n = name {
 {% highlight swift %}
 var age: Int? = 5
 var name: String? = "Jack"
-if let n = name, a = age {
+if let n = name, let a = age {
   print("Hello \(n). You are \(a) years old.")
 } else {
   print("Hello stranger. How old are you?")

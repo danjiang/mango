@@ -74,7 +74,7 @@ genres.remove("Jazz")
 {% highlight swift %}
 var genres: Set<String> = ["Rock", "Pop", "Jazz"]
 
-for genre in genres.sort() {
+for genre in genres.sorted() {
   print(genre)
 }
 {% endhighlight %}
@@ -88,16 +88,16 @@ let oddDigits: Set = [1, 3, 5, 7, 9]
 let evenDigits: Set = [0, 2, 4, 6, 8]
 let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
 
-oddDigits.union(evenDigits).sort()
+oddDigits.union(evenDigits).sorted()
 // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-oddDigits.intersect(evenDigits).sort()
+oddDigits.intersection(evenDigits).sorted()
 // []
 
-oddDigits.subtract(singleDigitPrimeNumbers).sort()
+oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
 // [1, 9]
 
-oddDigits.exclusiveOr(singleDigitPrimeNumbers).sort()
+oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
 // [1, 2, 9]
 {% endhighlight %}
 
@@ -109,11 +109,11 @@ let farmAnimals: Set = ["Cow", "Chick", "Sheet", "Dog", "Cat"]
 let cityAnimals: Set = ["Pigeon", "Rat"]
 
 // 子集
-houseAnimals.isSubsetOf(farmAnimals)
+houseAnimals.isSubset(of: farmAnimals)
 
 // 超集
-farmAnimals.isSubsetOf(houseAnimals)
+farmAnimals.isSuperset(of: houseAnimals)
 
 // 没有共同值
-farmAnimals.isDisjointWith(cityAnimals)
+farmAnimals.isDisjoint(with: cityAnimals)
 {% endhighlight %}

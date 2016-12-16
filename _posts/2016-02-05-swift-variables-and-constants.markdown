@@ -9,7 +9,7 @@ tag: swift
 
 从这篇文章，你将学习到如何使用 Swift 变量和常量，和其他任何编程语言一样，编程所使用的变量和常量都是要指定类型的，所以也会谈到类型相关的问题，最后会说一下元组 Tuples，让我们开始吧。
 
-![Swift Variables and Constnats](/images/swift-variables-and-constants1.jpg)
+![Swift Variables and Constnats](/images/swift-variables-and-constants.jpg)
 
 ## 变量
 

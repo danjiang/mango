@@ -21,8 +21,8 @@ func greeting(name: String) -> String {
   return welcome
 }
 
-print(greeting("Jack"))
-print(greeting("Lucy"))
+print(greeting(name: "Jack"))
+print(greeting(name: "Lucy"))
 {% endhighlight %}
 
 ## 函数参数和返回值
@@ -71,19 +71,19 @@ func greeting(name: String) -> (hello: String, goodbye: String) {
 
 ### 默认情况
 
-函数第一个参数会忽略外部名称，后面的参数外部名称和内部名称一致，如下面的示例。
+函数参数的外部名称和内部名称一致，如下面的示例。
 
 {% highlight swift %}
 func greeting(firtName: String, lastName: String) {
   print("Hello, " + firtName + " " + lastName)
 }
 
-greeting("Lincoln", lastName: "Park")
+greeting(firtName: "Lincoln", lastName: "Park")
 {% endhighlight %}
 
 ### 指定外部名称
 
-下面示例中 firstName 和 lastName 是外部名称，first 和 last 是内部名称，如果指定了外部名称，调用函数时也要写明外部名称。
+下面示例中 firstName 和 lastName 是外部名称，first 和 last 是内部名称，调用函数时也要写明外部名称。
 
 {% highlight swift %}
 func greeting(firtName first: String, lastName last: String) {
@@ -98,7 +98,7 @@ greeting(firtName: "Lincoln", lastName: "Park")
 用下划线来忽略外部名称。
 
 {% highlight swift %}
-func greeting(firstName: String, _ lastName: String) {
+func greeting(_ firstName: String, _ lastName: String) {
   print("Hello, " + firstName + " " + lastName)
 }
 
@@ -114,7 +114,7 @@ func greeting(name: String = "Unkown") {
   print("Hello, " + name)
 }
 
-greeting("James")
+greeting(name: "James")
 greeting()
 {% endhighlight %}
 
@@ -131,14 +131,14 @@ func sum(numbers: Int...) -> Int {
   return total
 }
 
-sum(2, 3)
-sum(5, 6, 7)
+sum(numbers: 2, 3)
+sum(numbers: 5, 6, 7)
 {% endhighlight %}
 
 ### 传入传出参数
 
 {% highlight swift %}
-func swap(inout a: Int, inout _ b: Int) {
+func swap(_ a: inout Int, _ b: inout Int) {
   let temporaryA = a
   a = b
   b = temporaryA
@@ -195,7 +195,7 @@ func goodbye(name: String) -> String {
   return "Goodbye, " + name
 }
 
-func printGreeting(greeting: (String) -> String, name: String) {
+func printGreeting(_ greeting: (String) -> String, name: String) {
   print(greeting(name))
 }
 
@@ -222,11 +222,11 @@ func greeting(leave: Bool) -> (String) -> String {
   }
 }
 
-var welcome = greeting(true)
+var welcome = greeting(leave: true)
 
 print(welcome("Jack"))
 
-welcome = greeting(false)
+welcome = greeting(leave: false)
 
 print(welcome("Jack"))
 {% endhighlight %}
@@ -252,11 +252,11 @@ func greeting(leave: Bool) -> (String) -> String {
   }
 }
 
-var welcome = greeting(true)
+var welcome = greeting(leave: true)
 
 print(welcome("Jack"))
 
-welcome = greeting(false)
+welcome = greeting(leave: false)
 
 print(welcome("Jack"))
 {% endhighlight %}

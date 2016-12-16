@@ -89,7 +89,7 @@ for value in colors.values {
 var colors = ["Red": "红色", "Green": "绿色", "Blue": "蓝色"]
 
 // 函数式拼接键
-let keys = colors.reduce("", combine: { $0 + "\($1.0), "})
+let keys = colors.reduce("", { $0 + "\($1.0), "})
 
 // 等价于下面的计算
 var allKeys = ""

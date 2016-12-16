@@ -33,17 +33,6 @@ for (animalName, legCount) in numberOfLegs {
 }
 {% endhighlight %}
 
-### For
-
-当然还有 C 风格的 **for** 循环。
-
-{% highlight swift %}
-let brands = ["Nike", "New Balance", "Under Armour", "Adidas"];
-for var i = 0; i < brands.count; i++ {
-  print("NO.\(i + 1) \(brands[i])")
-}
-{% endhighlight %}
-
 ### While
 
 判断条件的循环。
@@ -195,11 +184,11 @@ func greet(person: [String: String]) {
   print("I hope the weather is nice in \(location).")
 }
 
-greet(["name": "John"])
+greet(person: ["name": "John"])
 // Hello John!
 // I hope the weather is nice near you.
 
-greet(["name": "Jane", "location": "Cupertino"])
+greet(person: ["name": "Jane", "location": "Cupertino"])
 // Hello Jane!
 // I hope the weather is nice in Cupertino.
 {% endhighlight %}

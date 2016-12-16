@@ -77,7 +77,7 @@ let emptyDictionary = [String: Float]()
 
 ## 流程控制
 
-**if** 和 **switch** 作为条件控制，**for-in**、**for**、**while** 和 **repeat-while** 作为循环控制
+**if** 和 **switch** 作为条件控制，**for-in**、**while** 和 **repeat-while** 作为循环控制
 
 {% highlight swift %}
 let individualScores = [75, 43, 103, 87, 12]
@@ -172,12 +172,6 @@ for i in 0..<4 {
   firstForLoop += i
 }
 print(firstForLoop)
-
-var secondForLoop = 0
-for var i = 0; i < 4; ++i {
-  secondForLoop += i
-}
-print(secondForLoop)
 {% endhighlight %}
 
 ## 函数和闭包
@@ -188,13 +182,13 @@ print(secondForLoop)
 func greet(name: String, day: String) -> String {
   return "Hello \(name), today is \(day)."
 }
-greet("Bob", day: "Tuesday")
+greet(name: "Bob", day: "Tuesday")
 {% endhighlight %}
 
 函数可以通过元组 tuple 返回多个值
 
 {% highlight swift %}
-func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
+func calculateStatistics(_ scores: [Int]) -> (min: Int, max: Int, sum: Int) {
   var min = scores[0]
   var max = scores[1]
   var sum = 0
@@ -218,7 +212,7 @@ print(statistics.2)
 函数可以将任意数量参数收集为数组
 
 {% highlight swift %}
-func sumOf(numbers: Int...) -> Int {
+func sumOf(_ numbers: Int...) -> Int {
   var sum = 0
   for number in numbers {
     sum += number
@@ -271,7 +265,7 @@ func lessThanTen(number: Int) -> Bool {
   return number < 10
 }
 var numbers = [20, 19, 7, 12]
-hasAnyMatches(numbers, condition: lessThanTen)
+hasAnyMatches(list: numbers, condition: lessThanTen)
 {% endhighlight %}
 
 闭包就是一段可以稍后再执行的代码，闭包可以继续访问在其被创建时的外部变量，函数这些
@@ -294,7 +288,7 @@ print(mappedNumbers)
 超简洁的方式
 
 {% highlight swift %}
-let sortedNumbers = numbers.sort({ $0 > $1 })
+let sortedNumbers = numbers.sorted(by: { $0 > $1 })
 print(sortedNumbers)
 {% endhighlight %}
 
@@ -426,25 +420,25 @@ print(triangleAndSquare.triangle.sideLength)
 
 {% highlight swift %}
 enum Rank: Int {
-  case Ace = 1
-  case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
-  case Jack, Queen, King
+  case ace = 1
+  case two, three, four, five, six, seven, eight, nine, ten
+  case jack, queen, king
   func simpleDescription() -> String {
     switch self {
-    case .Ace:
+    case .ace:
       return "ace"
-    case .Jack:
+    case .jack:
       return "jack"
-    case .Queen:
+    case .queen:
       return "queen"
-    case .King:
+    case .king:
       return "king"
     default:
       return String(self.rawValue)
     }
   }
 }
-let ace = Rank.Ace
+let ace = Rank.ace
 let aceRawValue = ace.rawValue
 {% endhighlight %}
 
@@ -460,21 +454,21 @@ if let covertedRank = Rank(rawValue: 3) {
 
 {% highlight swift %}
 enum Suit {
-  case Spades, Hearts, Diamonds, Clubs
+  case spades, hearts, diamonds, clubs
   func simpleDescription() -> String {
     switch self {
-    case .Spades:
+    case .spades:
       return "spades"
-    case .Hearts:
+    case .hearts:
       return "hearts"
-    case .Diamonds:
+    case .diamonds:
       return "diamonds"
-    case .Clubs:
+    case .clubs:
       return "clubs"
     }
   }
 }
-let hearts = Suit.Hearts
+let hearts = Suit.hearts
 let heartsDescription = hearts.simpleDescription()
 {% endhighlight %}
 
@@ -488,7 +482,7 @@ struct Card {
     return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
   }
 }
-let threeOfSpades = Card(rank: .Three, suit: .Spades)
+let threeOfSpades = Card(rank: .three, suit: .spades)
 let threeOfSpadeDescription = threeOfSpades.simpleDescription()
 {% endhighlight %}
 
@@ -496,16 +490,16 @@ let threeOfSpadeDescription = threeOfSpades.simpleDescription()
 
 {% highlight swift %}
 enum ServerResponse {
-  case Result(String, String)
-  case Error(String)
+  case result(String, String)
+  case error(String)
 }
-let success = ServerResponse.Result("6:00 am", "8:09 pm")
-let failure = ServerResponse.Error("Out of cheese.")
+let success = ServerResponse.result("6:00 am", "8:09 pm")
+let failure = ServerResponse.error("Out of cheese.")
 
 switch success {
-case let .Result(sunrise, sunset):
-  print("Sunrise is at \(sunrise) and sunset is at\(sunset).")
-case let .Error(error):
+case let .result(sunrise, sunset):
+  print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
+case let .error(error):
   print("Failure... \(error)")
 }
 {% endhighlight %}
@@ -572,35 +566,35 @@ func repeatItem<Item>(item: Item, numberOfTimes: Int) -> [Item] {
   }
   return result
 }
-repeatItem("knock", numberOfTimes: 4)
+repeatItem(item: "knock", numberOfTimes: 4)
 {% endhighlight %}
 
 泛型还可以用在定义类，枚举和结构体中
 
 {% highlight swift %}
 enum OptionalValue<Wrapped> {
-  case None
-  case Some(Wrapped)
+  case none
+  case some(Wrapped)
 }
-var possibleInteger: OptionalValue<Int> = .None
-possibleInteger = .Some(100)
+var possibleInteger: OptionalValue<Int> = .none
+possibleInteger = .some(100)
 {% endhighlight %}
 
 使用 **where** 可以给泛型限制一些条件，如必须实现某些协议，或者必须有特定的父类等
 
 {% highlight swift %}
-func anyCommonElements <T: SequenceType, U: SequenceType
-  where T.Generator.Element: Equatable,
-  T.Generator.Element == U.Generator.Element>
-  (lhs: T, _ rhs: U) -> Bool {
-    for lhsItem in lhs {
-      for rhsItem in rhs {
-        if lhsItem == rhsItem {
-          return true
-        }
+func anyCommonElements <T: Sequence, U: Sequence>
+  (_ lhs: T, _ rhs: U) -> Bool
+  where T.Iterator.Element: Equatable,
+  T.Iterator.Element == U.Iterator.Element {
+  for lhsItem in lhs {
+    for rhsItem in rhs {
+      if lhsItem == rhsItem {
+        return true
       }
     }
-    return false
+  }
+  return false
 }
 anyCommonElements([1, 2, 3], [3])
 {% endhighlight %}
