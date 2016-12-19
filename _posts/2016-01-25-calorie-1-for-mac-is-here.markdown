@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都 
 category: business
-tag: featured
 ---
 
 经过一段时间的努力，热量助手 Mac 版正式上线了，你可以在 Mac 电脑上查询食物热量和运动消耗，同时也可以记录每天的食物热量，当然还可以配合 iPhone 和 iPad 版本的热量助手一起使用。
