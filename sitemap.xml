@@ -279,53 +279,85 @@
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/05/30/swift-closures/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/06/14/swift-enums/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/06/27/swift-structs/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/07/13/swift-classes/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/07/30/swift-properties/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/08/14/swift-methods/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/08/21/swift-subscripts/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/08/29/swift-initialization/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/09/12/swift-extensions/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/10/08/swift-protocols/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/10/15/swift-inheritance/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/10/17/swift-type-casting/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
 	<url>
 		<loc>http://blog.danthought.com/programming/2016/11/07/swift-memory-management/</loc>
 		<changefreq>weekly</changefreq>
-	</url>	
+	</url>
+  <url>
+		<loc>http://blog.danthought.com/programming/2016/11/18/swift-error-handling/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+  <url>
+		<loc>http://blog.danthought.com/business/2016/11/24/wuhoo-workout-1-for-iphone-is-here/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+  <url>
+		<loc>http://blog.danthought.com/programming/2016/12/10/swift-nested-types/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+  <url>
+		<loc>http://blog.danthought.com/programming/2016/12/14/swift-generic/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+  <url>
+		<loc>http://blog.danthought.com/business/2016/12/19/blogging-for-two-years/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+  <url>
+		<loc>http://blog.danthought.com/programming/2017/02/06/core-data-migration/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+  <url>
+		<loc>http://blog.danthought.com/programming/2017/02/07/core-data-performance/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+  <url>
+		<loc>http://blog.danthought.com/programming/2017/02/08/core-data-concurrency/</loc>
+		<changefreq>weekly</changefreq>
+	</url>
 </urlset>

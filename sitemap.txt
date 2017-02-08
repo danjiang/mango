@@ -79,3 +79,11 @@ http://blog.danthought.com/programming/2016/10/08/swift-protocols/
 http://blog.danthought.com/programming/2016/10/15/swift-inheritance/
 http://blog.danthought.com/programming/2016/10/17/swift-type-casting/
 http://blog.danthought.com/programming/2016/11/07/swift-memory-management/
+http://blog.danthought.com/programming/2016/11/18/swift-error-handling/
+http://blog.danthought.com/business/2016/11/24/wuhoo-workout-1-for-iphone-is-here/
+http://blog.danthought.com/programming/2016/12/10/swift-nested-types/
+http://blog.danthought.com/programming/2016/12/14/swift-generic/
+http://blog.danthought.com/business/2016/12/19/blogging-for-two-years/
+http://blog.danthought.com/programming/2017/02/06/core-data-migration/
+http://blog.danthought.com/programming/2017/02/07/core-data-performance/
+http://blog.danthought.com/programming/2017/02/08/core-data-concurrency/
