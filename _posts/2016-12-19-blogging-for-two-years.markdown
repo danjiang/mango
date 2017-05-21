@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: business
-tag: featured
 ---
 
 时间过的好快，这一年马上就要结束了，看看年初的计划，又有多少实现了呢？

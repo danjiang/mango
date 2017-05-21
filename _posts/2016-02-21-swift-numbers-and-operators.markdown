@@ -125,3 +125,32 @@ if poor || lazy {
   print("Bad Boy")
 }
 {% endhighlight %}
+
+## 自定义运算符
+
+Swift 中支持自定义运算符，如下是重载 Swift 中已经存在的运算符：
+
+{% highlight swift %}
+struct Point {
+  var x = 0
+  var y = 0
+}
+
+func +(left: Point, right: Point) -> Point {
+  return Point(x: left.x + right.x, y: left.y + right.y)
+}
+
+let p1 = Point(x: 2, y: 5)
+let p2 = Point(x: 4, y: 3)
+let p3 = p1 + p2
+{% endhighlight %}
+
+定义不存在的 Swift 中间运算符，这里使用 **infix** 关键词，不过还有 **prefix** 和 **postfix** 关键词：
+
+{% highlight swift %}
+infix operator >>>
+
+func >>>(filter1: @escaping Filter, filter2: @escaping Filter) -> Filter {
+  return { image in filter2(filter1(image)) }
+}
+{% endhighlight %}

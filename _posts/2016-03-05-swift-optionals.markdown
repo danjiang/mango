@@ -37,7 +37,7 @@ var greeting = "Hello, " + name
 error: value of optional type 'String?' not unwrapped; did you mean to use '!' or '?'?
 {% endhighlight %}
 
-Swift 是门讲究少出错的语言，在使用可选类型进行运算前，要通过下面两种方式展开可选类型保证可选类型有值，再进行其他运算。
+Swift 是门讲究少出错的语言，在使用可选类型进行运算前，要通过下面几种方式展开可选类型保证可选类型有值，再进行其他运算。
 
 ### 强制展开
 
@@ -71,6 +71,52 @@ if let n = name, let a = age {
 } else {
   print("Hello stranger. How old are you?")
 }
+{% endhighlight %}
+
+### guard let
+
+{% highlight swift %}
+func greeting(name: String?) {
+  guard let n = name else {
+    print("Hello, Stranger")
+    return
+  }
+  print("Hello, " + n)
+}
+{% endhighlight %}
+
+### func flatMap(_:)
+
+如果可选类型不为 nil，会将展开后值作为参数传给 transform 闭包，闭包会返回转化后的 **可选类型**：
+
+{% highlight swift %}
+func flatMap<U>(_ transform: (Wrapped) throws -> U?) rethrows -> U?
+
+let possibleNumber: Int? = Int("42")
+let nonOverflowingSquare = possibleNumber.flatMap { x -> Int? in
+    let (result, overflowed) = Int.multiplyWithOverflow(x, x)
+    return overflowed ? nil : result
+}
+print(nonOverflowingSquare)
+// Prints "Optional(1746)"
+{% endhighlight %}
+
+### func map(_:)
+
+如果可选类型不为 nil，会将展开后值作为参数传给 transform 闭包，闭包会返回转化后的 **非可选类型**：
+
+{% highlight swift %}
+func map<U>(_ transform: (Wrapped) throws -> U) rethrows -> U?
+
+let possibleNumber: Int? = Int("42")
+let possibleSquare = possibleNumber.map { $0 * $0 }
+print(possibleSquare)
+// Prints "Optional(1746)"
+ 
+let noNumber: Int? = nil
+let noSquare = noNumber.map { $0 * $0 }
+print(noSquare)
+// Prints "nil"
 {% endhighlight %}
 
 ## 隐式展开可选类型

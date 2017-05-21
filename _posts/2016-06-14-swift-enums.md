@@ -135,3 +135,15 @@ if let lost = Direction(rawValue: "Lost") {
   print("Be lost") // Be lost
 }
 {% endhighlight %}
+
+## 递归枚举
+
+枚举定义中还有另一个枚举的实例，需要使用 **indirect** 关键词来告诉编译器为了间接插入必要中间层：
+
+{% highlight swift %}
+indirect enum ArithmeticExpression {
+  case number(Int)
+  case addition(ArithmeticExpression, ArithmeticExpression)
+  case multiplication(ArithmeticExpression, ArithmeticExpression)
+}
+{% endhighlight %}
