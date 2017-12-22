@@ -53,7 +53,7 @@ greeting = "你好" // 所以只能给 greeting 赋 String 类型的值
 
 ## 类型推断
 
-你应该会注意到以上很多示例代码中没有使用类型注解，Swift 是强类型编辑语言，每一个变量或常量在声明时都要明确类型，那么这又是怎么做到的呢？这就是通过类型推断 Type Inference 来明确的。
+你应该会注意到以上很多示例代码中没有使用类型注解，Swift 是强类型编程语言，每一个变量或常量在声明时都要明确类型，那么这又是怎么做到的呢？这就是通过类型推断 Type Inference 来明确的。
 
 {% highlight swift %}
 let age = 42 // age 被推断为 Int 类型
@@ -62,7 +62,7 @@ let pi = 3.14159 // pi 被推断为 Double 类型
 
 ## 类型转换
 
-Swift 是强类型语言，所以值不能自动地转换为其他类型，需要自己来做类型转换 Type Conversion，否侧会有编译错误。
+Swift 是强类型语言，所以值不能自动地转换为其他类型，需要自己来做类型转换 Type Conversion，否则会有编译错误。
 
 ![Swift Type Conversion Error](/images/swift-type-conversion-error.jpg)
 

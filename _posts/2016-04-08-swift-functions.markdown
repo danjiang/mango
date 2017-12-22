@@ -157,8 +157,8 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 函数类型由参数类型和返回值类型构成，如下示例的函数类型就是 (String, String) -> String
 
 {% highlight swift %}
-func greeting(firtName: String, lastName: String) {
-  print("Hello, " + firtName + " " + lastName)
+func greeting(firtName: String, lastName: String) -> String {
+  return "Hello, " + firtName + " " + lastName
 }
 {% endhighlight %}
 

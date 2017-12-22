@@ -52,9 +52,9 @@ if shoppingList.count < 5 {
   print("Not Enough")
 }
 
-// 访问最后一个元素
-print(shoppingList.first ?? "")
 // 访问第一个元素
+print(shoppingList.first ?? "")
+// 访问最后一个元素
 print(shoppingList.last ?? "")
 // 通过下标来访问第二元素
 print(shoppingList[1])

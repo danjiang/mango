@@ -69,7 +69,7 @@ genres.insert("Classical")
 genres.remove("Jazz")
 {% endhighlight %}
 
-## 遍历字典
+## 遍历集合
 
 {% highlight swift %}
 var genres: Set<String> = ["Rock", "Pop", "Jazz"]
