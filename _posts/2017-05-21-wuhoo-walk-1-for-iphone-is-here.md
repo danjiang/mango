@@ -2,9 +2,8 @@
 title: Wuhoo 走路 iPhone 版已上线
 author: 但江
 avatar: danjiang
-location: 成都 
+location: 成都
 category: business
-tag: featured
 ---
 
 [Wuhoo 走路][1] 是一款 iPhone 手机应用，主要的功能是读取 iPhone 手机 [健康][2] 应用中的步数，来查看走路一共消耗了多少热量，相当于吃多少个某种食物的热量摄入。

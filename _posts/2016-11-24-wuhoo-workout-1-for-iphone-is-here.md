@@ -2,9 +2,8 @@
 title: Wuhoo 训练 iPhone 版已上线
 author: 但江
 avatar: danjiang
-location: 成都 
+location: 成都
 category: business
-tag: featured
 ---
 
 [Wuhoo 训练][1] 是一款 iPhone 手机应用，目前主要的功能是创建训练计时器，并使用这些计时器来帮助你做训练。[Wuhoo][2] 是针对健康数字生活的品牌。

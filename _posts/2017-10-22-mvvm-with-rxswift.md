@@ -2,8 +2,9 @@
 title: MVVM 模式中结合 RxSwift
 author: 但江
 avatar: danjiang
-location: 成都 
+location: 成都
 category: programming
+tag: featured
 ---
 
 本文首先会分别讲解一下 MVVM 模式和 RxSwift，然后再讲解如何将 MVVM 模式和 RxSwift 进行结合。
@@ -23,7 +24,7 @@ MVC 模式大家应该不陌生了吧，我们来简单回顾一下，View 层�
 MVC 模式带来了一些问题，ViewController 承担的任务过于繁重，既然叫 ViewController，我们是不是应该只让它负责控制 View 呢？业务逻辑是我们应用中最关键的部分，我们希望业务逻辑很容易地被测试，也希望业务逻辑能够跨平台复用，首先 ViewController 继承自 UIViewController，似乎不是很容易被测试，如果是 Plain Object 应该要更容易被测试，其次，iOS 平台 ViewController 继承自 UIViewController，macOS 平台 ViewControler 继承自 NSViewController，别忘了还有多 Window 的问题，代码复用起来也会有难度。
 
 我们来看看 MVVC 模式怎么解决这些问题，MVVC 模式比 MVC 模式，多加了一个 ViewModel 层，ViewModel 层处理业务逻辑并且完全独立于视图展现，ViewController 层只负责控制 View，初始化 ViewModel 时传入必要的依赖类，将 ViewModel 和 View 之间绑定起来，View 层和 Model 层并没有什么特别的变化。
- 
+
 > MVVC 模式中业务逻辑主要放在 ViewModel 中。
 
 ViewModel 只是一个 Plain Object，所以可以被更容易的测试，也能够跨平台复用。
@@ -80,36 +81,36 @@ Schedulers 是对数据流发射和处理调度的抽象，RxSwift 已经预制�
 
 {% highlight swift %}
 struct HomeViewModel {
-  
+
   // 依赖：实现业务逻辑必须的
 
   let sceneCoordinator: SceneCoordinatorType
   let habitService: HabitService
-  
+
   // 输出：列表
-  
+
   var habits: Observable<[Habit]> {
     ...
   }
-  
+
   // 输入：删除
-  
+
   func onDelete(habit: Habit) -> CocoaAction {
     ...
   }
-  
+
   // 输入：修改
-  
+
   func onUpdateForm(habit: Habit) -> Action<HabitForm, Void> {
     ...
   }
-  
+
   // 输入：创建
-  
+
   func onCreateHabit() -> CocoaAction {
     ...
   }
-  
+
 }
 {% endhighlight %}
 
@@ -127,22 +128,22 @@ let homeViewModel = HomeViewModel(sceneCoordinator: sceneCoordinator, habitServi
 
 {% highlight swift %}
 class HomeViewController: UIViewController, BindableType {
-  
+
   var viewModel: HomeViewModel!
 
   fileprivate let progressView = ProgressView()
   fileprivate let tableView = UITableView()
   fileprivate let habitCellIdentifier = "cell"
   fileprivate let bag = DisposeBag()
-  
+
   override func loadView() {
     super.loadView()
-    
+
     // 布局的代码
   }
-  
+
   // 关注这里如何将 ViewModel 和 View 绑定
-  
+
   func bindViewModel() {
     navigationItem.rightBarButtonItem!.rx.action = viewModel.onCreateHabit()
     viewModel.habits
@@ -153,7 +154,7 @@ class HomeViewController: UIViewController, BindableType {
     }
     .addDisposableTo(bag)
   }
-    
+
 }
 {% endhighlight %}
 

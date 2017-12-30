@@ -2,9 +2,9 @@
 title: Objective-C 内存管理，复制和归档
 author: 但江
 avatar: danjiang
-location: 成都 
+location: 成都
 category: programming
-tag: objective-c
+tags: objective-c featured
 ---
 
 本文并不是一篇完整的教程，更像一篇快速笔记，讲解 Objective-C 中的内存管理，复制对象和归档对象。
@@ -133,7 +133,7 @@ iOS 应用运行在事件循环中，为了处理新的事件，系统会创建�
 {% highlight objc %}
 HVUser *user1 = [HVUser new];
 user1.name = @"Jack";
-  
+
 HVUser *user2 = [user1 copy];
 user2.name = @"Mick";
 {% endhighlight %}
