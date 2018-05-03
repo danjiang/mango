@@ -120,7 +120,7 @@ iOS 应用运行在事件循环中，为了处理新的事件，系统会创建�
 @implementation HVUser
 
 - (id)copyWithZone:(NSZone *)zone {
-  HVUser *user = [HVUser new];
+  HVUser *user = [[[self class] allocWithZone:zone] init];
   user.name = self.name;
   user.mobile = self.mobile;
   user.gender = self.gender;
@@ -136,6 +136,19 @@ user1.name = @"Jack";
 
 HVUser *user2 = [user1 copy];
 user2.name = @"Mick";
+{% endhighlight %}
+
+如果需要通过拷贝得到可变实例和不可变实例，还可以再实现：
+
+{% highlight objc %}
+- (id)mutableCopyWithZone:(NSZone *)zone {
+{% endhighlight %}
+
+**copy** 始终返回不可变实例，**mutableCopy** 始终返回可变实例：
+
+{% highlight objc %}
+-[NSMutableArray copy] => NSArray
+-[NSArray copy] => NSMutableArray
 {% endhighlight %}
 
 ## 归档对象
