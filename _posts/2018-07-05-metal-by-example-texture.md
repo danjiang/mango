@@ -15,7 +15,7 @@ tag: metal
 
 如下的左图是在 3D 建模软件中制作的模型，如下的右图就是将模型导出的时候，分离出来的纹理，当然导出文件中还包含 OBJ 模型；纹理映射就是将网格模型中每一个顶点和纹理中一个点结合起来，类似于一张 2D 包装纸裹到 3D 物体表面。
 
-![Metal By Example Texture Mapping](/images/mbe-texture-mapping.png)
+![Metal By Example Texture Mapping](/images/mbe-texture-mapping1.png)
 
 Metal 中坐标体系基于左上角，UIKit 中坐标体系基于左上角，OpenGL 中坐标体系基于左下角，CG 中坐标体系基于左下角，所以通过 CG 读取的纹理图像要转换来适配 Metal 的坐标体系。
 
