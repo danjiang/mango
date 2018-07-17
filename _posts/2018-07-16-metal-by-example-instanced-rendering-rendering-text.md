@@ -13,7 +13,7 @@ tag: metal
 
 ## 实例渲染
 
-![Metal By Example Instanced Rendering](/images/mbe-instanced-rendering.png)
+{% youtube gYpmVTldLOk %}
 
 绘制地形
 
@@ -88,9 +88,11 @@ vertex ProjectedVertex vertex_project(InVertex vertexIn [[stage_in]],
 
 示例代码：
 
-[danjiang / mbe-sample-code](https://github.com/danjiang/mbe-sample-code/tree/master/objc/11-InstancedDrawing)
+[danjiang / mbe-sample-code / InstancedDrawing](https://github.com/danjiang/mbe-sample-code/tree/master/objc/11-InstancedDrawing)
 
 ## 渲染文本
+
+{% youtube Q92YpyM2yR4 %}
 
 动态栅格化（Dynamic Rasterization）
 
@@ -115,4 +117,4 @@ uniforms.viewProjectionMatrix = projectionMatrix;
 
 示例代码：
 
-[danjiang / mbe-sample-code](https://github.com/danjiang/mbe-sample-code/tree/master/objc/12-TextRendering)
+[danjiang / mbe-sample-code / TextRendering](https://github.com/danjiang/mbe-sample-code/tree/master/objc/12-TextRendering)

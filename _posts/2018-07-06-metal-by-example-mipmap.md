@@ -86,6 +86,6 @@ id<MTLBlitCommandEncoder> commandEncoder = [commandBuffer blitCommandEncoder];
 
 ## 代码和效果
 
-[danjiang / mbe-sample-code](https://github.com/danjiang/mbe-sample-code/tree/master/objc/07-Mipmapping)
+[danjiang / mbe-sample-code / Mipmapping](https://github.com/danjiang/mbe-sample-code/tree/master/objc/07-Mipmapping)
 
 {% youtube Px2RhCIjwBc %}

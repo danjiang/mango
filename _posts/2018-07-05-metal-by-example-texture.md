@@ -165,6 +165,6 @@ Shader 中根据传入值进行 sample：
 float3 diffuseColor = diffuseTexture.sample(samplr, vertexIn.texCoords).rgb;
 {% endhighlight %}
 
-[danjiang / MetalByExample](https://github.com/danjiang/MetalByExample/tree/texture)
+[danjiang / MetalByExample / Texturing](https://github.com/danjiang/MetalByExample/tree/texture)
 
 {% youtube 7c-M3b6YmEE %}

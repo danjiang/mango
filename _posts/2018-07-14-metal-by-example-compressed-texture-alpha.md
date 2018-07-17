@@ -29,9 +29,11 @@ tag: metal
 
 示例代码：
 
-[danjiang / mbe-sample-code](https://github.com/danjiang/mbe-sample-code/tree/master/objc/09-CompressedTextures)
+[danjiang / mbe-sample-code / CompressedTextures](https://github.com/danjiang/mbe-sample-code/tree/master/objc/09-CompressedTextures)
 
 ## 透明
+
+{% youtube GzQMtubQiiQ %}
 
 透明检查（Alpha Testing），决定 Fragment Shader 返回的颜色是否需要放到 Render Buffer 中显示出来，这里利用纹理中的 Alpha 值和设置阀值进行比较来决定是否要 **discard_fragment**：
 
@@ -73,4 +75,4 @@ if (blendingEnabled)
 
 示例代码：
 
-[danjiang / mbe-sample-code](https://github.com/danjiang/mbe-sample-code/tree/master/objc/10-AlphaBlending)
+[danjiang / mbe-sample-code / AlphaBlending](https://github.com/danjiang/mbe-sample-code/tree/master/objc/10-AlphaBlending)

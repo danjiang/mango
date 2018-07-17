@@ -134,6 +134,6 @@ setVertexBuffer 的 atIndex 0 对应 vertex shader 函数中的 [[buffer(0)]] �
 
 ## 代码和效果
 
-[danjiang / MetalByExample](https://github.com/danjiang/MetalByExample/tree/2d)
+[danjiang / MetalByExample / 2D](https://github.com/danjiang/MetalByExample/tree/2d)
 
 ![Metal By Example 2D Result](/images/mbe-2d-result.png)

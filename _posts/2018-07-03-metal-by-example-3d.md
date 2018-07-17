@@ -173,6 +173,6 @@ const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
 
 ## 代码和效果
 
-[danjiang / MetalByExample](https://github.com/danjiang/MetalByExample/tree/3d)
+[danjiang / MetalByExample / 3D](https://github.com/danjiang/MetalByExample/tree/3d)
 
 {% youtube 83lBOrW3fZQ %}

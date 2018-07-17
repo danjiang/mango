@@ -156,6 +156,6 @@ fragment float4 fragment_light(ProjectedVertex vertexIn [[stage_in]],
 
 ## 代码和效果
 
-[danjiang / MetalByExample](https://github.com/danjiang/MetalByExample/tree/lighting)
+[danjiang / MetalByExample / Lighting](https://github.com/danjiang/MetalByExample/tree/lighting)
 
 {% youtube Zwe-MxsrLjk %}

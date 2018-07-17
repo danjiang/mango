@@ -207,6 +207,6 @@ self.renderer.sceneOrientation = orientation;
 
 ## 代码和效果
 
-[danjiang / mbe-sample-code](https://github.com/danjiang/mbe-sample-code/tree/master/objc/08-CubeMapping)
+[danjiang / mbe-sample-code / CubeMapping](https://github.com/danjiang/mbe-sample-code/tree/master/objc/08-CubeMapping)
 
 {% youtube zJS7cMvYnfo %}

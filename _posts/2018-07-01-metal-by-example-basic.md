@@ -72,6 +72,6 @@ id<MTLRenderCommandEncoder> commandEncoder = [commandBuffer renderCommandEncoder
 
 ## 代码和效果
 
-[danjiang / MetalByExample](https://github.com/danjiang/MetalByExample/tree/basic)
+[danjiang / MetalByExample / Basic](https://github.com/danjiang/MetalByExample/tree/basic)
 
 ![Metal By Example Basic Result](/images/mbe-basic-result.png)
