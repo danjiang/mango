@@ -53,6 +53,15 @@ layout: default
 			</ul>
 		</div>
 
+		<div class="post-series-tag" id="opengl">
+			<h6>OpenGL</h6>
+			<ul>
+				{% for post in site.tags.opengl reversed %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+
 		<div class="post-series-tag" id="metal">
 			<h6>Metal</h6>
 			<ul>

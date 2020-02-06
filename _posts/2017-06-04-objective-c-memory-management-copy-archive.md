@@ -86,7 +86,7 @@ ARC 仍然采用了引用计数，不过系统会检测出何时需要保持对�
 
 **@autoreleasepool** 这个指令围住的语句块定了自动释放池的上下文，任何在这个上下文中创建的对象都是自动释放的，在自动释放池块结束的时候销毁这些对象：
 
-{% highlight objc %}
+{% highlight c %}
 int main(int argc, char * argv[]) {
   @autoreleasepool {
     return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
