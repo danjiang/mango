@@ -45,74 +45,82 @@ layout: default
 	<div class="post-series">
 		<h5 class="post-series-icon">专题系列</h5>
 		<div class="post-series-tag" id="swift">
-			<h6>Swift</h6>
-			<ul>
+			<h4 class="post-series-swift">Swift 编程语言</h4>
+			<ul class="post-series-column3">
 				{% for post in site.tags.swift reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+
+		<div class="post-series-tag" id="objective-c">
+			<h4 class="post-series-objective-c">Objective-C 编程语言</h4>
+			<ul class="post-series-column2">
+				{% for post in site.tags.objective-c reversed %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 
 		<div class="post-series-tag" id="opengl">
-			<h6>OpenGL</h6>
-			<ul>
+			<h4 class="post-series-opengl">OpenGL ES 图像处理</h6>
+			<ul class="post-series-column3">
 				{% for post in site.tags.opengl reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 
 		<div class="post-series-tag" id="metal">
-			<h6>Metal</h6>
-			<ul>
+			<h4 class="post-series-metal">Metal 图像处理</h4>
+			<ul class="post-series-column3">
 				{% for post in site.tags.metal reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 
 		<div class="post-series-tag" id="core-data">
-			<h6>Core Data</h6>
-			<ul>
+			<h4 class="post-series-core-data">Core Data 数据存储</h6>
+			<ul class="post-series-column2">
 				{% for post in site.tags.core-data reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 		
-		<div class="post-series-tag" id="objective-c">
-			<h6>Objective-C</h6>
-			<ul>
-				{% for post in site.tags.objective-c reversed %}
+		<div class="post-series-tag" id="ruby">
+			<h4 class="post-series-ruby">Ruby 编程语言</h4>
+			<ul class="post-series-column2">
+				{% for post in site.tags.ruby reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 
 		<div class="post-series-tag" id="rails">
-			<h6>Rails</h6>
-			<ul>
+			<h4 class="post-series-rails">Rails 服务端 Web 框架</h4>
+			<ul class="post-series-column3">
 				{% for post in site.tags.rails reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
-			</ul>
-		</div>
-
-		<div class="post-series-tag" id="ruby">
-			<h6>Ruby</h6>
-			<ul>
-				{% for post in site.tags.ruby reversed %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 
 		<div class="post-series-tag" id="ubuntu-apache">
-			<h6>Ubuntu Apache</h6>
-			<ul>
+			<h4 class="post-series-ubuntu-apache">Ubuntu Apache HTTP 服务器</h4>
+			<ul class="post-series-column3">
 				{% for post in site.tags.ubuntu-apache reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 		<div class="clearfix"></div>
