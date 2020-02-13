@@ -209,7 +209,7 @@ glUniformMatrix4fv(self.projectionMatrixUniform, 1, GLboolean(GL_FALSE), self.pr
 glUniformMatrix4fv(self.modelViewMatrixUniform, 1, GLboolean(GL_FALSE), self.modelViewMatrix.array)
 {% endhighlight %}
 
-> <i class="fas fa-exclamation-triangle" style="color:#F5B131"></i> 不同类型的 uniform 变量要使用不同名称的 OpenGL ES Functions，方法名上就看的出来参数类型，之前错把 glUniform1i 写成了 glUniform1f，找了很多天才发现了这个问题。
+> <i class="fas fa-exclamation-triangle icon-warning"></i> 不同类型的 uniform 变量要使用不同名称的 OpenGL ES Functions，方法名上就看的出来参数类型，之前错把 glUniform1i 写成了 glUniform1f，找了很多天才发现了这个问题。
 
 * <em class="fab fa-github"></em> [示例代码 ModelTransformation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-1.ModelTransformation "danjiang / LearningOpenGLES2 / 06-1.ModelTransformation")
 * <em class="fab fa-github"></em> [示例代码 ModelTransformation-Animation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-2.ModelTransformation-Animation "danjiang / LearningOpenGLES2 / 06-2.ModelTransformation-Animation")
