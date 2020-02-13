@@ -38,7 +38,7 @@ GLKit 是 Apple 公司提供对 OpenGL 使用的简易封装：
 > 
 > On iOS, GLKit requires an OpenGL ES 2.0 context. In macOS, GLKit requires an OpenGL context that supports the OpenGL 3.2 Core Profile.
 >
-> Quote from [GLKit - Apple Developer Documentation](https://developer.apple.com/documentation/glkit#overview)
+> ---- Quote from [GLKit - Apple Developer Documentation](https://developer.apple.com/documentation/glkit#overview)
 
 ## 基础工程搭建
 
@@ -49,7 +49,7 @@ GLKit 是 Apple 公司提供对 OpenGL 使用的简易封装：
 
 ### GLKView 和 GLKViewController
 
-[danjiang / LearningOpenGLES2 / 01.HelloOpenGL](https://github.com/danjiang/LearningOpenGLES2/tree/master/01.HelloOpenGL)
+<em class="fab fa-github"></em> [示例代码](https://github.com/danjiang/LearningOpenGLES2/tree/master/01.HelloOpenGL "danjiang / LearningOpenGLES2 / 01.HelloOpenGL")
 
 {% highlight swift %}
 import UIKit
@@ -79,7 +79,7 @@ class ViewController: GLKViewController {
 
 ### CAEAGLLayer
 
-[danjiang / LearningOpenGLES2 / 01.HelloOpenGL2](https://github.com/danjiang/LearningOpenGLES2/tree/master/01.HelloOpenGL2)
+<em class="fab fa-github"></em> [示例代码](https://github.com/danjiang/LearningOpenGLES2/tree/master/01.HelloOpenGL2 "danjiang / LearningOpenGLES2 / 01.HelloOpenGL2")
 
 这种方式可以说是对 GLKView 和 GLKViewController 所做事情的拆解。
 
@@ -137,7 +137,7 @@ frame buffer 还可以和 texture 关联，将内容最终绘制到 texture 中�
 > 
 > You can also attach an OpenGL ES texture to the color attachment point of a framebuffer, which means that any drawing commands are rendered into the texture.
 >
-> Qutoe from [OpenGL ES Programming Guide - Drawing to Other Rendering Destinations](https://developer.apple.com/library/archive/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/WorkingwithEAGLContexts/WorkingwithEAGLContexts.html#//apple_ref/doc/uid/TP40008793-CH103-SW1)
+> ---- Qutoe from [OpenGL ES Programming Guide - Drawing to Other Rendering Destinations](https://developer.apple.com/library/archive/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/WorkingwithEAGLContexts/WorkingwithEAGLContexts.html#//apple_ref/doc/uid/TP40008793-CH103-SW1)
 
 {% highlight swift %}
 private func setupFrameBuffer() {
@@ -171,7 +171,7 @@ private func setupFrameBuffer() {
 }
 {% endhighlight %}
 
-下面的代码就和 `func glkView(_ view: GLKView, drawIn rect: CGRect)` 中差不多了，不过多了两步，一是设置 OpenGL Context 绘制区域的大小，还有就是将 render buffer 的内容显示到 layer 上：
+下面的代码就和 **func glkView(_ view: GLKView, drawIn rect: CGRect)** 中差不多了，不过多了两步，一是设置 OpenGL Context 绘制区域的大小，还有就是将 render buffer 的内容显示到 layer 上：
 
 {% highlight swift %}
 func display() {

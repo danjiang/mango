@@ -39,4 +39,11 @@ $on-phone:         600px;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base", "layout", "syntax-highlighting";
+@import "base", "layout";
+// Code Highlight
+@import "syntax-highlighting";
+// Font Awesome
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";
+@import "fontawesome/regular.scss";
+@import "fontawesome/brands.scss";

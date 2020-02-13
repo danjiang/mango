@@ -1,24 +1,3 @@
-@mixin icon($image) {
-	background: url($image) left center no-repeat;
-	background-size: 24px 24px;
-	padding-left: 36px;
-	margin-bottom: $spacing-unit;
-	@include media-query($on-phone) {
-		padding-left: 32px;
-	}
-}
-
-@mixin square($image) {
-	background: url($image) left center no-repeat;
-	background-size: 20px 20px;
-	padding-left: 32px;
-	margin-bottom: $spacing-unit / 2;
-	@include media-query($on-phone) {
-		background-size: 16px 16px;
-		padding-left: 24px;
-	}
-}
-
 /**
  * Site header
  */
@@ -68,9 +47,6 @@
 	padding-bottom: $spacing-unit * 2;
 	margin-bottom: $spacing-unit * 2;
 	border-bottom: 1px solid $grey-color-light;
-	h5.post-latest-icon {
-		@include icon('/images/flask.png')
-	}
 	h3 {
 		margin-top: $spacing-unit;
 		margin-bottom: $spacing-unit;
@@ -84,9 +60,6 @@
 	padding-bottom: $spacing-unit;
 	margin-bottom: $spacing-unit * 2;
 	border-bottom: 1px solid $grey-color-light;
-	h5.post-featured-icon {
-		@include icon('/images/star.png')
-	}
 	div.post-featured-brief {
 		float: left;
 		width: 45%;
@@ -111,39 +84,15 @@
 	padding-bottom: $spacing-unit;
 	margin-bottom: $spacing-unit * 2;
 	border-bottom: 1px solid $grey-color-light;
-	h5.post-series-icon {
-		@include icon('/images/folder-document.png')
-	}
 	div.post-series-tag {
 		margin-bottom: $spacing-unit;
-		h4.post-series-swift {
-			@include square('/images/square-swift.png')
-		}
-		h4.post-series-objective-c {
-			@include square('/images/square-objective-c.png')
-		}
-		h4.post-series-opengl {
-			@include square('/images/square-opengl.png')
-		}
-		h4.post-series-metal {
-			@include square('/images/square-metal.png')
-		}
-		h4.post-series-core-data {
-			@include square('/images/square-core-data.png')
-		}
-		h4.post-series-ruby {
-			@include square('/images/square-ruby.png')
-		}
-		h4.post-series-rails {
-			@include square('/images/square-rails.png')
-		}
-		h4.post-series-ubuntu-apache {
-			@include square('/images/square-ubuntu-apache.png')
-		}
 		ul {
 			margin: 0;
 			padding-left: 1.35em;
 			li {
+			float: left;
+			width: 28%;
+			margin-right: 5%;
 				list-style: none;
 				&:before {
 					content: "";
@@ -181,9 +130,6 @@
 
 .post-archive {
 	margin-bottom: $spacing-unit;
-	h5.post-archive-icon {
-		@include icon('/images/calendar.png')
-	}
 	div.post-archive-category {
 		float: left;
 		width: 45%;

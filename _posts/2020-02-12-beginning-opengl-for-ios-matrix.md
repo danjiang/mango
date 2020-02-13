@@ -42,7 +42,7 @@ class Model {
 
 > A model matrix is used to place objects into world-space coordinates. For example, we might have our puck model and our mallet model initially centered at (0, 0, 0). Without a model matrix, our models will be stuck there: if we wanted to move them, we’d have to update each and every vertex ourselves. Instead of doing that, we can use a model matrix and transform our vertices by multiplying them with the matrix. If we want to move our puck to (5, 5), we just need to prepare a model matrix that will do this for us.
 >
-> Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
+> ---- Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
 
 **2. View Matrix**
 
@@ -67,7 +67,7 @@ class Model {
 >
 > The advantage of using a separate matrix is that it lets us prebake a bunch of transformations into a single matrix. As an example, imagine we wanted to rotate the scene around and move it a certain amount into the distance. One way we could do this is by issuing the same rotate and translate calls for every single object. While that works, it’s easier to just save these transformations into a separate matrix and apply that to every object.
 >
-> Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
+> ---- Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
 
 **3. Projection Matrix**
 
@@ -81,7 +81,7 @@ OpenGL 在这一步会执行 perspective division，就是将坐标 x, y, z 除�
 
 > To create the illusion of 3D on the screen, OpenGL will take each gl_Position and divide the x, y, and z components by the w component. When the w component is used to represent distance, this causes objects that are further away to be moved closer to the center of the rendering area, which then acts like a vanishing point. This is how OpenGL fools us into seeing a scene in 3D, using the same trick that artists have been using for centuries.
 >
-> Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
+> ---- Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
 
 可以采用 Projection Matrix 来自动计算 w 的值：
 
@@ -120,7 +120,7 @@ glViewport(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)
 
 > Before we can see the final result, OpenGL needs to map the x and y components of the normalized device coordinates to an area on the screen that the operating system has set aside for display, called the viewport; these mapped coordinates are known as window coordinates. We don’t really need to be too concerned about these coordinates beyond telling OpenGL how to do the mapping. We’re currently doing this in our code with a call to glViewport() in onSurfaceChanged().
 >
-> Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
+> ---- Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
 
 ## Depth Buffer
 
@@ -134,7 +134,7 @@ glEnable(GLenum(GL_DEPTH_TEST))
 
 > OpenGL gives us a better solution in the form of the depth buffer, a special buffer that records the depth of every fragment on the screen. When this buffer is turned on, OpenGL performs a depth test for every fragment: if the fragment is closer than what’s already there, draw it; otherwise discard it.
 >
-> Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
+> ---- Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
 
 ## Culling
 
@@ -209,11 +209,11 @@ glUniformMatrix4fv(self.projectionMatrixUniform, 1, GLboolean(GL_FALSE), self.pr
 glUniformMatrix4fv(self.modelViewMatrixUniform, 1, GLboolean(GL_FALSE), self.modelViewMatrix.array)
 {% endhighlight %}
 
-> 不同类型的 uniform 变量要使用不同名称的 OpenGL ES Functions，方法名上就看的出来参数类型，之前错把 glUniform1i 写成了 glUniform1f，找了很多天才发现了这个问题 😤。
+> <i class="fas fa-exclamation-triangle" style="color:#F5B131"></i> 不同类型的 uniform 变量要使用不同名称的 OpenGL ES Functions，方法名上就看的出来参数类型，之前错把 glUniform1i 写成了 glUniform1f，找了很多天才发现了这个问题。
 
-* [danjiang / LearningOpenGLES2 / 06-1.ModelTransformation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-1.ModelTransformation)
-* [danjiang / LearningOpenGLES2 / 06-2.ModelTransformation-Animation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-2.ModelTransformation-Animation)
-* [danjiang / LearningOpenGLES2 / 06-3.ViewTransformation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-3.ViewTransformation)
-* [danjiang / LearningOpenGLES2 / 06-4.ProjectionTransformation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-4.ProjectionTransformation)
-* [danjiang / LearningOpenGLES2 / 06-5.AnimateCube](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-5.AnimateCube)
-* [danjiang / LearningOpenGLES2 / 06-6.DepthAndCulling](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-6.DepthAndCulling)
+* <em class="fab fa-github"></em> [示例代码 ModelTransformation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-1.ModelTransformation "danjiang / LearningOpenGLES2 / 06-1.ModelTransformation")
+* <em class="fab fa-github"></em> [示例代码 ModelTransformation-Animation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-2.ModelTransformation-Animation "danjiang / LearningOpenGLES2 / 06-2.ModelTransformation-Animation")
+* <em class="fab fa-github"></em> [示例代码 ViewTransformation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-3.ViewTransformation "danjiang / LearningOpenGLES2 / 06-3.ViewTransformation")
+* <em class="fab fa-github"></em> [示例代码 ProjectionTransformation](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-4.ProjectionTransformation "danjiang / LearningOpenGLES2 / 06-4.ProjectionTransformation")
+* <em class="fab fa-github"></em> [示例代码 AnimateCube](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-5.AnimateCube "danjiang / LearningOpenGLES2 / 06-5.AnimateCube")
+* <em class="fab fa-github"></em> [示例代码 DepthAndCulling](https://github.com/danjiang/LearningOpenGLES2/tree/master/06-6.DepthAndCulling "danjiang / LearningOpenGLES2 / 06-6.DepthAndCulling")

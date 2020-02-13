@@ -45,7 +45,7 @@ let vertices : [Vertex] = [
 
 ## Shader
 
-[danjiang / LearningOpenGLES2 / 01.HelloOpenGL2 / HelloOpenGL2 /ShaderProgram.swift](https://github.com/danjiang/LearningOpenGLES2/blob/master/01.HelloOpenGL2/HelloOpenGL2/ShaderProgram.swift)
+<em class="fab fa-github"></em> [示例代码](https://github.com/danjiang/LearningOpenGLES2/blob/master/01.HelloOpenGL2/HelloOpenGL2/ShaderProgram.swift "danjiang / LearningOpenGLES2 / 01.HelloOpenGL2 / HelloOpenGL2 /ShaderProgram.swift")
 
 在 GPU 上跑的小程序，分为 vertex shader 和 fragment shader，GPU 小程序通过 GLSL 来编写，可以先简单理解 vertex shader 处理顶点，fragment shader 处理像素。
 
@@ -248,7 +248,7 @@ func uniformLocation(for name: String) -> GLint {
 
 #### Pass vertex as ordered with vertex buffer objects
 
-[danjiang / LearningOpenGLES2 / 02.Triangle](https://github.com/danjiang/LearningOpenGLES2/tree/master/02.Triangle)
+<em class="fab fa-github"></em> [示例代码](https://github.com/danjiang/LearningOpenGLES2/tree/master/02.Triangle "danjiang / LearningOpenGLES2 / 02.Triangle")
 
 ![OpenGL Vertex Buffer Objects](/images/opengl-vertex-buffer-objects.jpg)
 
@@ -313,7 +313,7 @@ glDisableVertexAttribArray(VertexAttributes.vertexAttribPosition.rawValue)
                           
 #### Pass vertex as indexed with vertex buffer objects
 
-[danjiang / LearningOpenGLES2 / 03.IndexedSquare](https://github.com/danjiang/LearningOpenGLES2/tree/master/03.IndexedSquare)
+<em class="fab fa-github"></em> [示例代码](https://github.com/danjiang/LearningOpenGLES2/tree/master/03.IndexedSquare "danjiang / LearningOpenGLES2 / 03.IndexedSquare")
 
 之前传递 Vertex 方式是，绘制一个长方形，它由 2 个三角形组成，我们就需要 6 个 Vertex，由几何的知识，我们知道这 2 个三角形会有共同的 Vertex，我们完全可以只传递 4 个 Vertex，并告知 2 个三角形由 4 个 Vertex 中的哪 3 个组成：
 
@@ -356,7 +356,7 @@ glDrawElements(GLenum(GL_TRIANGLES), GLsizei(indices.count), GLenum(GL_UNSIGNED_
 
 #### Pass vertex with postion and color
 
-[danjiang / LearningOpenGLES2 / 03.ColoredSquare](https://github.com/danjiang/LearningOpenGLES2/tree/master/03.ColoredSquare)
+<em class="fab fa-github"></em> [示例代码](https://github.com/danjiang/LearningOpenGLES2/tree/master/03.ColoredSquare "danjiang / LearningOpenGLES2 / 03.ColoredSquare")
 
 Vextex 数据结构有坐标位置和颜色：
 
@@ -400,7 +400,7 @@ func BUFFER_OFFSET(_ n: Int) -> UnsafeRawPointer? {
 
 #### Pass vertex with vertex array objects
 
-[danjiang / LearningOpenGLES2 / 04.VertexArrayObject](https://github.com/danjiang/LearningOpenGLES2/tree/master/04.VertexArrayObject)
+<em class="fab fa-github"></em> [示例代码](https://github.com/danjiang/LearningOpenGLES2/tree/master/04.VertexArrayObject "danjiang / LearningOpenGLES2 / 04.VertexArrayObject")
 
 可以通过 vertex array objects 将下面两步所做的事情放在一起：
 
@@ -453,7 +453,7 @@ glBindVertexArrayOES(0)
 
 #### Pass vertex via a pointer
 
-[danjiang / LearningOpenGLES2 / 02.Triangle2](https://github.com/danjiang/LearningOpenGLES2/tree/master/02.Triangle2)
+<em class="fab fa-github"></em> [示例代码](https://github.com/danjiang/LearningOpenGLES2/tree/master/02.Triangle2 "danjiang / LearningOpenGLES2 / 02.Triangle2")
 
 不通过 vertex buffer objects 传递数据，通过指针传递数据，如果数据结构复杂，通过 vertex buffer objects 更好：
 
@@ -473,11 +473,11 @@ glVertexAttribPointer(
     &vertices) // 通过指针传递数据
 {% endhighlight %}
 
-> `void VertexAttribPointer(uint index, int size, enum type,
-> boolean normalized, sizei stride, const void *pointer);`
+> *void VertexAttribPointer(uint index, int size, enum type,
+> boolean normalized, sizei stride, const void *pointer);*
 > 
 > Vertex data may be sourced from arrays that are stored in application memory (via a pointer) or faster GPU memory (in a buffer object). 
 > 
 > If an ARRAY_BUFFER is bound, the attribute will be read from the bound buffer, and pointer is treated as an offset within the buffer.
 >
-> Quote from OpenGL ES 2.0 Quick Reference Card
+> ---- Quote from OpenGL ES 2.0 Quick Reference Card

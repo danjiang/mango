@@ -131,7 +131,6 @@ blockquote {
 	border-left: 4px solid $grey-color-light;
 	padding-left: $spacing-unit / 2;
 	font-size: 18px;
-	letter-spacing: -1px;
 	font-style: italic;
 
 	> :last-child {
@@ -236,4 +235,28 @@ strong {
 em {
 	color: $brand-color;
 	font-style: italic;
+}
+
+/**
+ * Font Awesome
+ */
+i.section-icon {
+	padding-right: 12px;
+	@include media-query($on-phone) {
+		padding-right: 8px;
+	}
+}
+
+i.series-icon {
+	padding-right: 14px;
+	@include media-query($on-phone) {
+		padding-right: 10px;
+	}
+}
+
+i.archive-icon {
+	padding-right: 10px;
+	@include media-query($on-phone) {
+		padding-right: 6px;
+	}
 }
