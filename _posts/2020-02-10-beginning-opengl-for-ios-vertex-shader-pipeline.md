@@ -204,21 +204,21 @@ func uniformLocation(for name: String) -> GLint {
 
 ![OpenGL Pipeline Overview](/images/opengl-pipeline-overview.png)
 
-**1. Read Vertex Data**
+**1. Transfer Vertex Data**
 
-第一步，GPU 读取 Vertex 数据，我们创建 Vertex 数据是在 CPU 的内存中，要将 Vertex 的数据发给 GPU，后面会详细讲怎么做。
+第一步，给 GPU 传递 Vertex 数据，我们创建 Vertex 数据是在 CPU 的内存中，要将 Vertex 的数据发给 GPU，后面会详细讲怎么做。
 
 **2. Execute Vertex Shader**
 
 执行编写的 vertex shader。
 
-**3. Assemble Primitives**
+**3. Primitive Assemble**
 
 把几何图形拆解为最基本的三角形。
 
 ![OpenGL Pipeline Assemble Primitives](/images/opengl-pipeline-assemble-primitives.jpg)
 
-**4. Rasterize Primitives**
+**4. Rasterization**
 
 将最基本的三角形转换为像素，还需要根据顶点中的位置坐标和颜色来决定每个像素的位置坐标和颜色：
 
@@ -236,11 +236,15 @@ func uniformLocation(for name: String) -> GLint {
 
 执行编写的 fragment shader。
 
-**6. Testing and Blending**
+**6. Per-Fragment Operations**
 
-解决物体前后遮挡和透明物体混合的问题。
+针对每个 fragment 的操作。
 
-**7. Write to Frame Buffer**
+**7. Whole Framebuffer Operations**
+
+针对整个 framebuffer 的操作。
+
+**8. Frame Buffer**
 
 将结果写到 framebuffer。
 

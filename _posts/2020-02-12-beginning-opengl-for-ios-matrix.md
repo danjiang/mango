@@ -71,19 +71,7 @@ class Model {
 
 **3. Projection Matrix**
 
-先要理解一点就是透视，比如下图中的铁轨实际上几乎都是等宽的，离你越远的，你视觉上会觉得更窄：
-
-![OpenGL Rails](/images/opengl-rails.png)
-
-OpenGL 在这一步会执行 perspective division，就是将坐标 x, y, z 除以 w，从而得到区间在 [-1, 1] 之间的 normalized device coordinates，如下图所示，离的越远 w 值越大，就可以实现前面所说的透视：
-
-![OpenGL Perspective Division](/images/opengl-perspective-division.png)
-
-> To create the illusion of 3D on the screen, OpenGL will take each gl_Position and divide the x, y, and z components by the w component. When the w component is used to represent distance, this causes objects that are further away to be moved closer to the center of the rendering area, which then acts like a vanishing point. This is how OpenGL fools us into seeing a scene in 3D, using the same trick that artists have been using for centuries.
->
-> ---- Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
-
-可以采用 Projection Matrix 来自动计算 w 的值：
+可以采用 Projection Matrix 来自动计算 w 的值，w 的作用下一步会讲解：
 
 {% highlight swift %}
 extension ViewController {
@@ -110,7 +98,21 @@ GLKMatrix4MakePerspective 参数的含义：
 
 ![OpenGL Perspective Frustum](/images/opengl-perspective-frustum.png)
 
-**4. Viewport Transformation**
+**4. Perspective Division**
+
+先要理解一点就是透视，比如下图中的铁轨实际上几乎都是等宽的，离你越远的，你视觉上会觉得更窄：
+
+![OpenGL Rails](/images/opengl-rails.png)
+
+OpenGL 在这一步会执行 perspective division，就是将坐标 x, y, z 除以 w，从而得到区间在 [-1, 1] 之间的 normalized device coordinates，如下图所示，离的越远 w 值越大，就可以实现前面所说的透视：
+
+![OpenGL Perspective Division](/images/opengl-perspective-division.png)
+
+> To create the illusion of 3D on the screen, OpenGL will take each gl_Position and divide the x, y, and z components by the w component. When the w component is used to represent distance, this causes objects that are further away to be moved closer to the center of the rendering area, which then acts like a vanishing point. This is how OpenGL fools us into seeing a scene in 3D, using the same trick that artists have been using for centuries.
+>
+> ---- Quote from [OpenGL ES 2 for Android](https://pragprog.com/book/kbogla/opengl-es-2-for-android)
+
+**5. Viewport Transformation**
 
 这一步是 OpenGL 自动完成的，通常我们只需要设置 Viewport：
 
