@@ -40,16 +40,16 @@ func greeting() -> String {
 参数之间用逗号分割。
 
 {% highlight swift %}
-func greeting(firtName: String, lastName: String) -> String {
-  return "Hello, " + firtName + " " + lastName
+func greeting(firstName: String, lastName: String) -> String {
+  return "Hello, " + firstName + " " + lastName
 }
 {% endhighlight %}
 
 ### 没有返回值的函数
 
 {% highlight swift %}
-func greeting(firtName: String, lastName: String) {
-  print("Hello, " + firtName + " " + lastName)
+func greeting(firstName: String, lastName: String) {
+  print("Hello, " + firstName + " " + lastName)
 }
 {% endhighlight %}
 
@@ -74,11 +74,11 @@ func greeting(name: String) -> (hello: String, goodbye: String) {
 函数参数的外部名称和内部名称一致，如下面的示例。
 
 {% highlight swift %}
-func greeting(firtName: String, lastName: String) {
-  print("Hello, " + firtName + " " + lastName)
+func greeting(firstName: String, lastName: String) {
+  print("Hello, " + firstName + " " + lastName)
 }
 
-greeting(firtName: "Lincoln", lastName: "Park")
+greeting(firstName: "Lincoln", lastName: "Park")
 {% endhighlight %}
 
 ### 指定外部名称
@@ -86,11 +86,11 @@ greeting(firtName: "Lincoln", lastName: "Park")
 下面示例中 firstName 和 lastName 是外部名称，first 和 last 是内部名称，调用函数时也要写明外部名称。
 
 {% highlight swift %}
-func greeting(firtName first: String, lastName last: String) {
+func greeting(firstName first: String, lastName last: String) {
   print("Hello, " + first + " " + last)
 }
 
-greeting(firtName: "Lincoln", lastName: "Park")
+greeting(firstName: "Lincoln", lastName: "Park")
 {% endhighlight %}
 
 ### 忽略外部名称
@@ -157,8 +157,8 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 函数类型由参数类型和返回值类型构成，如下示例的函数类型就是 (String, String) -> String
 
 {% highlight swift %}
-func greeting(firtName: String, lastName: String) -> String {
-  return "Hello, " + firtName + " " + lastName
+func greeting(firstName: String, lastName: String) -> String {
+  return "Hello, " + firstName + " " + lastName
 }
 {% endhighlight %}
 

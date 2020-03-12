@@ -121,7 +121,7 @@ let x = try? someThrowingFunction()
 ### 禁止传播错误
 
 {% highlight swift %}
-let photo = tyr! loadImage(atPath: "./Resources/John Appleseed.jpg")
+let photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")
 {% endhighlight %}
 
 ## 指定一些清理操作
