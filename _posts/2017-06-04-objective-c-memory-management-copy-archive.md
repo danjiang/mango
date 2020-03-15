@@ -18,7 +18,7 @@ tags: objective-c featured
 #### 手工管理内存计数
 
 * 当创建对象时，**[Object new]**，初始的引用计数为 1；
-* 当创建引用到对象，**[object retain]**，引用计数加 1；
+* 当引用到对象，**[object retain]**，引用计数加 1；
 * 当不再需要对象时，**[object release]**，引用计数减 1。
 
 #### 自动释放池
@@ -64,11 +64,11 @@ if (property != newValue) {
 
 ### ARC
 
-ARC 仍然采用了引用计数，不过系统会检测出何时需要保持对象，何时需要自动释放对象，何时需要释放对象。
+ARC 仍然采用了引用计数，不过系统会检测出何时需要保持对象，何时需要自动释放对象。
 
 #### strong 和 weak
 
-**strong** 让编译器保证在事件循环中通过对赋值执行保持操作强属性能够存活下来：
+**strong** 让编译器保证在事件循环中通过对赋值执行保持操作，强属性能够存活下来：
 
 {% highlight objc %}
 @property (nonatomic, strong) NSMutableArray *data;
@@ -84,7 +84,7 @@ ARC 仍然采用了引用计数，不过系统会检测出何时需要保持对�
 
 #### @autoreleasepool
 
-**@autoreleasepool** 这个指令围住的语句块定了自动释放池的上下文，任何在这个上下文中创建的对象都是自动释放的，在自动释放池块结束的时候销毁这些对象：
+**@autoreleasepool** 这个指令围住的语句块决定了自动释放池的上下文，任何在这个上下文中创建的对象都是自动释放的，在自动释放池块结束的时候销毁这些对象：
 
 {% highlight c %}
 int main(int argc, char * argv[]) {
