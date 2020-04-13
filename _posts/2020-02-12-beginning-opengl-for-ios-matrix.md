@@ -46,7 +46,7 @@ class Model {
 
 **2. View Matrix**
 
-对场景中的每个模型进行转换，不会放在 model 中，但会对 model 产生影响所以需要传入到 model 中，View Matrix 可以有多个，当前有效的只有一个，切回 View Matrix 就类似于切换视角，这里说下矩阵的乘法跟相乘顺序有关系，View Matrix × Model Matrix 和 Model Matrix × View Matrix 会产生不同的结果，正确的应该是 View Matrix × Model Matrix，最右边的会先对坐标进行转换：
+对场景中的每个模型进行转换，不会放在 model 中，但会对 model 产生影响所以需要传入到 model 中，View Matrix 可以有多个，当前有效的只有一个，切换 View Matrix 就类似于切换视角，这里说下矩阵的乘法跟相乘顺序有关系，View Matrix × Model Matrix 和 Model Matrix × View Matrix 会产生不同的结果，正确的应该是 View Matrix × Model Matrix，最右边的会先对坐标进行转换：
 
 {% highlight swift %}
 class ViewController: GLKViewController {
