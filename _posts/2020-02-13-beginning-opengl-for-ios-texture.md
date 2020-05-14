@@ -132,11 +132,7 @@ iOS 的 UIKit 坐标和 Core Graphics 坐标分别如下：
 
 ![iOS Coordinates](/images/ios-coordinates.png)
 
-当我们从磁盘加载纹理图像到内存，Core Graphics 会沿着 x 轴水平翻转：
-
-![iOS Core Graphics Flip Horizontal](/images/ios-core-graphics-flip-horizontal.jpg)
-
-可以在 CGContext Draw 的时候做一次 Flip Horizontal 就可以保证纹理数据方向的正确性，GLTextureLoader 中设置了 GLKTextureLoaderOriginBottomLeft 属性，保证了纹理数据方向的正确性。
+当我们通过 UIImage 从磁盘加载纹理图像到内存，需要注意图像的方向，可以通过 CGContext Draw 进行相应的方向调整，就可以保证纹理数据方向的正确性；GLTextureLoader 中设置了 GLKTextureLoaderOriginBottomLeft 属性，也可以保证纹理数据方向的正确性。
 
 之前绘制立方体的时候，相接的两个平面可以共享两个 Vertex 的位置坐标，但是纹理坐标却不能共享，因为在两个平面上要保证正确的绘制顺序，相接处的纹理坐标并不相同，所以需要每个平面单独定义两个三角形：
 
