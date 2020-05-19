@@ -71,7 +71,19 @@ class Model {
 
 **3. Projection Matrix**
 
-可以采用 Projection Matrix 来自动计算 w 的值，w 的作用下一步会讲解：
+Projection Matrix 分 Perspective Projection 和 Orthographic Projection，Perspective Projection 中相同大小的物体在越远处看起来越小，Orthographic Projection 中相同大小的物体在远处和近处看起来一样大：
+
+![OpenGL Perspective Orthographic Frustum](/images/opengl-perspective-orthographic-frustum.png)
+
+Orthographic Matrix 如下：
+
+![OpenGL Orthographic Matrix](/images/opengl-orthographic-matrix.png)
+
+这里重点讲解下 Perspective Matrix 如下：
+
+![OpenGL Perspective Matrix](/images/opengl-perspective-matrix.png)
+
+iOS 中可以使用 GLKMatrix4MakePerspective 来计算 Perspective Matrix， Perspective Matrix 左乘坐标点会计算出 w 的值，w 的作用下一步会讲解：
 
 {% highlight swift %}
 extension ViewController {
@@ -91,12 +103,12 @@ extension ViewController {
 
 GLKMatrix4MakePerspective 参数的含义：
 
+![OpenGL Perspective Frustum](/images/opengl-perspective-frustum.png)
+
 | fovyRadians | 如下图中 FOV 表示的垂直视角的角度 |
 | aspect | 可视区域的长宽比率，通常就是屏幕的长宽比 |
 | nearZ | This should be set to the distance to the far plane and must be pos- itive and greater than the distance to the near plane. |
 | farZ | This should be set to the distance to the near plane and must be positive. For example, if this is set to 1, the near plane will be located at a z of -1. |
-
-![OpenGL Perspective Frustum](/images/opengl-perspective-frustum.png)
 
 **4. Perspective Division**
 

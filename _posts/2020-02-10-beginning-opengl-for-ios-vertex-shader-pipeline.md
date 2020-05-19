@@ -203,6 +203,7 @@ func uniformLocation(for name: String) -> GLint {
 ### 整体流程
 
 ![OpenGL Pipeline Overview](/images/opengl-pipeline-overview.png)
+![OpenGL Pipeline Overview 2](/images/opengl-pipeline-overview2.png)
 
 **1. Transfer Vertex Data**
 
