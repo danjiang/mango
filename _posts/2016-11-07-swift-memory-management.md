@@ -4,7 +4,7 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tags: swift featured
+tag: swift
 ---
 
 从这篇文章，你将学习到 Swift 的内存管理，和 Objective-C 一样，主要也是通过 ARC 机制来实现的，还会讲到类实例之间的循环强引用和闭包的循环强引用，问题是怎么来的，以及通过弱引用或无主引用来解决问题的办法，让我们开始吧。

@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都 
 category: business
-tag: featured
 ---
 
 > Everything we know about how to start a startup, for free, from some of the world experts.

@@ -4,7 +4,7 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tag: opengl
+tags: opengl featured
 ---
 
 之前学习的 iOS OpenGL ES 编程的资料和知识比较零散，现在希望通过观看 [Ray Wenderlich - Beginning OpenGL for iOS](https://www.youtube.com/playlist?list=PL23Revp-82LL_XoQEiTT6zsgHHrpjr1D9) 的同时，把目前掌握的 OpenGL ES 知识点整理一下，第二篇文章会讲 Vertex、Shader 和 Pipeline 这些基础内容。

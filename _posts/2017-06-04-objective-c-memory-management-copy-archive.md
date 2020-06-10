@@ -4,7 +4,7 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tags: objective-c featured
+tag: objective-c
 ---
 
 本文并不是一篇完整的教程，更像一篇快速笔记，讲解 Objective-C 中的内存管理，复制对象和归档对象。
