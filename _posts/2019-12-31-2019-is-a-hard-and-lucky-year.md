@@ -3,7 +3,7 @@ title: 2019 是艰难而又幸运的一年
 author: 但江
 avatar: danjiang
 location: 成都
-category: business
+category: life
 ---
 
 之前我一直以为自己很倒霉，为什么这些破事会发生在自己身上，现在才明白这又是多么的幸运，能够在相对年轻的时候明白这些道理。

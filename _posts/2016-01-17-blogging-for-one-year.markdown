@@ -3,7 +3,7 @@ title: 博客一周年
 author: 但江
 avatar: danjiang
 location: 成都
-category: business
+category: life
 ---
 
 其实已经写了一年又快两个月了，此篇文章主要是想做一个总结和一个规划。

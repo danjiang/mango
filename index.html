@@ -134,15 +134,7 @@ layout: default
 				{% for post in site.categories.programming %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
-			</ul>
-		</div>
-
-		<div class="post-archive-category">
-			<h6><i class="fas fa-briefcase archive-icon"></i>商业</h6>
-			<ul>
-				{% for post in site.categories.business %}
-				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 
@@ -152,18 +144,29 @@ layout: default
 				{% for post in site.categories.design %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
 
 		<div class="post-archive-category">
-			<h6><i class="fas fa-chart-line archive-icon"></i>运营</h6>
+			<h6><i class="fas fa-briefcase archive-icon"></i>商业</h6>
 			<ul>
-				{% for post in site.categories.operation %}
+				{% for post in site.categories.business %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
+				<div class="clearfix"></div>
 			</ul>
 		</div>
-		<div class="clearfix"></div>
+
+		<div class="post-archive-category">
+			<h6><i class="fas fa-coffee archive-icon"></i>生活</h6>
+			<ul>
+				{% for post in site.categories.life %}
+				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+				<div class="clearfix"></div>
+			</ul>
+		</div>
 	</div>
 
 </div>

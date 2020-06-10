@@ -276,7 +276,7 @@ public:
 	* <em class="fab fa-github"></em> [VideoSaturationEffect](https://github.com/danjiang/DTLiving/blob/master/DTLiving/core/effect/color_processing/video_saturation_effect.h) 调整饱和度。
 	* <em class="fab fa-github"></em> [VideoGammaEffect](https://github.com/danjiang/DTLiving/blob/master/DTLiving/core/effect/color_processing/video_gamma_effect.h) 调整伽马值。
 	* <em class="fab fa-github"></em> [VideoLevelsEffect](https://github.com/danjiang/DTLiving/blob/master/DTLiving/core/effect/color_processing/video_levels_effect.h) 类似 Photoshop 的色阶调整。
-	* <em class="fab fa-github"></em> [VideoColorMatrixEffect](https://github.com/danjiang/DTLiving/blob/master/DTLiving/core/effect/color_processing/video_color_matrix_effect.h) 图像的颜色值是 1x4 的行向量，和 4x4 矩阵相乘得到新的颜色值。
+	* <em class="fab fa-github"></em> [VideoColorMatrixEffect](https://github.com/danjiang/DTLiving/blob/master/DTLiving/core/effect/color_processing/video_color_matrix_effect.h) 图像的颜色值是 1x4 的列向量，和 4x4 矩阵相乘得到新的颜色值。
 	* <em class="fab fa-github"></em> [VideoSepiaFilter](https://github.com/danjiang/DTLiving/blob/master/DTLiving/Bridge/ColorProcessing/VideoSepiaFilter.h) 利用上面的 VideoColorMatrixEffect 实现怀旧效果。
 	* <em class="fab fa-github"></em> [VideoRGBEffect](https://github.com/danjiang/DTLiving/blob/master/DTLiving/core/effect/color_processing/video_rgb_effect.h) 单独调整 R、G 和 B。
 	* <em class="fab fa-github"></em> [VideoHueEffect](https://github.com/danjiang/DTLiving/blob/master/DTLiving/core/effect/color_processing/video_hue_effect.h) 调整色相。

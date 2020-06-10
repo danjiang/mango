@@ -90,9 +90,6 @@
 			margin: 0;
 			padding-left: 1.35em;
 			li {
-			float: left;
-			width: 28%;
-			margin-right: 5%;
 				list-style: none;
 				&:before {
 					content: "";
@@ -131,9 +128,6 @@
 .post-archive {
 	margin-bottom: $spacing-unit;
 	div.post-archive-category {
-		float: left;
-		width: 45%;
-		margin-right: 5%;
 		margin-bottom: $spacing-unit;
 		ul {
 			margin: 0;
@@ -141,6 +135,9 @@
 			li {
 				margin: 0;
 				padding: 0;
+				float: left;
+				width: 45%;
+				margin-right: 5%;
 				list-style: none;
 				span {
 					font-size: $small-font-size;
@@ -149,9 +146,13 @@
 			}
 		}
 		@include media-query($on-phone) {
-			float: none;
-			width: 100%;
-			margin-right: 0;
+			ul {
+				li {
+					float: none;
+					width: 100%;
+					margin-right: 0;
+				}
+			}
 		}	
 	}
 }
