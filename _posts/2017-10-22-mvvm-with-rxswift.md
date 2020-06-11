@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tag: featured
 ---
 
 本文首先会分别讲解一下 MVVM 模式和 RxSwift，然后再讲解如何将 MVVM 模式和 RxSwift 进行结合。

@@ -4,10 +4,10 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tag: ios-av
+tags: ios-av featured
 ---
 
-最近一直在实践 iOS 上的音视频直播开发，有了一些心得体会，准备写一系列的文章来总结一下，本文先会整体地谈一下音视频开发，然后谈一下 iOS 生产侧的音视频开发，最后分别说一下 iOS 视频采集、iOS 视频效果器和 iOS 视频预览。
+先会整体地谈一下音视频开发，然后谈一下 iOS 生产侧的音视频开发，最后分别说一下 iOS 视频采集、iOS 视频效果器和 iOS 视频预览。
 
 ![Camera Sea](/images/camera-sea.jpg)
 

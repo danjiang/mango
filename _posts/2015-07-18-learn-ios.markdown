@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tag: objective-c
 ---
 
 我从 2011 年开始 iOS 开发，走过很多弯路，其实在学习你不了解东西的时候，你甚至不知道那是弯路，直到你对这样东西有了足够的认识，你才知道什么是有效的，什么不是，所以不要管那么多，不要徘徊不前，立即开始吧。

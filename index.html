@@ -63,6 +63,26 @@ layout: default
 				<div class="clearfix"></div>
 			</ul>
 		</div>
+		
+		<div class="post-series-tag" id="ios-basic">
+			<h4><i class="fab fa-app-store-ios series-icon"></i>iOS 编程基础</h4>
+			<ul class="post-series-column3">
+				{% for post in site.tags.ios-basic reversed %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+
+		<div class="post-series-tag" id="core-data">
+			<h4><i class="fas fa-database series-icon"></i>Core Data 数据存储</h6>
+			<ul class="post-series-column2">
+				{% for post in site.tags.core-data reversed %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+				<div class="clearfix"></div>
+			</ul>
+		</div>
 
 		<div class="post-series-tag" id="opengl">
 			<h4><i class="fas fa-cube series-icon"></i>OpenGL ES 图像处理</h6>
@@ -84,10 +104,10 @@ layout: default
 			</ul>
 		</div>
 
-		<div class="post-series-tag" id="core-data">
-			<h4><i class="fas fa-database series-icon"></i>Core Data 数据存储</h6>
+		<div class="post-series-tag" id="ios-av">
+			<h4><i class="fas fa-video series-icon"></i>iOS 音视频开发</h4>
 			<ul class="post-series-column2">
-				{% for post in site.tags.core-data reversed %}
+				{% for post in site.tags.ios-av reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 				<div class="clearfix"></div>

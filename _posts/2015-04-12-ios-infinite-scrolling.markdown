@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tag: objective-c
 ---
 
 ![Weight Ruler](/images/weight-ruler.gif)

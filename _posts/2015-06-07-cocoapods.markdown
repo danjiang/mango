@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tag: objective-c
 ---
 
 [CocoaPods][1] 是为了解决 Swift 和 Objective-C 项目的依赖关系，在没有 CocoaPods 以前，我们只能手动地拷贝第三方的代码，维护起来很麻烦，CocoaPods 是通过 Ruby 语言编写的，自然在设计和使用上非常类似于 RubyGems。

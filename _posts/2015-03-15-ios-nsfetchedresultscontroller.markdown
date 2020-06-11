@@ -4,7 +4,6 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tag: objective-c
 ---
 
 👉 *[此文章有 Swift 的更新版本](/programming/2016/05/16/core-data-nsfetchedresultscontroller/)*
