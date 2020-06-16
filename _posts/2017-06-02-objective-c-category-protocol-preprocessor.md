@@ -49,6 +49,47 @@ shape.numberOfSides = 4;
 [shape sum:4]
 {% endhighlight %}
 
+分类中不支持添加实例变量，所以没有办法支撑属性，但是可以通过 Associated Object 来支撑属性，但是不推荐这么做：
+
+{% highlight objc %}
+#import <Foundation/Foundation.h>
+
+@interface EOCPerson : NSObject
+@property (nonatomic, copy, readonly) NSString *firstName;
+@property (nonatomic, copy, readonly) NSString *lastName;
+
+- (id)initWithFirstName:(NSString*)firstName 
+            andLastName:(NSString*)lastName;
+@end
+
+@implementation EOCPerson
+@end
+{% endhighlight %}
+
+{% highlight objc %}
+@interface EOCPerson (Friendship)
+@property (nonatomic, strong) NSArray *friends;
+- (BOOL)isFriendsWith:(EOCPerson*)person;
+@end
+
+
+#import <objc/runtime.h>
+
+static const char* kFriendsPropertyKey = "kFriendsPropertyKey";
+
+@implementation EOCPerson (Friendship)
+
+- (NSArray*)friends {
+    return objc_getAssociatedObject(self, kFriendsPropertyKey);
+}
+
+- (void)setFriends:(NSArray*)friends {
+    objc_setAssociatedObject(self, kFriendsPropertyKey, friends, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+@end
+{% endhighlight %}
+
 ## 类的扩展
 
 创建一个未命名的分类，且在括号 **()** 之间不指定名字，这是一种特殊的情况，这种特殊的语法定义为类的扩展；未命名分类是非常有用的，因为它们的方法都是私有的，如果需要写一个类，而且属性和方法仅供这个类本身使用，未命名分类比较合适：

@@ -56,7 +56,9 @@ let mySerialQueue = DispatchQueue(label: "com.danthought.serial")
 let workerQueue = DispatchQueue(label: "com.danthought.worker", attributes: .concurrent)
 {% endhighlight %}
 
-suspend 和 resume，suspend 调用时不会暂停已经在执行的 block，会暂停从 queue 里取 block 来执行，suspend 后还可以继续往 queue 里添加 block：
+### suspend 和 resume
+
+suspend 调用时不会暂停已经在执行的 block，会暂停从 queue 里取 block 来执行，suspend 后还可以继续往 queue 里添加 block：
 
 {% highlight swift %}
 private func authorizeCamera() {
@@ -81,6 +83,8 @@ private func authorizeCamera() {
     }
 }
 {% endhighlight %}
+
+### asyncAfter
 
 利用 asyncAfter 延时执行 Block：
 
@@ -265,6 +269,39 @@ DispatchSource 可以用于监听一些特定事件：Unix 信号，文件描述
     signal?.resume()
   }
 #endif
+{% endhighlight %}
+
+### dispatch_once
+
+dispatch_once 在 Swift 中已经废除，Objective-C 时代的东西，dispatch_once 是保证在应用程序执行中只执行一次指定处理的 API，常用于实现单例模式：
+
+{% highlight objc %}
+@implementation EOCClass
+
++ (id)sharedInstance {
+    static EOCClass *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
+@end
+{% endhighlight %}
+
+Swift 中实现单例模式：
+
+{% highlight swift %}
+class DeathStarSuperlaser {
+    static let sharedInstance = DeathStarSuperlaser()
+
+    private init() {
+        // Private initialization to ensure just one instance is created.
+    }
+}
+
+let laser = DeathStarSuperlaser.sharedInstance
 {% endhighlight %}
 
 ## Operation 和 OperationQueue
@@ -509,3 +546,9 @@ Xcode Thread Sanitizer
 
 ![Xcode Thread Sanitizer](/images/xcode-tsan.png)
 
+## 参考资料
+
+* [Grand Central Dispatch Tutorial for Swift 4: Part 1/2](https://www.raywenderlich.com/5370-grand-central-dispatch-tutorial-for-swift-4-part-1-2)
+* [Grand Central Dispatch Tutorial for Swift 4: Part 2/2](https://www.raywenderlich.com/5371-grand-central-dispatch-tutorial-for-swift-4-part-2-2)
+* [Operation and OperationQueue Tutorial in Swift](https://www.raywenderlich.com/5293-operation-and-operationqueue-tutorial-in-swift)
+* [iOS Concurrency with GCD and Operations](https://www.raywenderlich.com/3648-ios-concurrency-with-gcd-and-operations)
