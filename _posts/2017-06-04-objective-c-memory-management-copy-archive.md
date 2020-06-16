@@ -151,6 +151,8 @@ user2.name = @"Mick";
 -[NSArray copy] => NSMutableArray
 {% endhighlight %}
 
+这里还需要注意拷贝的实现是深拷贝，还是浅拷贝。
+
 ## 归档对象
 
 归档对象需要实现 **NSCoding** 协议：

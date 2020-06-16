@@ -59,7 +59,7 @@ RunLoop 的知识点非常的多，详细解读请看下面这篇文章，这里
 
 ### Timer
 
-创建和取消 Timer 的代码如下：
+创建和取消 Timer 的代码如下，注意创建 Timer 调用 scheduledTimer(timeInterval:target:selector:userInfo:repeats:) 会一直强引用 target，直到调用 invalidate()，如果忘记调用 invalidate() 就会造成内存泄露，最好使用 block 版本 scheduledTimer(withTimeInterval:repeats:block:) 来创建 Timer：
 
 {% highlight swift %}
 func createTimer() {
