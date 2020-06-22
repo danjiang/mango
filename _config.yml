@@ -1,7 +1,7 @@
 # Site settings
-title: 博客 - 商业、设计、编程和运营 - 但江
+title: 博客 - 编程、设计、商业和生活 - 但江
 description: > # this means to ignore newlines until "baseurl:"
-  来自于但江的思考，关注商业、设计、编程和运营
+  来自于但江的思考，关于编程、设计、商业和生活
 permalink: pretty
 studio: "http://danthought.com"
 wuhoo: "http://wuhoo.co/zh/"
