@@ -7,7 +7,7 @@ category: programming
 tags: ios-av featured
 ---
 
-先会整体地谈一下音视频开发，然后谈一下 iOS 生产侧的音视频开发，最后分别说一下 iOS 视频采集、iOS 视频效果器和 iOS 视频预览。
+最近在 iOS 上的音视频直播开发有些心得体会，准备写一系列的文章来总结一下，本文先会整体地谈一下音视频开发，然后谈一下 iOS 生产侧的音视频开发，最后分别说一下 iOS 视频采集、iOS 视频效果器和 iOS 视频预览。
 
 ![Camera Sea](/images/camera-sea.jpg)
 

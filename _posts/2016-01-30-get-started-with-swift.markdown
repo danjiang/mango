@@ -4,7 +4,7 @@ author: 但江
 avatar: danjiang
 location: 成都 
 category: programming
-tags: swift featured
+tag: swift
 ---
 
 苹果公司在 2014 年 6 月 2 日发布了 Swift 编程语言，你可以使用 Swift 编写在 OS X、iOS、watchOS 和 tvOS 上运行的应用，2015 年 12 月 4 日，苹果公司宣布 Swift 编程语言开放源代码，让 Swift 有更广阔的想象空间。
