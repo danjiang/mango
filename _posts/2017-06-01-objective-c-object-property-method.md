@@ -1,5 +1,5 @@
 ---
-title: Objective-C 的类，对象和方法
+title: Objective-C 的对象，属性和方法
 author: 但江
 avatar: danjiang
 location: 成都 
@@ -7,7 +7,7 @@ category: programming
 tag: objective-c
 ---
 
-本文并不是一篇完整的教程，更像一篇快速笔记，讲解 Objective-C 中的类，对象和方法，当然还有继承，以及 id，static，@class，const，NS_ENUM 和 typedef。
+本文并不是一篇完整的教程，更像一篇快速笔记，讲解 Objective-C 中的对象，属性和方法，当然还有继承，以及 id，static，@class，const，NS_ENUM 和 typedef。
 
 ![Objective C](/images/objective-c.png)
 
@@ -86,6 +86,46 @@ NSString *description = [shape simpleDescription];
 
 @end
 {% endhighlight %}
+
+## 属性
+
+属性是对实例变量访问的抽象，类似于 Java 中 getter 和 setter，如下的代码会自动添加两个实例变量 _threshold 和 _quantizationLevels 来作为属性的实现：
+
+{% highlight objc %}
+@interface VideoToonFilter : VideoFilter
+
+@property (nonatomic, assign) float threshold;
+@property (nonatomic, assign) float quantizationLevels;
+
+- (instancetype)init;
+
+@end
+{% endhighlight %}
+
+### @dynamic
+
+@dynamic 关键字告诉编译器不要自动添加实例变量作为属性的实现，实现会在运行时找到。
+
+### 原子性
+
+默认情况下，属性的实现都会加锁来保证原子性，也就自带 atomic，声明成 nonatomic 就不保证原子性。
+
+### 可读可写
+
+默认情况下，属性的实现都是可读可写的，也就是自带 readwrite，声明成 readonly 就是只读的。
+
+### 内存管理
+
+* assign：只是赋值。
+* strong：retain 新值，release 旧值。
+* weak：像 assign 只是赋值，但是指向的对象被销毁时，会赋值为 nil。
+* unsafe_unretained：像 assign 只是赋值，但是指向的对象被销毁时，不会赋值为 nil。
+* copy：拷贝一次。
+
+### 方法名
+
+* getter=\<name\> 指定 getter 的名称。
+* setter=\<name\> 指定 setter 的名称。
 
 ## 其他
 
