@@ -1,5 +1,5 @@
 ---
-title: iOS 音视频播放器 AVPlayer
+title: iOS AVFoundation - 音视频播放器 AVPlayer
 author: 但江
 avatar: danjiang
 location: 成都
