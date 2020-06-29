@@ -7,7 +7,7 @@ category: programming
 tag: ios-av
 ---
 
-iOS 中的通过 PhotoKit 提供访问 "照片 App" 中的照片和视频，本文主要讲解使用 PhotoKit 浏览相册中的照片和视频、导出相册中的照片、导出相册中的视频、修改相册中的照片和新增相册中的照片。
+本文讲解在 iOS 中如何实现图片的剪裁和旋转，重点在于对 UIScrollView、手势触控、UIView 和 CALayer 的理解。
 
 ![Camera Sea](/images/camera-sea.jpg)
 
@@ -136,15 +136,23 @@ extension PreviewPhotoViewController: UIScrollViewDelegate {
 }
 {% endhighlight %}
 
+#### UIScrollView 的 contentSize
+
 如上的代码，一个 UIImageView 作为 UIScrollView 的子 View，同样放置了一张图片到了 UIImageView，并且将图片的大小设置为 UIScrollView 的 contentSize，也就如下图所示，可显示区域就是 UIScrollView 的 bounds，图片的大小超过了 UIScrollView 的 bounds，也可以看到 contentOffset 是 UIImageView 原点到 UIScrollView 原点的偏移，目前都是正的 x 和 y。
 
 ![UIScrollView contentOffset nonzero](/images/uiscrollview-contentoffset-nonzero.jpg)
 
+#### caculateZoomScale()
+
 caculateZoomScale() 方法用于计算出 UIScrollView 的 zoomScale 的范围，这里限定了只计算 aspectFit 模式，后面再细讲。
+
+#### UIScrollView 的 zoomScale
 
 UIScrollViewDelegate 中实现的代码表明，通过 pinch 手势就可以改变 UIScrollView 的 zoomScale，示例中 UIScrollView 的内容就是 UIImageView，UIScrollView 的 zoomScale 表示缩放程度，其实就是通过改变 UIScrollView 的 contentSize 来实现，contentSize 和 UIImageView 大小一致，所以就会缩放 UIImageView，当 contentSize 都小于等于 UIScrollView 的 bounds，contentOffset 就是 0，centerContents() 方法主要作用就是在这种情况下计算 UIImageView 的 frame，使其居中，如下图所示：
 
 ![UIScrollView contentOffset zero](/images/uiscrollview-contentoffset-zero.jpg)
+
+#### UIScrollView 的 bounds
 
 上面说到可显示区域就是 UIScrollView 的 bounds，如下图中，1 是显示图片最左上角，2 是显示图片最右上角，3 是显示图片最左下角，4 是显示图片最右下角，和 UIScrollView 的 bounds 非常的贴合，没有任何间距。
 
@@ -164,7 +172,7 @@ view.addSubview(resizeView)
 三个平级的 View：
 
 * UIScrollView 放置图片
-* PhotoEditorMaskView 面罩视图
+* PhotoEditorMaskView 遮罩视图
 * PhotoEditorResizeView 剪裁区域控制视图
 
 ![Resize View Hierarchy](/images/resize-view-hierarchy.jpg)
@@ -351,7 +359,7 @@ override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
 }
 {% endhighlight %}
 
-还有非 8 个触控控制区域的地方，仍然可以响应 pinch 和 pan 的手势，通过如下方法来排除这些区域，可以参考 [iOS 基础 - 处理屏幕点击事件](/programming/2020/06/11/ios-basic-handle-touch-event/) 了解更多：
+还有，非 8 个触控控制区域的地方，仍然可以响应 pinch 和 pan 的手势，通过如下方法来排除这些区域，可以参考 [iOS 基础 - 处理屏幕点击事件](/programming/2020/06/11/ios-basic-handle-touch-event/) 了解更多：
 
 {% highlight swift %}
 override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
@@ -411,7 +419,7 @@ isFit 用于控制如下两种等比缩放模式：aspectFit 和 aspectFill。
 
 ![UIScrollView Aspect](/images/uiscrollview-aspect.jpg)
 
-isEdit 用于控制当剪裁区域大于当前 UIScrollView 的 contentSize（也就是 UIImageView 的大小）时，才调整 UIScrollView 的 zoomScale。
+isEdit 用于控制是否改变 zoomScale，前面代码的计算，当剪裁区域大于当前 UIScrollView 的 contentSize（也就是 UIImageView 的大小）时，才设置 isEdit 为 true。
 
 调整 UIScrollView 的 contentInset：
 
@@ -483,7 +491,7 @@ fitBounds = view.bounds.applying(.init(translationX: contentsFrame.origin.x,
 
 ## Mask
 
-在没有触控操作剪裁区域时，需要显示黑色遮罩，但是剪裁区域要高亮，通过 CALayer 的 mask 属性来实现：
+在没有触控操作剪裁区域时，需要显示黑色遮罩，但是剪裁区域不需要遮罩，通过 CALayer 的 mask 属性来实现：
 
 {% highlight swift %}
 func toggleMask(rect: CGRect?) {
