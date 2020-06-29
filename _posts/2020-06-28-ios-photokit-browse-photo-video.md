@@ -11,11 +11,14 @@ iOS 中的通过 PhotoKit 提供访问 "照片 App" 中的照片和视频，本�
 
 ![Camera Sea](/images/camera-sea.jpg)
 
-## 浏览相册中的照片和视频
-
 完整代码：
 
 * <em class="fab fa-github"></em> [PhotoLibraryViewController](https://github.com/danjiang/DTCamera/blob/master/DTCamera/iOS/Library/PhotoLibraryViewController.swift)
+* <em class="fab fa-github"></em> [LibraryPhotoCell](https://github.com/danjiang/DTCamera/blob/master/DTCamera/iOS/Library/LibraryPhotoCell.swift)
+* <em class="fab fa-github"></em> [LibraryVideoCell](https://github.com/danjiang/DTCamera/blob/master/DTCamera/iOS/Library/LibraryVideoCell.swift)
+* <em class="fab fa-github"></em> [LibraryAlbumCell](https://github.com/danjiang/DTCamera/blob/master/DTCamera/iOS/Library/LibraryAlbumCell.swift)
+
+## 浏览相册中的照片和视频
 
 第一步，获取相册使用权限：
 
@@ -113,7 +116,7 @@ private func fetchAssets(in collection: PHAssetCollection? = nil) -> PHFetchResu
 }
 {% endhighlight %}
 
-第三步，显示照片和视频的缩略图，PHAsset 包含的只是照片和视频的信息，缩率图要通过 PHImageManager 的 requestImage 方法异步获取：
+第三步，显示照片和视频的缩略图，PHAsset 包含的只是照片和视频的信息，缩略图要通过 PHImageManager 的 requestImage 方法异步获取：
 
 {% highlight swift %}
 func requestImage(for asset: PHAsset, targetSize: CGSize, contentMode: PHImageContentMode, options: PHImageRequestOptions?, resultHandler: @escaping (UIImage?, [AnyHashable : Any]?) -> Void) -> PHImageRequestID
@@ -223,9 +226,9 @@ private func fetchPhotos(completionBlock: @escaping (_ photos: [UIImage]?) -> Vo
 
 PHImageManager 获取相册中的视频资源有如下几个方法：
 
-* requestPlayerItem 获取可以直接播放的 AVPlayerItem
-* requestAVAsset 获取可以直接播放和编辑的 AVAsset
-* requestExportSession 获取可以导出到目录文件的 AVAssetExportSession
+* requestPlayerItem 获取可以直接播放的 AVPlayerItem。
+* requestAVAsset 获取可以直接播放和编辑的 AVAsset。
+* requestExportSession 获取可以导出到目录文件的 AVAssetExportSession。
 
 这里使用 requestExportSession 获取 AVAssetExportSession，PHImageRequestOptions 和 PHVideoRequestOptions 都有关于从 iCloud 获取照片和视频的功能，isNetworkAccessAllowed 允许获取从 iCloud 获取照片和视频，progressHandler 获取从 iCloud 下载照片和视频的进度，PHImageManager cancelImageRequest 可以取消整个获取照片和视频的异步任务：
 
