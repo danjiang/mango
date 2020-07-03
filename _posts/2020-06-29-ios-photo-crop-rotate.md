@@ -1,5 +1,5 @@
 ---
-title: iOS 图片编辑之剪裁和旋转
+title: iOS 浏览图片、剪裁图片和旋转图片
 author: 但江
 avatar: danjiang
 location: 成都
