@@ -15,6 +15,7 @@ Audio Unit 是 iOS 比较底层的音频处理库，提供了一些效果器的�
 
 * <em class="fab fa-github"></em> [AudioUnitRecorder](https://github.com/danjiang/DTCamera/blob/master/DTCamera/iOS/Recorder/AudioUnitRecorder.swift)
 * <em class="fab fa-github"></em> [AUGraphPlayer](https://github.com/danjiang/DTCamera/blob/master/DTCamera/iOS/Player/AUGraphPlayer.swift)
+* <em class="fab fa-github"></em> [syedhali / AudioStreamer](https://github.com/syedhali/AudioStreamer)
 * [Audio Unit Programming Guide](https://developer.apple.com/library/archive/documentation/MusicAudio/Conceptual/AudioUnitProgrammingGuide/TheAudioUnit/TheAudioUnit.html#//apple_ref/doc/uid/TP40003278-CH12-SW1)
 
 ## Audio Unit Processing Graph Services
