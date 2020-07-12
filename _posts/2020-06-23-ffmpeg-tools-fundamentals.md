@@ -7,7 +7,7 @@ category: programming
 tags: ffmpeg featured
 ---
 
-作为开发者，使用 FFmpeg 主要分两部分：命令行工具和软件库，本文讲解如何在 macOS 上编译 FFmpeg，以及 FFmpeg 命令行工具使用的一些基本概念。
+作为开发者，使用 FFmpeg 主要分两部分：命令行工具和接口使用，本文讲解如何在 macOS 上编译 FFmpeg，以及 FFmpeg 命令行工具使用的一些基本概念。
 
 ![Editing Video](/images/editing-video.jpg)
 
@@ -72,6 +72,19 @@ make install
 {% endhighlight %}
 
 ## 命令行工具
+
+### 官方文档
+
+* <em class="fas fa-file-alt"></em> [FFmpeg Documentaion](https://ffmpeg.org/documentation.html)
+* <em class="fas fa-file-alt"></em> [FFmpeg WIKI](https://trac.ffmpeg.org)
+* <em class="fas fa-file-alt"></em> [FFmpeg Command Line Tools Documentation](https://ffmpeg.org/documentation.html)
+
+### 其他资料
+
+* <em class="fas fa-book"></em> [FFmpeg Basics](http://ffmpeg.tv)
+* <em class="fas fa-book"></em> [FFmpeg 从入门到精通](https://book.douban.com/subject/30178432/)
+
+### 命令行工具的介绍
 
 * ffmpeg 音视频编解码。
 * ffplay 音视频播放和可视化分析，对于视频播放器，不得不提的一个问题就是音画同步，在 ffplay 中音画同步的实现方式其实有三种，分别是：
