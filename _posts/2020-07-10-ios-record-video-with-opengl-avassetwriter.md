@@ -7,7 +7,7 @@ category: programming
 tag: ios-av
 ---
 
-本文讲解了数字音频、PCM 音频格式和AAC 音频格式这些理论知识，然后讲解在 iOS 上通过 AudioToolbox 中的 Audio Converter Services 来将 PCM 编码为 AAC。
+本文讲解了数字音频、PCM 音频格式和 AAC 音频格式这些理论知识，然后讲解在 iOS 上通过 AudioToolbox 中的 Audio Converter Services 来将 PCM 编码为 AAC。
 
 ![Camera Sea](/images/camera-sea.jpg)
 
