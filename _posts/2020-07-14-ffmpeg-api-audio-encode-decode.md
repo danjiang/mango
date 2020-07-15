@@ -7,7 +7,7 @@ category: programming
 tag: ffmpeg
 ---
 
-作为开发者，使用 FFmpeg 主要分两部分：命令行工具和接口使用，本文讲解如何在 macOS 上交叉编译 FFmpeg，再将其集成到 Xcode 中，再初步介绍 FFmpeg 接口使用时会用到的常用结构，最后实际编写音视频文件转封装的代码。
+本文讲解如何通过 FFmpeg 将 AAC 解码为 PCM，把 PCM 编码为 AAC。
 
 ![Editing Video](/images/editing-video.jpg)
 
