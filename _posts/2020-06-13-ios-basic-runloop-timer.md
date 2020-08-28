@@ -13,6 +13,8 @@ tag: ios-basic
 
 ## RunLoop
 
+### 基本概念
+
 RunLoop 的知识点非常的多，详细解读请看下面这篇文章，这里主要是对下面这篇文章中，我认为的关键内容进行摘录：
 
 * [深入理解RunLoop · Garan no dou](https://blog.ibireme.com/2015/05/18/runloop/)
@@ -24,36 +26,108 @@ RunLoop 的知识点非常的多，详细解读请看下面这篇文章，这里
 
 每次调用 RunLoop 的主函数时，只能指定其中一个 Mode。如果需要切换 Mode，只能退出 Loop，再重新指定一个 Mode 进入。这样做主要是为了分隔开不同组的 Source、Timer 和 Observer，让其互不影响。
 
-整个 RunLoop 的过程：
-* 通知 Observers：即将进入 Loop
+### 整个 RunLoop 的过程
+
+* 通知 Observers：**即将进入 Loop**
 * do while
-	* 通知 Observers：即将触发 Timer 回调
-	* 通知 Observers：即将触发 Source0 回调
-	* 触发 Source0 回调
+	* 通知 Observers：**即将触发 Timer 回调**
+	* 通知 Observers：**即将触发 Source0 回调**
+	* **触发 Source0 回调**
 	* 如果有 Source1 是 ready 状态的话，就会跳转到 handle_msg 去处理消息
-	* 通知 Observers：即将进入休眠
+	* 通知 Observers：**即将进入休眠**
 	* 等待 mach_port 的消息，且进入休眠，唤醒方式：
 		* 基于 port 的 Source 事件
 		* Timer 时间到
 		* RunLoop 超时
 		* 被调用者唤醒
-	* 通知 Observers：刚刚被唤醒
+	* 通知 Observers：**刚刚被唤醒**
 	* handle_msg 处理消息：
-		* 如果 Timer 时间到，就触发 Timer 回调
-		* 如果 dispatch 就执行 block
-		* Source1 事件的话，就处理这个事件
+		* **如果 Timer 时间到，就触发 Timer 回调**
+		* **如果 dispatch 就执行 block**
+		* **Source1 事件的话，就处理这个事件**
 	* 判断是否需要走下一个 Loop：
 		* 事件已处理完
 		* RunLoop 超时
 		* 外部调用者强制停止
 		* mode 为空，RunLoop 结束
+* 通知 Observers: **即将退出**
+
+### 一些应用场景
+
+#### 监控卡顿
+
+App 启动后，在主线程 RunLoop 里注册了下面的 Observer：
+
+* 通知 Observers：即将进入 Loop
+* do while
+	* ...
+	* 通知 Observers：**即将触发 Source0 回调** => runLoopObserverCallBack
+	* ...	
+	* 通知 Observers：**刚刚被唤醒** => runLoopObserverCallBack
+	* ...
 * 通知 Observers: 即将退出
 
-一些应用场景：
-* AutoreleasePool：通过 Observer 监听事件来创建和释放池，这样事件回调和Timer 回调内的代码被 AutoreleasePool 环绕着。
-* 事件响应：注册了一个 Source1 来接收触摸、加速、传感器等事件。
-* 界面更新：当在操作 UI 时，这个 UIView 或 CALayer 就被标记为待处理，通过 Observer 监听事件来更新 UI 界面。
-* 定时器：后面讲。
+runLoopObserverCallBack 主要是更新 runLoopActivity 和触发信号量通知：
+
+{% highlight objc %}
+static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
+    SMLagMonitor *lagMonitor = (__bridge SMLagMonitor*)info;
+    lagMonitor->runLoopActivity = activity;
+    
+    dispatch_semaphore_t semaphore = lagMonitor->dispatchSemaphore;
+    dispatch_semaphore_signal(semaphore);
+}
+{% endhighlight %}
+
+开启一个子线程进行监控，当信号量在等待：第一种情况超时几秒返回，检测 runLoopActivity 没有发生变化，说明 **Source0 回调** 和 **handle_msg 处理消息** 有耗时情况发生；第二种情况被 runLoopObserverCallBack 通过信号量唤醒，检测 runLoopActivity 发生变化，没有耗时情况发生，继续监控。
+
+{% highlight objc %}
+// 创建子线程监控
+dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    // 子线程开启一个持续的 loop 用来进行监控
+    while (YES) {
+        long semaphoreWait = dispatch_semaphore_wait(dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC));
+        if (semaphoreWait != 0) {
+            if (!runLoopObserver) {
+                timeoutCount = 0;
+                dispatchSemaphore = 0;
+                runLoopActivity = 0;
+                return;
+            }
+            // BeforeSources 和 AfterWaiting 这两个状态能够检测到是否卡顿
+            if (runLoopActivity == kCFRunLoopBeforeSources || runLoopActivity == kCFRunLoopAfterWaiting) {
+                // 将堆栈信息上报服务器的代码放到这里
+            } // end activity
+        }// end semaphore wait
+        timeoutCount = 0;
+    }// end while
+});
+{% endhighlight %}
+
+参考 [如何利用 RunLoop 原理去监控卡顿？](https://time.geekbang.org/column/article/89494) 和 <em class="fab fa-github"></em> [SMLagMonitor.m](https://github.com/ming1016/DecoupleDemo/blob/master/DecoupleDemo/SMLagMonitor.m)
+
+#### AutoreleasePool
+
+App 启动后，苹果在主线程 RunLoop 里注册了下面的 Observer：
+
+* 通知 Observers：**即将进入 Loop** => 调用 _objc_autoreleasePoolPush() 创建自动释放池
+* do while
+	* ...
+	* 通知 Observers：**即将进入休眠** => 调用_objc_autoreleasePoolPop() 和 _objc_autoreleasePoolPush() 释放旧的池并创建新池
+	* ...
+* 通知 Observers: **即将退出** => 调用 _objc_autoreleasePoolPop() 来释放自动释放池
+
+#### 事件响应
+
+苹果注册了一个 **Source1** 来接收触摸、加速、传感器等系统事件，随后苹果注册的那个 Source1 就会触发回调，并调用 _UIApplicationHandleEventQueue() 进行应用内部的分发。
+
+#### 手势识别
+
+当上面的 _UIApplicationHandleEventQueue() 识别了一个手势时，其首先会调用 Cancel 将当前的 touchesBegin/Move/End 系列回调打断，随后系统将对应的 UIGestureRecognizer 标记为待处理，苹果注册了一个 Observer 监测 **即将进入休眠**，其回调函数会获取所有刚被标记为待处理的 UIGestureRecognizer，并执行UIGestureRecognizer 的回调，当有 UIGestureRecognizer 的状态变化时，这个回调都会进行相应处理。
+
+#### 界面更新
+
+当在操作 UI 时，这个 UIView 或 CALayer 就被标记为待处理，并被提交到一个全局的容器去，苹果注册了一个 Observer 监测 **即将进入休眠** 和 **即将退出**，回调去执行一个很长的函数，这个函数里会遍历所有待处理的 UIView 或 CALayer 以执行实际的绘制和调整，并更新 UI 界面。
 
 ## 定时器
 
