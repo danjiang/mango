@@ -96,7 +96,7 @@ void setButtonCallbacks() {
 }
 {% endhighlight %}
 
-创建一个类来解决这个问题就搞复杂了，用 Block 更适合解决这个问题，Block 中会捕获外部局部变量，也就是“带有自动变量值”的含义：
+创建一个类来解决这个问题就搞复杂了，用 Block 更适合解决这个问题，Block 中会捕获外部局部变量，也就是 "带有自动变量值" 的含义：
 
 {% highlight objc %}
 void setButtonCallbacks() {
@@ -181,7 +181,7 @@ XYZSimpleBlock anotherBlock = ^{
 
 ### 截获自动变量值
 
-“带有自动变量值”的含义就是“截获自动变量值”，如下示例 Block 会截获外部的 anInteger 为 Block 自己的自动变量，截获后，再修改外部的自动变量，对已截获的自动变量没有影响。
+"带有自动变量值" 的含义就是 "截获自动变量值"，如下示例 Block 会截获外部的 anInteger 为 Block 自己的自动变量，截获后，再修改外部的自动变量，对已截获的自动变量没有影响。
 
 {% highlight objc %}
 - (void)testMethod {
@@ -312,11 +312,40 @@ Global Block 的产生时机：
 如下代码中 self 是一个 UIViewController 的实例，此 UIViewController 强引用 HVUserAgreementViewController，HVUserAgreementViewController 强引用 confirmBlock，confirmBlock 强引用 self，这样形成了一个循环引用，通过 __weak 修饰符来转换 self 为弱引用，解除掉了循环引用关系。
 
 {% highlight objc %}
-- (void)openEULAViewController{
+- (void)openEULAViewController {
     __weak typeof(self) weakSelf = self;
-    HVUserAgreementViewController * viewController = [HVUserAgreementViewController new];
+    HVUserAgreementViewController *viewController = [HVUserAgreementViewController new];
     viewController.confirmBlock = ^{
         weakSelf.eulachecker.check = YES;
+    };
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+{% endhighlight %}
+
+再来看一个情况，如下的 Block 中有多条语句执行，在语句执行的过程中，weakSelf 都有可能变成 nil：
+
+{% highlight objc %}
+- (void)openEULAViewController {
+    __weak typeof(self) weakSelf = self;
+    HVUserAgreementViewController *viewController = [HVUserAgreementViewController new];
+    viewController.confirmBlock = ^{
+        [weakSelf doA];
+        [weakSelf doB];
+    };
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+{% endhighlight %}
+
+进一步修改代码，如下的 Block 中有多条语句执行，在语句执行的过程中，strongSelf 不会变成 nil，因为 __strong 修饰符修饰的变量，再赋值时使引用计数 +1，在 Block 执行结束后，变量被销毁，使引用计数 -1，所以，在语句执行的过程中，strongSelf 不会变成 nil：
+
+{% highlight objc %}
+- (void)openEULAViewController {
+    __weak typeof(self) weakSelf = self;
+    HVUserAgreementViewController *viewController = [HVUserAgreementViewController new];
+    viewController.confirmBlock = ^{
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf doA];
+        [strongSelf doB];
     };
     [self presentViewController:viewController animated:YES completion:nil];
 }
