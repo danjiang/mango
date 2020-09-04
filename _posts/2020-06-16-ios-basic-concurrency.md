@@ -458,6 +458,8 @@ class SumOperation: AsyncOperation {
 }
 {% endhighlight %}
 
+> Operation 被添加到 OperationQueue 中，会在 OperationQueue 相对应的线程中执行，对于执行添加 Operation 操作的线程来讲就是异步的，这里 AsyncOperation 和 Operation 的区别主要是针对 main() 执行结束后，其状态是否是 isFinished，表明此 Operation 已经结束，如果是线性的 OperationQueue，就会继续拿下一个 Operation 来执行，AsyncOperation 的目的是对如网络请求这样的异步方法进行封装。
+
 ### 依赖关系
 
 管理 Operation 之间的依赖关系，这些 Operation 可以是被添加到不同 OperationQueue，要注意依赖关系形成一个环而导致死锁：

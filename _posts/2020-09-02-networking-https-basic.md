@@ -4,7 +4,7 @@ author: 但江
 avatar: danjiang
 location: 成都
 category: programming
-tag: objective-c
+tag: networking
 ---
 
 本文是对 HTTPS 运行机制的整理，便于记忆。
