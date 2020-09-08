@@ -81,9 +81,11 @@ h1 {
 
 h2 {
 	font-size: $base-font-size * 40 / 16;
+	padding-bottom: $spacing-unit / 4;
+	border-bottom:1px solid $grey-color-light;
 	@include media-query($on-phone) {
 		font-size: $base-font-size * 20 / 16;
-	}	
+	}
 }
 
 h3 {
@@ -95,6 +97,7 @@ h3 {
 
 h4 {
 	font-size: $base-font-size * 25 / 16;
+	color: $secondary-color;
 	@include media-query($on-phone) {
 		font-size: $base-font-size * 18 / 16;
 	}	

@@ -129,6 +129,15 @@ App 启动后，苹果在主线程 RunLoop 里注册了下面的 Observer：
 
 当在操作 UI 时，这个 UIView 或 CALayer 就被标记为待处理，并被提交到一个全局的容器去，苹果注册了一个 Observer 监测 **即将进入休眠** 和 **即将退出**，回调去执行一个很长的函数，这个函数里会遍历所有待处理的 UIView 或 CALayer 以执行实际的绘制和调整，并更新 UI 界面。
 
+#### 关于 GCD
+
+当调用 dispatch_async(dispatch_get_main_queue(), block) 时，libDispatch 会向主线程的 RunLoop 发送消息，RunLoop会被唤醒，并从消息中取得这个 block，并在回调 \_\_CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE\_\_() 里执行这个 block，也就是对应 **handle_msg 处理消息：如果 dispatch 就执行 block**
+。但这个逻辑仅限于 **dispatch 到主线程，dispatch 到其他线程仍然是由 libDispatch 处理的**。
+
+#### PerformSelecter
+
+当调用 NSObject 的 performSelecter:afterDelay: 后，实际上其内部会 **创建一个 Timer** 并添加到当前线程的 RunLoop 中。所以如果当前线程没有 RunLoop，则这个方法会失效。当调用 performSelector:onThread: 时，实际上其会 **创建一个 Timer** 加到对应的线程去，同样的，如果对应线程没有 RunLoop 该方法也会失效。
+
 ## 定时器
 
 ### Timer
@@ -170,6 +179,8 @@ RunLoop.main.add(timer, forMode: .common)
 {% endhighlight %}
 
 当 App 退到后台，iOS 会暂停运行的 timer，当 App 又回到前台，iOS 会重启 timer。
+
+> NSTimer 是用了 XNU 内核的 mk_timer，而非 GCD 驱动的。
 
 ### CADisplayLink
 
