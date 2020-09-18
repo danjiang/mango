@@ -4,7 +4,7 @@ layout: default
 
 <div class="site-content">
 	<div class="post-latest">
-		<h5><i class="far fa-bell section-icon"></i>最新发布</h5>
+		<div class="post-section-title"><i class="far fa-bell section-icon"></i>最新发布</div>
 		{% assign foundImage = 0 %}
 		{% assign images = site.posts.first.content | split:"<img " %}
 		{% for image in images %}
@@ -21,7 +21,7 @@ layout: default
 	</div>
 
 	<div class="post-featured">
-		<h5><i class="far fa-heart section-icon"></i>精彩推荐</h5>
+		<div class="post-section-title"><i class="far fa-heart section-icon"></i>精彩推荐</div>
 		{% for post in site.tags.featured limit:4 %}
 			<div class="post-featured-brief">
 				{% assign foundImage = 0 %}
@@ -43,9 +43,9 @@ layout: default
 	</div>
 
 	<div class="post-series">
-		<h5><i class="far fa-bookmark section-icon"></i>专题系列</h5>
+		<div class="post-section-title"><i class="far fa-bookmark section-icon"></i>专题系列</div>
 		<div class="post-series-tag" id="swift">
-			<h4><i class="fab fa-swift series-icon"></i>Swift 编程语言</h4>
+			<div class="post-series-title"><i class="fab fa-swift series-icon"></i>Swift 编程语言</div>
 			<ul class="post-series-column3">
 				{% for post in site.tags.swift reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -55,7 +55,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="objective-c">
-			<h4><i class="fas fa-laptop-code series-icon"></i>Objective-C 编程语言</h4>
+			<div class="post-series-title"><i class="fas fa-laptop-code series-icon"></i>Objective-C 编程语言</div>
 			<ul class="post-series-column2">
 				{% for post in site.tags.objective-c reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -65,7 +65,7 @@ layout: default
 		</div>
 		
 		<div class="post-series-tag" id="ios-basic">
-			<h4><i class="fab fa-app-store-ios series-icon"></i>iOS 编程基础</h4>
+			<div class="post-series-title"><i class="fab fa-app-store-ios series-icon"></i>iOS 编程基础</div>
 			<ul class="post-series-column2">
 				{% for post in site.tags.ios-basic reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -75,7 +75,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="core-data">
-			<h4><i class="fas fa-database series-icon"></i>Core Data 数据存储</h6>
+			<div class="post-series-title"><i class="fas fa-database series-icon"></i>Core Data 数据存储</div>
 			<ul class="post-series-column2">
 				{% for post in site.tags.core-data reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -85,7 +85,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="opengl">
-			<h4><i class="fas fa-cube series-icon"></i>OpenGL ES 图像处理</h6>
+			<div class="post-series-title"><i class="fas fa-cube series-icon"></i>OpenGL ES 图像处理</div>
 			<ul class="post-series-column3">
 				{% for post in site.tags.opengl reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -95,7 +95,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="metal">
-			<h4><i class="fas fa-cube series-icon"></i>Metal 图像处理</h4>
+			<div class="post-series-title"><i class="fas fa-cube series-icon"></i>Metal 图像处理</div>
 			<ul class="post-series-column3">
 				{% for post in site.tags.metal reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -105,7 +105,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="ffmpeg">
-			<h4><i class="fas fa-stream series-icon"></i>FFmpeg 音视频处理</h6>
+			<div class="post-series-title"><i class="fas fa-stream series-icon"></i>FFmpeg 音视频处理</div>
 			<ul class="post-series-column3">
 				{% for post in site.tags.ffmpeg reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -115,7 +115,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="ios-av">
-			<h4><i class="fas fa-video series-icon"></i>iOS 音视频开发</h4>
+			<div class="post-series-title"><i class="fas fa-video series-icon"></i>iOS 音视频开发</div>
 			<ul class="post-series-column3">
 				{% for post in site.tags.ios-av reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -125,7 +125,7 @@ layout: default
 		</div>
 		
 		<div class="post-series-tag" id="ruby">
-			<h4><i class="fas fa-gem series-icon"></i>Ruby 编程语言</h4>
+			<div class="post-series-title"><i class="fas fa-gem series-icon"></i>Ruby 编程语言</div>
 			<ul class="post-series-column2">
 				{% for post in site.tags.ruby reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -135,7 +135,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="rails">
-			<h4><i class="fas fa-road series-icon"></i>Rails 服务端 Web 框架</h4>
+			<div class="post-series-title"><i class="fas fa-road series-icon"></i>Rails 服务端 Web 框架</div>
 			<ul class="post-series-column3">
 				{% for post in site.tags.rails reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -145,7 +145,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="ubuntu-apache">
-			<h4><i class="fas fa-server series-icon"></i>Ubuntu Apache HTTP 服务器</h4>
+			<div class="post-series-title"><i class="fas fa-server series-icon"></i>Ubuntu Apache HTTP 服务器</div>
 			<ul class="post-series-column3">
 				{% for post in site.tags.ubuntu-apache reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -155,7 +155,7 @@ layout: default
 		</div>
 
 		<div class="post-series-tag" id="networking">
-			<h4><i class="fas fa-wifi series-icon"></i>计算机网络</h4>
+			<div class="post-series-title"><i class="fas fa-wifi series-icon"></i>计算机网络</div>
 			<ul class="post-series-column3">
 				{% for post in site.tags.networking reversed %}
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -167,9 +167,9 @@ layout: default
 	</div>
 
 	<div class="post-archive">
-		<h5><i class="far fa-folder section-icon"></i>分类归档</h5>
+		<div class="post-section-title"><i class="far fa-folder section-icon"></i>分类归档</div>
 		<div class="post-archive-category">
-			<h6><i class="fas fa-code archive-icon"></i>编程</h6>
+			<div class="post-archive-title"><i class="fas fa-code archive-icon"></i>编程</div>
 			<ul>
 				{% for post in site.categories.programming %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -179,7 +179,7 @@ layout: default
 		</div>
 
 		<div class="post-archive-category">
-			<h6><i class="fas fa-palette archive-icon"></i>设计</h6>
+			<div class="post-archive-title"><i class="fas fa-palette archive-icon"></i>设计</div>
 			<ul>
 				{% for post in site.categories.design %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -189,7 +189,7 @@ layout: default
 		</div>
 
 		<div class="post-archive-category">
-			<h6><i class="fas fa-briefcase archive-icon"></i>商业</h6>
+			<div class="post-archive-title"><i class="fas fa-briefcase archive-icon"></i>商业</div>
 			<ul>
 				{% for post in site.categories.business %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -199,7 +199,7 @@ layout: default
 		</div>
 
 		<div class="post-archive-category">
-			<h6><i class="fas fa-coffee archive-icon"></i>生活</h6>
+			<div class="post-archive-title"><i class="fas fa-coffee archive-icon"></i>生活</div>
 			<ul>
 				{% for post in site.categories.life %}
 				<li><span>{{ post.date | date:"%y-%m-%d"}}</span> » <a href="{{ post.url }}">{{ post.title }}</a></li>
