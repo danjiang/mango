@@ -56,6 +56,10 @@ Build Settings 里面的 Architectures 选项。Architectures 指的是该 App �
 
 ### 库的介绍
 
+下图中，实线是强制依赖，虚线是选择依赖。
+
+![FFmpeg Libraries Dependencies](/images/ffmpeg-libraries-dependencies.jpg)
+
 * libavformat 封装模块
 * libavcodec 编解码模块
 * libavfilter 滤镜模块
