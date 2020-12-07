@@ -1,5 +1,5 @@
 ---
-title: Objective-C Runtime、对象和消息传递
+title: Objective-C 对象模型和消息传递
 author: 但江
 avatar: danjiang
 location: 成都
@@ -11,86 +11,9 @@ tag: objective-c
 
 ![Objective C](/images/objective-c.png)
 
-## 回顾 C 语言
+## Objective-C 对象模型
 
-Objective-C 是对 C 语言的扩展，主要增加了面向对象的功能，这里罗列一下 C 语言的内容，要详细学习 C 语言，推荐 [C 语言程序设计：现代方法](https://book.douban.com/subject/4279678/)。
-
-* 语法
-	* 声明和定义
-	* 算术运算符、赋值运算符、位运算符
-	* 选择语句、循环语句
-	* 基本类型：整数、浮点数、字符，类型转换
-	* 数组
-	* 指针
-	* 字符串
-	* 函数
-	* 结构
-	* 联合
-	* 枚举
-	* 动态存储分配
-* 程序的组成
-	* 头文件和源文件
-	* 预处理
-	* 编译和链接
-
-## Objective-C Runtime
-
-### 消息传递
-
-先来看一下如下 Objective-C 和 C++ 中的方法调用：
-
-{% highlight objc %}
-Object *obj = [Object new];
-[obj performWith:parameter1 and:parameter2];
-{% endhighlight %}
-
-{% highlight cpp %}
-Object *obj = new Object();
-obj->perform(parameter1, parameter2);
-{% endhighlight %}
-
-在 Objective-C 中，方法调用其实是消息传递，都是在 runtime 决定那个实现代码被执行，编译器不关心被发送消息的对象的类型，都是在 runtime 做决定。
-
-而在 C++ 中，方法调用是在编译时决定的，[virtual function](https://www.learncpp.com/cpp-tutorial/122-virtual-functions/) 是通过 virtual table 在运行时决定那个实现代码被执行。
-
-### 内存管理
-
-C 语言中的动态存储分配：
-
-* malloc 函数 —— 分配内存块，但是不对内存块进行初始化。
-* calloc 函数 —— 分配内存块，并且对内存块进行清零。
-* realloc 函数 —— 调整先前分配的内存块大小。
-
-{% highlight objc %}
-NSString *someString = @"The string";
-NSString *anotherString = someString;
-{% endhighlight %}
-
-上面的代码在内存中的表示如下图：
-
-![NSString](/images/nsstring.png)
-
-栈中的变量在压栈出栈的时候被自动管理，堆中的内存管理被 Objective-C 做了抽象，不需要使用前面描述的 C 语言中的动态存储分配函数，Objective-C runtime 通过自动引用计数（ARC）来管理。
-
-### 通过关联对象给类添加数据
-
-有时候一些类并不是自己定义实现的，没有源代码，不能通过修改源代码的方式添加新实例变量，这里可以通过关联对象来添加：
-
-{% highlight objc %}
-void objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy);
-id objc_getAssociatedObject(id object, const void *key);
-void objc_removeAssociatedObjects(id object);
-{% endhighlight %}
-
-objc_AssociationPolicy 的值如下，可以和属性中内存管理相对应：
-
-* OBJC_ASSOCIATION_ASSIGN
-* OBJC_ASSOCIATION_COPY
-* OBJC_ASSOCIATION_COPY_NONATOMIC
-* OBJC_ASSOCIATION_RETAIN
-* OBJC_ASSOCIATION_RETAIN_NONATOMIC
-
-## Objective-C 对象
+### Objective-C 对象的实质
 
 Objective-C 中一切皆对象，如下的代码中，someString 是对象，NSString 是类对象。
 
@@ -137,7 +60,38 @@ struct objc_class {
 - (BOOL)isMemberOfClass:(Class)aClass;
 {% endhighlight %}
 
+### Objective-C 对象的内存分布
+
+{% highlight objc %}
+NSString *someString = @"The string";
+NSString *anotherString = someString;
+{% endhighlight %}
+
+上面的代码在内存中的表示如下图：
+
+![NSString](/images/nsstring.png)
+
+栈中的变量在压栈出栈的时候被自动管理，堆中的内存管理被 Objective-C 做了抽象，不需要使用 [开始学习 Objective-C - 动态存储分配](/programming/2020/12/01/get-started-with-objective-c#动态存储分配) 中描述的 C 语言的动态存储分配函数，而是 [Objective-C 内存管理](/programming/2020/12/04/objective-c-memory-management/) 中描述的自动引用计数 ARC 来管理。
+
 ## Objective-C 消息传递
+
+### 方法派遣
+
+先来看一下 Objective-C 和 C++ 中的方法调用：
+
+{% highlight objc %}
+Object *obj = [Object new];
+[obj performWith:parameter1 and:parameter2];
+{% endhighlight %}
+
+{% highlight cpp %}
+Object *obj = new Object();
+obj->perform(parameter1, parameter2);
+{% endhighlight %}
+
+在 Objective-C 中，方法调用的本质是消息传递，都是在运行时决定那个实现代码被执行，编译器不关心被发送消息的对象类型，都是在运行时做决定。
+
+而在 C++ 中，方法调用是在编译时决定的，[Virtual Function](https://www.learncpp.com/cpp-tutorial/122-virtual-functions/) 是通过 Virtual Table 在运行时决定那个实现代码被执行。
 
 ### objc_msgSend
 
