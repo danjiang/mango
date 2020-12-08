@@ -2,12 +2,12 @@
 title: Objective-C 对象模型和消息传递
 author: 但江
 avatar: danjiang
-location: 成都
+location: 深圳
 category: programming
 tag: objective-c
 ---
 
-本文是对 Objective-C 机制的讲解，涉及到 Runtime、对象和消息传递，首先会回顾下 C 语言。随着 Swift 日益成熟，Objective-C 地位在日益下滑，但是并不会完全消失，一是很多已有的大应用都有很多 Objective-C 存量代码，如果要使用 C/C++ 的一些跨平台的库，使用 Objective-C 编写 Objective-C++ 做桥接是唯一的选择。多说一点 Swift 可以直接使用 C 的库。
+本文并不是一篇完整的教程，更像一篇快速笔记，讲解 Objective-C 中的对象模型和消息传递。
 
 ![Objective C](/images/objective-c.png)
 

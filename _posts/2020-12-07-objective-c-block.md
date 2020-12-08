@@ -2,12 +2,12 @@
 title: Objective-C Block
 author: 但江
 avatar: danjiang
-location: 成都
+location: 深圳
 category: programming
 tag: objective-c
 ---
 
-本文是对 Objective-C Block 的讲解。随着 Swift 日益成熟，Objective-C 地位在日益下滑，但是并不会完全消失，一是很多已有的大应用都有很多 Objective-C 存量代码，如果要使用 C/C++ 的一些跨平台的库，使用 Objective-C 编写 Objective-C++ 做桥接是唯一的选择。多说一点 Swift 可以直接使用 C 的库。
+本文并不是一篇完整的教程，更像一篇快速笔记，讲解 Objective-C 中的 Block。
 
 ![Objective C](/images/objective-c.png)
 
@@ -96,7 +96,7 @@ void setButtonCallbacks() {
 }
 {% endhighlight %}
 
-创建一个类来解决这个问题就搞复杂了，用 Block 更适合解决这个问题，Block 中会捕获外部局部变量，也就是 "带有自动变量值" 的含义：
+创建一个类来解决这个问题就搞复杂了，用 Block 更适合解决这个问题，Block 中会捕获外部局部变量，也就是 \"带有自动变量值\" 的含义：
 
 {% highlight objc %}
 void setButtonCallbacks() {
@@ -181,7 +181,7 @@ XYZSimpleBlock anotherBlock = ^{
 
 ### 截获自动变量值
 
-"带有自动变量值" 的含义就是 "截获自动变量值"，如下示例 Block 会截获外部的 anInteger 为 Block 自己的自动变量，截获后，再修改外部的自动变量，对已截获的自动变量没有影响。
+\"带有自动变量值\" 的含义就是 \"截获自动变量值\"，如下示例 Block 会截获外部的 anInteger 为 Block 自己的自动变量，截获后，再修改外部的自动变量，对已截获的自动变量没有影响。
 
 {% highlight objc %}
 - (void)testMethod {
@@ -281,7 +281,7 @@ Block 也是 Objective-C 对象，看下图：
 
 ![Objective-C Block](/images/objective-c-block.png)
 
-"截获自动变量值" 意味着执行 Block 语法时，Block 语法表达式所使用的自动变量值被保存到 Block 的结构体实例（即 Block 自身）中，所以不能改动到原有的自动变量值。
+\"截获自动变量值\" 意味着执行 Block 语法时，Block 语法表达式所使用的自动变量值被保存到 Block 的结构体实例（即 Block 自身）中，所以不能改动到原有的自动变量值。
 
 添加了 __block 说明符的变量，会变成结构体实例，上图中的 Block 结构体会含有此结构体实例的指针，这样就可以改动到原有的自动变量值。
 

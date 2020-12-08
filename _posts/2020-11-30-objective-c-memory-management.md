@@ -2,7 +2,7 @@
 title: Objective-C 内存管理
 author: 但江
 avatar: danjiang
-location: 成都
+location: 深圳
 category: programming
 tag: objective-c
 ---

@@ -1,19 +1,21 @@
 ---
-title: Objective-C 的分类，协议和预处理
+title: Objective-C 的分类
 author: 但江
 avatar: danjiang
-location: 成都 
+location: 深圳 
 category: programming
 tag: objective-c
 ---
 
-本文并不是一篇完整的教程，更像一篇快速笔记，讲解 Objective-C 中的分类，类扩展，协议和预处理。
+本文并不是一篇完整的教程，更像一篇快速笔记，讲解 Objective-C 中的分类。
 
 ![Objective C](/images/objective-c.png)
 
 ## 分类 Category
 
-分类提供了一个简单的方式，用它可以将类的定义模块化到相关方法的分类中；它还提供了扩展现有类定义的简便方式，并且不必访问类的源代码，也无须创建子类。如下通过分类来扩展 **DTShape** 新增 **sum** 方法：
+### 通过分类给类添加方法
+
+分类提供了一个简单的方式，用它可以将类的定义模块化到相关方法的分类中；它还提供了扩展现有类定义的简便方式，并且不必访问类的源代码，也无须创建子类。如下通过分类来扩展 DTShape 新增 sum 方法：
 
 {% highlight objc %}
 #import "DTShape.h"
@@ -49,7 +51,25 @@ shape.numberOfSides = 4;
 [shape sum:4]
 {% endhighlight %}
 
-分类中不支持添加实例变量，所以没有办法支撑属性，但是可以通过 Associated Object 来支撑属性，但是不推荐这么做：
+### 通过关联对象给类添加属性
+
+分类中不支持添加实例变量，所以没有办法支撑属性，但是可以通过关联对象在没有源代码的情况下来支撑属性，但是不推荐这么做，相关方法：
+
+{% highlight objc %}
+void objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy);
+id objc_getAssociatedObject(id object, const void *key);
+void objc_removeAssociatedObjects(id object);
+{% endhighlight %}
+
+objc_AssociationPolicy 的值如下，可以和 [Objective-C 内存管理](/programming/2020/12/04/objective-c-memory-management/) 的属性修饰符相对应：
+
+* OBJC_ASSOCIATION_ASSIGN
+* OBJC_ASSOCIATION_COPY
+* OBJC_ASSOCIATION_COPY_NONATOMIC
+* OBJC_ASSOCIATION_RETAIN
+* OBJC_ASSOCIATION_RETAIN_NONATOMIC
+
+示例：
 
 {% highlight objc %}
 #import <Foundation/Foundation.h>
@@ -71,8 +91,9 @@ shape.numberOfSides = 4;
 @property (nonatomic, strong) NSArray *friends;
 - (BOOL)isFriendsWith:(EOCPerson*)person;
 @end
+{% endhighlight %}
 
-
+{% highlight objc %}
 #import <objc/runtime.h>
 
 static const char* kFriendsPropertyKey = "kFriendsPropertyKey";
@@ -153,10 +174,10 @@ typedef struct category_t {
 
 ### 加载 Category
 
-* 在 Objective-C Runtime 库被加载过程中，前面编译阶段产生的 category_t 数组被加载和附加到类上，Category 的方法被**放到了新方法列表的前面**，而原来类的方法被放到了新方法列表的后面，这也就是我们平常所说的 Category 的方法会 "覆盖" 掉原来类的同名方法，这是因为运行时在查找方法的时候是顺着方法列表的顺序查找的。
+* 在 Objective-C Runtime 库被加载过程中，前面编译阶段产生的 category_t 数组被加载和附加到类上，Category 的方法被**放到了新方法列表的前面**，而原来类的方法被放到了新方法列表的后面，这也就是我们平常所说的 Category 的方法会 \"覆盖\" 掉原来类的同名方法，这是因为运行时在查找方法的时候是顺着方法列表的顺序查找的。
 * 附加 Category 到类的工作会先于 +load 方法的执行，所以在类的 +load 方法调用的时候，我们可以调用 Category 中声明的方法。
 * +load 的执行顺序是先类，后 Category，而 Category 的 +load 执行顺序是根据编译顺序决定的。
-* 但是对于 "覆盖" 掉的方法，则会先找到最后一个编译的 Category 里的对应方法。
+* 但是对于 \"覆盖\" 掉的方法，则会先找到最后一个编译的 Category 里的对应方法。
 
 ### load 和 initialize
 
@@ -167,69 +188,3 @@ typedef struct category_t {
 
 * load 在当每个类和 Category 被加载到 Runtime 时运行，且只运行一次。
 * initialize 在类第一次被使用时，才会运行，且只运行一次。
-
-## 协议
-
-协议列出了一组方法，有些可以是选择实现，有些是必须实现，如果决定实现特定协议的所有方法，也就意味着遵守这项协议：
-
-1. **@required** 后面的方法是必须实现，默认都是必须实现；
-2. **@optional** 后面的方法是选择实现。
-
-{% highlight objc %}
-@class PWListener;
-
-@protocol PWListenerDelegate <NSObject>
-
-- (void)listenerDidStartSuccess:(PWListener *)listener;
-- (void)listenerDidStartFailed:(PWListener *)listener;
-- (void)listener:(PWListener *)listener didConnectDevice:(PWLocalDevice *)device;
-
-@end
-
-@interface PWListener : NSObject
-
-@property (weak, nonatomic) id<PWListenerDelegate> delegate;
-
-- (instancetype)initWithAbility:(PWAbility *)ability port:(NSInteger)port;
-
-- (void)start;
-
-@end
-{% endhighlight %}
-
-## 预处理
-
-预处理程序语句使用 **#** 标记，这个符号必须是一行中的第一个非空字符，顾名思义，预处理程序实际上是在分析 Objective-C 程序之前处理这些语句。
-
-**#define** 就是给符号名称指定程序常量：
-
-{% highlight objc %}
-#define PI 3.141592654
-#define TWO_PI 2 * 3.141592654
-{% endhighlight %}
-
-**#import** 导入头文件，**""** 在包含源文件的目录中查找，**<>** 只在特殊的系统头文件目录中寻找包含文件：
-
-{% highlight objc %}
-#import "PWAPIController.h"
-#import <AFNetworking/AFNetworking.h>
-{% endhighlight %}
-
-**#ifdef**，**#ifndef**，**#endif** 是条件编译：
-
-{% highlight objc %}
-#ifdef __OBJC__
-  #import <Foundation/Foundation.h>
-  #import <UIKit/UIKit.h>
-#endif
-
-#ifndef __OBJC__
-  #if USE_IL2CPP_PCH
-    #include "il2cpp_precompiled_header.h"
-  #endif
-#endif
-{% endhighlight %}
-
-在 Xcode -> Target -> Build Settings 中设置：
-
-![Objective C Preprocessor Macros](/images/objective-c-preprocessor-macros.png)
