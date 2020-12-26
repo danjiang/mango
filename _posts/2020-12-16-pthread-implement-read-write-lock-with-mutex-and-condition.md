@@ -2,7 +2,7 @@
 title: iOS 基础 - 使用互斥锁和条件变量实现读写锁
 author: 但江
 avatar: danjiang
-location: 成都 
+location: 深圳 
 category: programming
 tag: ios-basic
 ---

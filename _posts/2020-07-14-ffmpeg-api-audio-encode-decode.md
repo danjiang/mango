@@ -13,7 +13,7 @@ tag: ffmpeg
 
 ## 预备知识
 
-通过 [iOS 利用 AudioToolbox 将 PCM 编码为 AAC](/programming/2020/07/08/ios-audiotoolbox-audio-converter-services/) 来了解数字音频、PCM 音频格式和 AAC 音频格式这些理论知识，再通过 [FFmpeg 接口使用 - 基础和转封装](/programming/2020/07/12/ffmpeg-api-fundamentals/) 来了解如何在 macOS 上交叉编译 FFmpeg，再将其集成到 Xcode 中，以及使用 FFmpeg 接口时会用到的常用结构。
+通过 [数字音频、PCM 音频格式和 AAC 音频格式](/programming/2020/12/18/digital-audio-pcm-aac/) 来了解这些理论知识，再通过 [FFmpeg 接口使用 - 基础和转封装](/programming/2020/07/12/ffmpeg-api-fundamentals/) 来了解如何在 macOS 上交叉编译 FFmpeg，再将其集成到 Xcode 中，以及使用 FFmpeg 接口时会用到的常用结构。
 
 ## 音频解码
 

@@ -7,7 +7,7 @@ category: programming
 tag: ios-av
 ---
 
-本文讲解了数字音频、PCM 音频格式和 AAC 音频格式这些理论知识，然后讲解在 iOS 上通过 AudioToolbox 中的 Audio Converter Services 来将 PCM 编码为 AAC。
+本文讲解了利用 OpenGL ES 和 AVAssetWriter 录制视频的解决方案，可以使用 OpenGL ES 做特效。
 
 ![Camera Sea](/images/camera-sea.jpg)
 

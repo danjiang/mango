@@ -65,7 +65,7 @@ ffmpeg -i illustration.png illustration.jpg
 
 ## 数字音频
 
-通过 [iOS 利用 AudioToolbox 将 PCM 编码为 AAC](/programming/2020/07/08/ios-audiotoolbox-audio-converter-services/) 来了解数字音频的理论知识。
+通过 [数字音频、PCM 音频格式和 AAC 音频格式](/programming/2020/12/18/digital-audio-pcm-aac/) 来了解这些理论知识。
 
 常见的音频采样率：
 
